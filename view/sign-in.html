@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
+        <script src="semantic/dist/jquery-3.2.1.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <form id="form" class="ui form" method="post">
+            <div class="field">
+                <label>Username</label>
+                <input id="phone" type="text" name="phone" placeholder="Username">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>I agree to the Terms and Conditions</label>
+                </div>
+            </div>
+                <button class="ui button" id="button" type="button" name="button">Sign-in</button>
+        </form>
+        <script>
+                $(document).ready(function(){
+                    $("button").on('click',function(){
+                        var phone = $("input#phone").val();
+                        var password = $("input#password").val();
+                        console.log(JSON.stringify({ 'phone':phone, 'password':password}));
+                        $.ajax({
+                            url: 'http://185.77.205.82:8080/authentication/sign-in', // url where to submit the request
+                            type : "POST", // type of action POST || GET
+                            dataType : 'JSON', // data type
+                            data :  JSON.stringify({ 'phone':phone, 'password':password}), // post data || get data
+                            success:function(result){
+                                console.log('here');
+                                $.ajax({
+                                    url: 'http://185.77.205.82:3000/check', // url where to submit the request
+                                    type : "POST", // type of action POST || GET
+                                    dataType : 'JSON', // data type
+                                    data : JSON.stringify(result)
+                                })
+                            },
+                            error: function(xhr, resp, text) {
+                                console.log(xhr, resp, text);
+                            }
+                        });
+                    });
+                });
+            
+            </script>
+        
+    </body>
+</html>
