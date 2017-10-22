@@ -13,11 +13,11 @@
                 <form id="form" class="ui form" method="post">
                         <div class="field">
                             <label>Username</label>
-                            <input id="phone" type="text" name="phone" placeholder="Username">
+                            <input id="phone" type="text" placeholder="Username">
                         </div>
                         <div class="field">
                             <label>Password</label>
-                            <input id="password" type="password" name="password" placeholder="Password">
+                            <input id="password" type="password" placeholder="Password">
                         </div>
                         <div class="field">
                             <div class="ui checkbox">
@@ -31,28 +31,16 @@
         <script>
                 $(document).ready(function(){
                     $("button").on('click',function(){
-                        var phone = $("input#phone").val();
-                        var password = $("input#password").val();
+                        var phone = document.getElementById("phone").value;//$("input#phone").val();
+                        var password = document.getElementById("password").value;//$("input#password").val();
                         console.log(JSON.stringify({ 'phone':phone, 'password':password}));
                         $.ajax({
-                            url: 'http://185.77.205.82:8080/authentication/sign-in', // url where to submit the request
+                            url: 'http://185.77.205.82:3000/check', // url where to submit the request
                             type : "POST", // type of action POST || GET
                             dataType : 'JSON', // data type
-                            data :  JSON.stringify({ 'phone':phone, 'password':password}), // post data || get data
-                            success:function(result){
-                                console.log('here');
-                                $.ajax({
-                                    url: 'http://185.77.205.82:3000/check', // url where to submit the request
-                                    type : "POST", // type of action POST || GET
-                                    dataType : 'JSON', // data type
-                                    data : JSON.stringify(result)
-                                }).then(function(data) {
-                                    window.location = data.redirectUrl;
-                                });
-                            },
-                            error: function(xhr, resp, text) {
-                                console.log(xhr, resp, text);
-                            }
+                            data : JSON.stringify({ 'phone':phone, 'password':password})
+                        }).then(function(data) {
+                            window.location = data.redirectUrl;
                         });
                     });
                 });
