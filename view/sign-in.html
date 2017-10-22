@@ -9,23 +9,25 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body>
-        <form id="form" class="ui form" method="post">
-            <div class="field">
-                <label>Username</label>
-                <input id="phone" type="text" name="phone" placeholder="Username">
-            </div>
-            <div class="field">
-                <label>Password</label>
-                <input id="password" type="password" name="password" placeholder="Password">
-            </div>
-            <div class="field">
-                <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden">
-                    <label>I agree to the Terms and Conditions</label>
-                </div>
-            </div>
-                <button class="ui button" id="button" type="button" name="button">Sign-in</button>
-        </form>
+        <div style="width: 350px; margin: auto;">
+                <form id="form" class="ui form" method="post">
+                        <div class="field">
+                            <label>Username</label>
+                            <input id="phone" type="text" name="phone" placeholder="Username">
+                        </div>
+                        <div class="field">
+                            <label>Password</label>
+                            <input id="password" type="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                                <label>I agree to the Terms and Conditions</label>
+                            </div>
+                        </div>
+                            <button class="ui button" id="button" type="button" name="button">Sign-in</button>
+                    </form>
+        </div>
         <script>
                 $(document).ready(function(){
                     $("button").on('click',function(){
@@ -44,7 +46,9 @@
                                     type : "POST", // type of action POST || GET
                                     dataType : 'JSON', // data type
                                     data : JSON.stringify(result)
-                                })
+                                }).then(function(data) {
+                                    window.location = data.redirectUrl;
+                                });
                             },
                             error: function(xhr, resp, text) {
                                 console.log(xhr, resp, text);
