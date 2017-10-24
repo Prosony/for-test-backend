@@ -2,11 +2,12 @@ var http = require('http');
 var path = require('path');
 var request = require('request');
 var Coocies = require('cookies');
-
+var User = require('./model/user.js');
 var session = require('express-session');
 var server = require('./server.js');
 var opt = require('./options/options.js');
-var db_servise = require('./service/db.js');
+var db_service = require('./service/db.js');
+var session = require('express-session');
 
 server.app.get('/sign-in',function(request, responce){
     responce.sendFile(path.join(__dirname,'/view/sign-in.html'));
@@ -27,8 +28,8 @@ server.app.post('/check', function(request, responce){
                 res.setEncoding('utf8');
                 res.on('data', (chunk) => {
                     answerFromBackEnd = JSON.parse(chunk);
-                    db_servise.createUser(answerFromBackEnd);
-                    var test_log = db_servise.getUser(answerFromBackEnd);
+                    db_service.createUsers(answerFromBackEnd, request.sessionID);
+                    var test_log = db_service.getUsers(answerFromBackEnd);
                     console.log(`testLof ${test_log}`);
                     console.log(`#INFO [/check] [http.request][/check].on[data] answerFromBackEnd token: ${answerFromBackEnd.token}, id: ${answerFromBackEnd.id}`);
                 });
@@ -36,8 +37,8 @@ server.app.post('/check', function(request, responce){
                 console.log(`#INFO [/check] [http.request][/check].on[end] No more data in response.`);
 
                 if(answerFromBackEnd.id.trim() && answerFromBackEnd.token.trim()){
-                    request.session.user = answerFromBackEnd;
-                    console.log(`#INFO [/check] [http.request][/check].on[end] session: ${request.session.user}`);
+                    request.session.users = db_service.getUsers(request.sessionID);
+                    console.log(`#INFO [/check] [http.request][/check].on[end] session: ${request.session.users}`);
                     console.log(`#INFO [/check] [http.request][/check].on[end] session: ${request.sessionID}`);
                     responce.send({err: 0, redirectUrl: "/profile"});
                 }else{
@@ -55,16 +56,19 @@ server.app.post('/check', function(request, responce){
           requestToServer.end();
     });
 });
-
-server.app.route('/profile')
-.get(function(request, responce){
+server.app.get('/users', function(request, responce){
+    console.log(`request.sessionID: `,request.sessionID);
+});
+server.app.get('/profile', function(request, responce){
+   
     console.log('#INFO address: %s',request.url);
-    console.log(`request.session.user: ${request.session.user}`);
-    if(request.session.user != undefined){
-        var dataUser = request.session.user;
-        console.log(`dataUser.token: ${dataUser.token}, dataUser.id: ${dataUser.id}`);
+    console.log(`request.session.user: ${request.session.users}`);
+   
+    if(request.session.users != undefined){
+        console.log(`dataUser.token: ${request.session.users.token}, dataUser.id: ${request.session.users.id}`);
         responce.sendFile(path.join(__dirname,'/view/profile.html'));    
     }else{
+        console.log(`#INFO [/profile] refirect to /sign-in `);
         responce.redirect('/sign-in');
         // responce.sendFile(path.join(__dirname,'/view/sign-in.html'));
     }

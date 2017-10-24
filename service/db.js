@@ -1,22 +1,31 @@
 var mongoose = require('mongoose');
 var crypto = require('crypto');
-var User = require('../model/user.js');
+var Users = require('../model/user.js');
 var db = mongoose.connect('mongodb://127.0.0.1:27017/db_session');//("mongodb://user:password@ds027409.mongolab.com:27409/coffeeplaces");
 
-exports.createUser = function(userData){
-	var user = {
-		id_account: userData.id_account,
+exports.createUsers = function(userData, sessionID){
+	var users = {
+        id_account: userData.id,
+        id_session: sessionID,
 		token: userData.token,
     }
-	return new User(user).save();
+	return new Users(users).save();
 }
  
-exports.getUser = function(id_account) {
-	return User.findOne(id_account);
+exports.getUsers = function(id) {
+	return Users.findOne({id_session: id}).then(function(doc){
+       
+        if (doc.id_session == id){
+            console.log("id_session is ok");
+            return Promise.resolve(doc);
+        } else {
+            return Promise.reject("#INFO [db.js][getUser] id_sessin not equals or something wrong with token");
+        }
+    });
 }
  
-exports.checkUser = function(userData) {
-	return User.findOne({token: userData.token}).then(function(doc){
+exports.checkUsers = function(userData) {
+	return Users.findOne({token: userData.token}).then(function(doc){
         
             if (doc.token == userData.token){
 				console.log("User password is ok");
@@ -26,7 +35,9 @@ exports.checkUser = function(userData) {
 			}
 		});
 }
- 
+exports.getSessions = function(){
+	return db.getSessions();
+}
 function hash(text) {
 	return crypto.createHash('sha1').update(text).digest('base64');
 }
