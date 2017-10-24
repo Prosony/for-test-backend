@@ -1,9 +1,10 @@
 var options = {
-    path: "http://185.77.205.82:3000",
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer token"
-    }
+    hostname: 'localhost',
+    port: 8080,
+    path: '/authentication/sign-in',
+    method: 'POST',
+    headers : {
+        'Content-Type' : 'application/json'
+    },
 };
 module.exports.options = options;
