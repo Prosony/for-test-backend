@@ -21,7 +21,7 @@ server.app.post('/check', function(request, response){
         let password = answer.password;
         console.log('phone %s, token: %s', phone, password);
 
-            let requestToServer =  http.request(opt.options, (res) => {
+            let requestToServer =  http.request(opt.options_sing_in, (res) => {
                 let answerFromBackEnd;
                 console.log(`#INFO [/check] STATUS: ${res.statusCode}`);
                 res.setEncoding('utf8');
@@ -30,7 +30,8 @@ server.app.post('/check', function(request, response){
                     db_service.createUsers(answerFromBackEnd, request.sessionID).then(function (result) {
                         console.log('createUsers result: ',JSON.stringify(result));
                         // response.render('index', { title: 'The index page!' })
-                            response.send({err: 0, redirectUrl: "/profile"});
+                            response.send({err: 0, redirectUrl: '/profile/:'+result.id_account});
+                        // response.redirect('/sign-in');
                     }).catch(function(error){
                         console.log('Error create users, ',error);
                     });
@@ -44,23 +45,43 @@ server.app.post('/check', function(request, response){
           requestToServer.end();
     });
 });
-server.app.get('/profile', function(request, response){
-    db_service.getUsers(request.sessionID).then(function (result) {
+server.app.get('/profile/:id', function(request, response){
+    let id = request.params.id;
+    id = id.substring(1,id.length)
+    console.log('request id: ',id);
+    db_service.getUsersById(id).then(function (result) {
         console.log('getUsers result: ',result);
 
         if (result.token !== undefined){
             console.log(`#INFO [/profile] token: `,result.token);
-            response.render('profile', { token: result.token })
+
+            let requestToServer =  http.request(opt.options_profile, (res) => {
+                let answerFromBackEnd;
+                console.log(`#INFO [/check] STATUS: ${res.statusCode}`);
+                res.setEncoding('utf8');
+                res.on('data', (chunk) => {
+                    answerFromBackEnd = JSON.parse(chunk);
+                    response.render('profile', { data: answerFromBackEnd })
+                });
+            });
+
+            requestToServer.write(JSON.stringify({'token':result.token, 'id':result.id_account})); // write data to request body
+            requestToServer.end();
+            requestToServer.on('error', (e) => {
+                console.error(`#INFO [/check] [http.request][/check].on[error] problem with request: ${e.message}`);
+            });
+
+
         }else{
             console.log(`#INFO [/profile] refirect to /sign-in `);
             response.redirect('/sign-in');
         }
-
     }).catch(function(error){
         console.log('Error get users, ',error);
         response.redirect('/sign-in');
     });
 });
+
 server.app.get('/sidID', function(request, response){
     console.log(`request.sessionID: `,request.sessionID);
 });

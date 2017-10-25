@@ -27,6 +27,20 @@ exports.getUsers = function(id) {
         }
     });
 };
+
+exports.getUsersById = function(id) {
+    return Users.findOne({id_account: id}).then(function(doc){
+        let document = JSON.parse(JSON.stringify(doc));
+        console.log('[getUsers] doc.id_account',document);
+        console.log('[getUsers] userData.id_account ',id);
+        if (document.id_account === id){
+            console.log("id_account is ok");
+            return Promise.resolve(document);
+        } else {
+            return Promise.reject("#INFO [db.js][getUser] id_account not found");
+        }
+    });
+};
  
 exports.checkUsers = function(userData) {
 	return Users.find({token: userData.token}).then(function(doc){

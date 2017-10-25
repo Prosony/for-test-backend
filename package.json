@@ -1,0 +1,11 @@
+{
+  "name": "for-test-backend",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "latest",
+    "connect-mongo": "latest",
+    "express-session": "latest",
+    "express": "latest",
+    "mongoose": "latest"
+  }
+}
