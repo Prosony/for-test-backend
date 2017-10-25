@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 
-var Users = new mongoose.Schema({
+let Users = new mongoose.Schema({
     id_account : {
         type: String,
         unique: true,

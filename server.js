@@ -1,13 +1,15 @@
-var mongoose = require("mongoose");
-var express = require('express');
-var router = express.Router();
-var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
-var path = require('path');
-var bodyParser = require('body-parser');
+let mongoose = require("mongoose");
+let express = require('express');
+let router = express.Router();
+let session = require('express-session');
+let MongoStore = require('connect-mongo')(session);
+let path = require('path');
+let bodyParser = require('body-parser');
 
-var connectMongo = new MongoStore({url: 'mongodb://127.0.0.1:27017/db_session'});
-var app = express();
+let connectMongo = new MongoStore({url: 'mongodb://127.0.0.1:27017/db_session'});
+let app = express();
+
+app.set('views engine', 'ejs');
 
 app.use(session({
   secret: 'i need more beers',
@@ -24,7 +26,7 @@ app.use(session({
 //     cookie: { secure: true }
 // }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'view')));
+app.use(express.static(path.join(__dirname, 'views')));
 app.listen(3000, function(){
     console.log('server start on port 3000');
 });

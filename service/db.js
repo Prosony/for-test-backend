@@ -1,12 +1,12 @@
-var mongoose = require('mongoose');
-var crypto = require('crypto');
-var Users = require('../model/user.js');
+let mongoose = require('mongoose');
+let crypto = require('crypto');
+let Users = require('../model/user.js');
 mongoose.Promise = global.Promise;
-var db = mongoose.connect('mongodb://127.0.0.1:27017/db_session', { useMongoClient: true });//("mongodb://user:password@ds027409.mongolab.com:27409/coffeeplaces");
+let db = mongoose.connect('mongodb://127.0.0.1:27017/db_session', { useMongoClient: true });//("mongodb://user:password@ds027409.mongolab.com:27409/coffeeplaces");
 
 exports.createUsers = function(userData, sessionID){
 	console.log('[createUsers] session id:',sessionID,'userData:',userData);
-	var users = {
+	let users = {
         id_account: userData.id.toString(),
         id_session: sessionID.toString(),
 		token: userData.token.toString(),
@@ -16,7 +16,7 @@ exports.createUsers = function(userData, sessionID){
 
 exports.getUsers = function(id) {
 	return Users.findOne({id_session: id}).then(function(doc){
-		var document = JSON.parse(JSON.stringify(doc));
+		let document = JSON.parse(JSON.stringify(doc));
         console.log('[getUsers] doc.id_session',document);
         console.log('[getUsers] userData.id_session ',id);
         if (document.id_session === id){
