@@ -9,11 +9,11 @@ var opt = require('./options/options.js');
 var db_service = require('./service/db.js');
 var session = require('express-session');
 
-server.app.get('/sign-in',function(request, responce){
-    responce.sendFile(path.join(__dirname,'/view/sign-in.html'));
+server.app.get('/sign-in',function(request, response){
+    response.sendFile(path.join(__dirname,'/view/sign-in.html'));
 });
 
-server.app.post('/check', function(request, responce){
+server.app.post('/check', function(request, response){
     console.log('#INFO address: %s',request.url);
     request.on('data', function (data) {
 
@@ -28,24 +28,23 @@ server.app.post('/check', function(request, responce){
                 res.setEncoding('utf8');
                 res.on('data', (chunk) => {
                     answerFromBackEnd = JSON.parse(chunk);
-                    db_service.createUsers(answerFromBackEnd, request.sessionID);
-                    var test_log = db_service.getUsers(answerFromBackEnd);
-                    console.log(`testLof ${test_log}`);
-                    console.log(`#INFO [/check] [http.request][/check].on[data] answerFromBackEnd token: ${answerFromBackEnd.token}, id: ${answerFromBackEnd.id}`);
+                    db_service.createUsers(answerFromBackEnd, request.sessionID).then(function (result) {
+                        console.log('createUsers result: ',JSON.stringify(result));
+                        // db_service.getUsers(request.sessionID).then(function (result) {
+                        //     console.log('getUsers result: ',JSON.stringify(result));
+                            response.send({err: 0, redirectUrl: "/profile"});
+                        // }).catch(function(error){
+                        //     console.log('Error get users, ',error);
+                        //     responce.send({err: 204, redirectUrl: "/sign-in"});
+                        // });
+                    }).catch(function(error){
+                        console.log('Error create users, ',error);
+                    });
                 });
-                res.on('end', () => {
-                console.log(`#INFO [/check] [http.request][/check].on[end] No more data in response.`);
-
-                if(answerFromBackEnd.id.trim() && answerFromBackEnd.token.trim()){
-                    request.session.users = db_service.getUsers(request.sessionID);
-                    console.log(`#INFO [/check] [http.request][/check].on[end] session: ${request.session.users}`);
-                    console.log(`#INFO [/check] [http.request][/check].on[end] session: ${request.sessionID}`);
-                    responce.send({err: 0, redirectUrl: "/profile"});
-                }else{
-                    responce.send({err: 204, redirectUrl: "/sign-in"});
-                }
-                });
-            
+                // res.on('end', () => {
+                // console.log(`#INFO [/check] [http.request][/check].on[end] No more data in response.`);
+                //
+                // });
             });
 
             requestToServer.on('error', (e) => {
@@ -56,20 +55,25 @@ server.app.post('/check', function(request, responce){
           requestToServer.end();
     });
 });
-server.app.get('/users', function(request, responce){
+server.app.get('/sidID', function(request, responce){
     console.log(`request.sessionID: `,request.sessionID);
+    const user = db_service.getUsers(request.sessionID);
+    console.log('user ',user.toString());
 });
 server.app.get('/profile', function(request, responce){
-   
-    console.log('#INFO address: %s',request.url);
-    console.log(`request.session.user: ${request.session.users}`);
-   
-    if(request.session.users != undefined){
-        console.log(`dataUser.token: ${request.session.users.token}, dataUser.id: ${request.session.users.id}`);
-        responce.sendFile(path.join(__dirname,'/view/profile.html'));    
-    }else{
-        console.log(`#INFO [/profile] refirect to /sign-in `);
+    db_service.getUsers(request.sessionID).then(function (result) {
+        console.log('getUsers result: ',result);
+
+        if (result.token !== undefined){
+            console.log(`#INFO [/profile] token: `,result.token);
+            responce.sendFile(path.join(__dirname,'/view/profile.html'));
+        }else{
+            console.log(`#INFO [/profile] refirect to /sign-in `);
+            responce.redirect('/sign-in');
+        }
+
+    }).catch(function(error){
+        console.log('Error get users, ',error);
         responce.redirect('/sign-in');
-        // responce.sendFile(path.join(__dirname,'/view/sign-in.html'));
-    }
+    });
 });
