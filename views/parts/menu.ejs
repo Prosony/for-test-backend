@@ -1,6 +1,10 @@
-<div class="ui pointing menu" style="margin-top: 12px; margin-left: 15px; margin-right: 15px">
-    <a class="active item">
-        <i class="home icon"></i>Home
+<div class="ui pointing menu" style="margin-top: 12px; margin-left: 20px; margin-right: 20px">
+    <div class="item">
+        AniShelter
+    </div>
+    <%if (typeof token !== 'undefined') { %>
+    <a class="item" href="/profile/:<%=id%>">
+        <i class="home icon" ></i>Home
     </a>
     <a class="item">
         <i class="icon mail"></i> Messages
@@ -11,16 +15,25 @@
         <div class="floating ui teal label">22</div>
     </a>
     <div class="right menu" >
-       <div data-tooltip="That is your bookmarks!" data-position="bottom center">
-           <a class="ui item" href="#" >
-               <i class="bookmark icon"></i>Bookmarks
-           </a>
-       </div>
+        <div data-tooltip="That is your bookmarks!" data-position="bottom center">
+            <a class="ui item" onclick="show('/bookmarks','ui stackable two column grid')" >
+                <i class="bookmark icon"></i>Bookmarks
+                <div class="floating ui teal label"></div>
+            </a>
+        </div>
 
         <div data-tooltip="Do you want to sign out?" data-position="bottom right">
-            <a class="ui item"  href="#">
+            <a class="ui item"  href="/log-out">
                 <i class="sign out icon"></i>Logout
             </a>
         </div>
     </div>
+    <%}else{%>
+        <div class="item">
+            <div class="ui primary button">Get Started</div>
+        </div>
+        <div class="item">
+            <div class="ui button">Log-in</div>
+        </div>
+    <%}%>
 </div>

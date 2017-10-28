@@ -6,6 +6,8 @@
     "connect-mongo": "latest",
     "express-session": "latest",
     "express": "latest",
-    "mongoose": "latest"
+    "mongoose": "latest",
+    "superagent": "latest",
+    "async": "latest"
   }
 }

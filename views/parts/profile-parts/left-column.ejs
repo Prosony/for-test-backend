@@ -1,20 +1,60 @@
-<div class="column" style="width: 260px; margin-left: 15px ">
+<div class="column" style="width: 260px; margin-left: 20px ">
     <div class="ui card">
         <div class="ui slide masked reveal image">
-            <img src="../semantic/dist/images/Putin.jpg" class="visible content">
+            <img id="avatar" src="" class="visible content">
             <img src="../semantic/dist/images/example.jpg" class="hidden content">
         </div>
         <div class="content">
-            <a class="header"><%= data.name %> <%= data.surname %></a>
+            <!--<a class="header" ><b id="name-user"></b></a>-->
+            <h3 class="ui header" id="name-user"></h3>
             <div class="meta">
                 <span class="date">Create in Sep 2014</span>
             </div>
         </div>
         <div class="extra content">
-            <a>
-                <i class="users icon"></i>
-                2 Members
-            </a>
+            <a><i class="users icon"></i>2 Members</a>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    //let rows =<%-//JSON.stringify(data)%>
+      //  console.log(rows);
+    $(document).ready(function(){
+        $.ajax({
+            url:'http://185.77.205.82:8080/profile',
+            method: 'POST',
+            data: JSON.stringify({ 'token':'<%=token%>', 'id':'<%=id%>'}),
+            ContentType: 'application/json',
+            charset:'UTF-8',
+            success: function(profile) {
+                console.log(profile);
+                getAvatar(profile.path_avatar);
+                $('#name-user').html(profile.name +' '+ profile.surname);
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText + '|\n' + status + '|\n' +error);
+            }
+        });
+        function getAvatar(path){
+            $.ajax({
+                url:'http://185.77.205.82:8080/files',
+                method: 'POST',
+                data: JSON.stringify({ 'path': path}),
+                ContentType: 'application/json',
+                charset:'UTF-8',
+                success: function(base64String) {
+                    document.getElementById(`avatar`).src = `data:image/png;base64,${base64String}`;
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr.responseText + '|\n' + status + '|\n' +error);
+                }
+            });
+        }
+
+
+
+
+    });
+
+</script>

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>AniShelter</title>
         <% include ./parts/opt/head.ejs%>
     </head>
     <body>
+    <% include ./parts/menu.ejs%>
+
         <div style="width: 350px; margin: auto;">
                 <form id="form" class="ui form" method="post">
                         <div class="field">
-                            <label>Username</label>
-                            <input id="phone" type="text" placeholder="Username">
+                            <label>Email</label>
+                            <input id="email" type="text" placeholder="email">
                         </div>
                         <div class="field">
                             <label>Password</label>
@@ -26,14 +29,14 @@
         <script>
                 $(document).ready(function(){
                     $("button").on('click',function(){
-                        var phone = document.getElementById("phone").value;//$("input#phone").val();
-                        var password = document.getElementById("password").value;//$("input#password").val();
-                        console.log(JSON.stringify({ 'phone':phone, 'password':password}));
+                        let email = document.getElementById("email").value;//$("input#phone").val();
+                        let password = document.getElementById("password").value;//$("input#password").val();
+                        console.log(JSON.stringify({ 'email':email, 'password':password}));
                         $.ajax({
                             url: 'http://185.77.205.82:3000/check', // url where to submit the request
-                            type : "POST", // type of action POST || GET
-                            dataType : 'JSON', // data type
-                            data : JSON.stringify({ 'phone':phone, 'password':password})
+                                type : "POST", // type of action POST || GET
+                                dataType : 'JSON', // data type
+                                data : JSON.stringify({ 'email':email, 'password':password})
                         }).then(function(data) {
                             window.location = data.redirectUrl;
                         });

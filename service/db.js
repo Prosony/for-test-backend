@@ -14,7 +14,7 @@ exports.createUsers = function(userData, sessionID){
 	return new Users(users).save();
 };
 
-exports.getUsers = function(id) {
+exports.getUsersByIdSession = function(id) {
 	return Users.findOne({id_session: id}).then(function(doc){
 		let document = JSON.parse(JSON.stringify(doc));
         console.log('[getUsers] doc.id_session',document);
@@ -54,6 +54,18 @@ exports.checkUsers = function(userData) {
 			}
 		});
 };
+
+exports.logout = function (idSession) {
+    return Users.deleteOne({id_session: idSession}, function (error) {
+        if (!error) {
+            console.log('delete success!');
+        } else {
+            console.log('error delete: ', error);
+
+        }
+    });
+};
+
 function hash(text) {
 	return crypto.createHash('sha1').update(text).digest('base64');
-}
+    }
