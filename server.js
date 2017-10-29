@@ -18,13 +18,6 @@ app.use(session({
   store: connectMongo
 }));
 
-// app.use(session({
-//     secret: 'keyboard cat',
-//     resave: false,
-//     store:  new MongoStore({ url: 'mongodb://127.0.0.1:27017/db_session' }),
-//     saveUninitialized: true,
-//     cookie: { secure: true }
-// }));
 app.use(bodyParser.json());
 
 app.listen(3000, function(){

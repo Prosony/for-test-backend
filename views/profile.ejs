@@ -1,34 +1,16 @@
 <!DOCTYPE html>
-
 <html>
     <title>Profile</title>
     <% include ./parts/opt/head.ejs%>
     <body>
     <% include ./parts/menu.ejs %>
-
-                <div id="main" class="ui stackable two column grid" >
-                        <% include ./parts/profile-parts/left-column.ejs%>
-                        
-                        <div id="content-profile" class="column" style="width: auto;  margin-left: 15px;">
-                            <% include parts/profile-parts/center/main/about.ejs%>
-                            <% include parts/profile-parts/center/main/post-content.ejs%>
-                      </div>
-                </div>
+        <div id="main" class="ui stackable two column grid" >
+            <% include parts/profile-parts/left/left-column.ejs%>
+            <div id="content-profile" class="column" style="width: 800px;  margin-left: 15px;">
+                <% include parts/profile-parts/center/main/post-content.ejs%>
+            </div>
+        </div>
 
     </body>
-    <script>
-        function show(url, block){
-            console.log('bookmarks click!!!');
-            $.ajax({
-                url: url,
-                cache: false,
-                success: function(html){
-//                    block.html(html);
-                console.log(html);
-                    $('#content-profile').html(html);
-                }
-            });
-        }
-    </script>
 
 </html>

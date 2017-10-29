@@ -3,7 +3,7 @@
         AniShelter
     </div>
     <%if (typeof token !== 'undefined') { %>
-    <a class="item" href="/profile/:<%=id%>">
+    <a class="item" onclick="show_home('<%=token%>', '<%=id%>')">
         <i class="home icon" ></i>Home
     </a>
     <a class="item">
@@ -16,7 +16,7 @@
     </a>
     <div class="right menu" >
         <div data-tooltip="That is your bookmarks!" data-position="bottom center">
-            <a class="ui item" onclick="show('/bookmarks','ui stackable two column grid')" >
+            <a class="ui item" onclick="show_bookmarks()" >
                 <i class="bookmark icon"></i>Bookmarks
                 <div class="floating ui teal label"></div>
             </a>
@@ -37,3 +37,4 @@
         </div>
     <%}%>
 </div>
+

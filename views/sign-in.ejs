@@ -38,6 +38,7 @@
                                 dataType : 'JSON', // data type
                                 data : JSON.stringify({ 'email':email, 'password':password})
                         }).then(function(data) {
+                            console.log('data',data)
                             window.location = data.redirectUrl;
                         });
                     });

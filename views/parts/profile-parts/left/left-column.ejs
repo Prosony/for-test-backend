@@ -17,9 +17,7 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    //let rows =<%-//JSON.stringify(data)%>
-      //  console.log(rows);
+<script>
     $(document).ready(function(){
         $.ajax({
             url:'http://185.77.205.82:8080/profile',
@@ -30,7 +28,7 @@
             success: function(profile) {
                 console.log(profile);
                 getAvatar(profile.path_avatar);
-                $('#name-user').html(profile.name +' '+ profile.surname);
+               set_data_left(profile);
             },
             error: function(xhr, status, error) {
                 console.log(xhr.responseText + '|\n' + status + '|\n' +error);
@@ -38,7 +36,7 @@
         });
         function getAvatar(path){
             $.ajax({
-                url:'http://185.77.205.82:8080/files',
+                url: 'http://185.77.205.82:8080/files',
                 method: 'POST',
                 data: JSON.stringify({ 'path': path}),
                 ContentType: 'application/json',
@@ -51,10 +49,5 @@
                 }
             });
         }
-
-
-
-
     });
-
 </script>
