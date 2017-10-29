@@ -1,4 +1,4 @@
-<div class="column" style="width: 260px; margin-left: 20px ">
+
     <div class="ui card">
         <div class="ui slide masked reveal image">
             <img id="avatar" src="" class="visible content">
@@ -15,39 +15,10 @@
             <a><i class="users icon"></i>2 Members</a>
         </div>
     </div>
-</div>
 
 <script>
-    $(document).ready(function(){
-        $.ajax({
-            url:'http://185.77.205.82:8080/profile',
-            method: 'POST',
-            data: JSON.stringify({ 'token':'<%=token%>', 'id':'<%=id%>'}),
-            ContentType: 'application/json',
-            charset:'UTF-8',
-            success: function(profile) {
-                console.log(profile);
-                getAvatar(profile.path_avatar);
-               set_data_left(profile);
-            },
-            error: function(xhr, status, error) {
-                console.log(xhr.responseText + '|\n' + status + '|\n' +error);
-            }
-        });
-        function getAvatar(path){
-            $.ajax({
-                url: 'http://185.77.205.82:8080/files',
-                method: 'POST',
-                data: JSON.stringify({ 'path': path}),
-                ContentType: 'application/json',
-                charset:'UTF-8',
-                success: function(base64String) {
-                    document.getElementById(`avatar`).src = `data:image/png;base64,${base64String}`;
-                },
-                error: function(xhr, status, error) {
-                    console.log(xhr.responseText + '|\n' + status + '|\n' +error);
-                }
-            });
-        }
+    $(document).ready(function() {
+        data_update_profile('<%= token %>', '<%= id %>');
+        update_data_post_ad('<%= token %>', '<%= id %>')
     });
 </script>

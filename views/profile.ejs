@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <title>Profile</title>
+
     <% include ./parts/opt/head.ejs%>
     <body>
     <% include ./parts/menu.ejs %>
-        <div id="main" class="ui stackable two column grid" >
+
+        <div id="main" class="ui stackable two column grid" style="margin-left: 32px" >
+            <div id="left-column-block" class="column" style="width: 260px; ">
             <% include parts/profile-parts/left/left-column.ejs%>
-            <div id="content-profile" class="column" style="width: 800px;  margin-left: 15px;">
+            </div>
+            <div id="content-column-block" class="column" style="width: 800px;  margin-left: 25px;">
                 <% include parts/profile-parts/center/main/post-content.ejs%>
             </div>
         </div>

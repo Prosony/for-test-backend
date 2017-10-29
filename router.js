@@ -79,10 +79,22 @@ server.app.get('/check-auth', function(request, response){
     console.log(`request.sessionID: `,request.sessionID);
 });
 
+server.app.get('/advertisement', function (request, response) {
+    db_service.getUsersByIdSession(request.sessionID).then(function (result) {
+        console.log('#INFO [/advertisement] getUsersByIdSession result: ', result);
+
+        if (result.token !== undefined) {
+
+            response.render('parts/find-pet.ejs', { 'id': result.id_account, 'token':result.token});
+        }else{
+            response.redirect('/sign-in');
+        }
+    });
+});
 server.app.get('/log-out', function(request, response){
 
     db_service.getUsersByIdSession(request.sessionID).then(function (result) {
-        console.log('getUsersByIdSession result: ',result);
+        console.log('#INFO [/log-out] getUsersByIdSession result: ',result);
         if (result.token !== undefined){
             console.log(`#INFO [/log-out] token: `,result.token);
 
