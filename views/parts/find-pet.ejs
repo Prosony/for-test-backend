@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../semantic/front/find-pet-data.js"></script>
     <%include opt/head.ejs%>
 </head>
 <body>
-<%include menu.ejs%>
-<div class="ui internally celled grid">
-    <div class="row">
-        <div class="three wide column" >
-            <!--<div class="ui small circular rotate left reveal image">-->
-                <!--<img src="../semantic/dist/images/cat-one.jpg" class="visible content" style="border-radius: 0%; ">-->
-                <!--<img src="../semantic/dist/images/cat-two.jpg" class="hidden content">-->
-            <!--</div>-->
-            <img src="../semantic/dist/images/cat-one.jpg" class="ui small image" >
+    <%include menu.ejs%>
+
+    <div id="main" class="ui stackable two column grid" style="margin-left: 32px" >
+        <div id="left-column-block" class="column" style="width: 260px; ">
+
         </div>
-        <div class="ten wide column">
-            <p></p>
-        </div>
-        <div class="three wide column">
+        <div id="content-column-block" class="column" style="width: 800px;  margin-left: 25px;">
+            
         </div>
     </div>
-    <div class="row">
-        <div class="three wide column">
-            <img src="../semantic/dist/images/cat-one.jpg" >
-        </div>
-        <div class="ten wide column">
-            <p></p>
-        </div>
-        <div class="three wide column">
-        </div>
-    </div>
-</div>
 </body>
 </html>
+
+<script>
+    $(document).ready(function() {
+        data_update_find_pet('<%= token %>');
+    });
+</script>

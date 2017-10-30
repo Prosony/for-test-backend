@@ -12,9 +12,7 @@ function show_home(token, id){
 function show_bookmarks(){
     $('#content-column-block').load(path_bookmarks);
 }
-function show_find_pet() {
-    $('#content-column-block').load(path_bookmarks);
-}
+
 function data_update_profile(token,id){
     $.ajax({
             url:'http://185.77.205.82:8080/profile',

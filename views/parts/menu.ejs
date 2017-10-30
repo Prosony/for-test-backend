@@ -1,4 +1,5 @@
-<div class="ui pointing menu" style="margin-top: 12px; margin-left: 45px; margin-right: 45px">
+
+<div id="main-menu-mpm" class="ui pointing menu" style="margin-top: 12px !important; margin-left: 45px !important; margin-right: 45px !important;">
     <!--<div class="item">-->
         <img src="../semantic/dist/images/label3.png" style="height: 40px">
     <!--</div>-->
@@ -47,4 +48,8 @@
     </div>
     <%}%>
 </div>
-
+<script>
+    $(document).ready(function() {
+        $('#main-menu-mpm').sticky();
+    });
+</script>
