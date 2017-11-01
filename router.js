@@ -4,9 +4,44 @@ let opt = require('./options/options.js');
 let db_service = require('./service/db.js');
 let session = require('express-session');
 
-server.app.get('/sign-in',function(request, response){
-    response.render('sign-in');
+server.app.get('/',function(request, response){
+    console.log('#INFO [router.js] address: [%s], sessionID: %s',request.url,request.sessionID);
+    if (request.sessionID !== null && request.sessionID !== undefined){
+        db_service.getUsersByIdSession(request.sessionID).then(function (result) {
+
+            console.log("#INFO [router.js] result: ",result);
+            if (result.token !== undefined){
+                response.redirect('/profile/:'+result.id_account);
+            }else{
+                response.redirect('/sign-in');
+            }
+        }).catch(function(error){
+            console.log('Error get account, ',error);
+            response.redirect('/sign-in');
+        });
+    }else{
+        response.redirect('/sign-in');
+    }
+
 });
+server.app.get('/sign-in',function(request, response){
+        if (request.sessionID !== null && request.sessionID !== undefined){
+            db_service.getUsersByIdSession(request.sessionID).then(function (result) {
+
+                console.log("#INFO [router.js] result: ",result);
+                if (result.token !== undefined){
+                    response.redirect('/profile/:'+result.id_account);
+                }else{
+                    response.render('sign-in.ejs');
+                }
+            }).catch(function(error){
+                console.log('Error get account, ',error);
+                response.render('sign-in.ejs');
+            });
+        }else{
+            response.render('sign-in.ejs');
+        }
+    });
 
 server.app.post('/check', function(request, response){
     console.log('#INFO address: %s',request.url);
