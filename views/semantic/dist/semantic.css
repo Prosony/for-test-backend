@@ -13754,6 +13754,13 @@ a.ui.basic.label:hover {
   left: 100%;
   margin: 0em 0em 0em -1.5em !important;
 }
+ .ui.floating-down.label {
+   position: absolute;
+   z-index: 100;
+   top: 2.5em;
+   left: 100%;
+   margin: 0em 0em 0em -1.5em !important;
+ }
 
 /*-------------------
         Sizes
@@ -22815,7 +22822,7 @@ Floated Menu / Item
 .ui.menu.fixed,
 .ui.menu.fixed .item:first-child,
 .ui.menu.fixed .item:last-child {
-  border-radius: 0px !important;
+  /*border-radius: 0px !important;*/
 }
 
 .ui.fixed.menu,

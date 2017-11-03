@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../semantic/front/find-pet-data.js"></script>
+    <script src="../semantic/front/find-pet/find-pet-data.js"></script>
+    <script src="../semantic/front/service/other_service.js"></script>
+    <script src="../semantic/front/profile/show-profile-data.js"></script>
+    <script src="../semantic/front/profile/profile-data.js"></script>
+    <script src="../semantic/front/service/bookmarks-service.js"></script>
     <%include opt/head.ejs%>
 </head>
 <body>
@@ -12,14 +16,19 @@
 
         </div>
         <div id="content-column-block" class="column" style="width: 800px;  margin-left: 25px;">
+            <div class="ui top attached segment" id="ad-post-content">
 
+            </div>
         </div>
     </div>
 </body>
 </html>
 
 <script>
-    $(document).ready(function() {
-        data_update_find_pet('<%= token %>');
-    });
+    var token = '<%= token %>';
+    var id_account = '<%=id%>';
+    window.onload = function() {
+        data_update_find_pet(token);
+        star_favorites_switch();
+    };
 </script>

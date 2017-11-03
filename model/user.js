@@ -3,7 +3,6 @@ let mongoose = require('mongoose');
 let Users = new mongoose.Schema({
     id_account : {
         type: String,
-        unique: true,
         required: true
     },
     id_session :{

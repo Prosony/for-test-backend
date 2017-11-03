@@ -1,19 +1,28 @@
 
-<div id="main-menu-mpm" class="ui pointing menu" style="margin-top: 12px !important; margin-left: 45px !important; margin-right: 45px !important;">
-    <!--<div class="item">-->
-        <img src="../semantic/dist/images/label3.png" style="height: 40px">
-    <!--</div>-->
-    <%if (typeof token !== 'undefined') { %>
-    <a class="item" onclick="show_home('<%=token%>', '<%=id%>')">
-        <i class="home icon" ></i>Home
-    </a>
+<div id="main-menu-mpm" class="ui pointing menu" style=" margin-top: -2px; margin-left: 45px; margin-right: 45px;">
+
+    <img src="../semantic/dist/images/k-horizontal(small).png" style="margin-top: 6px; height: 25px; width: auto">
+    <%if (typeof token !=='undefined') {
+//        console.log('if url:', url)
+        if(typeof url !=='undefined' && url !== '/advertisement'){
+    %>
+
+        <a class="item" onclick="show_home('<%=token%>', '<%=id%>')">
+            <i class="home icon" ></i>Home
+        </a>
+    <%}else{%>
+        <a class="item" href="/profile/:<%=id%>">
+            <i class="home icon" ></i>Home
+        </a>
+    <%}%>
     <a class="item">
         <i class="icon mail"></i> Messages
-        <div class="floating ui red label" >22</div>
+        <div class="floating-down ui red label">5</div>
+        <!--<div class="floating  ui red label" >22</div>-->
     </a>
     <a class="item">
         <i class="alarm icon"></i> Notification
-        <div class="floating ui teal label">22</div>
+        <div class="floating-down ui teal label">5</div>
     </a>
     <div class="right menu" >
         <div data-tooltip="You can find a pet!" data-position="bottom center">
@@ -50,6 +59,17 @@
 </div>
 <script>
     $(document).ready(function() {
-        $('#main-menu-mpm').sticky();
+
+        $('#main-menu-mpm').sticky({
+            onStick: function() {
+                $(this).css({'margin-top': '-2px','margin-left':'45px', 'margin-right':'45px','left':'0px'});
+//                console.log('slide!');
+            },
+            onUnstick: function() {
+                $(this).css({ 'margin-top': '-2px','margin-left':'45px', 'margin-right':'45px','left':'0px'});
+//                console.log('UNslide!');
+            }
+        });
     });
+
 </script>

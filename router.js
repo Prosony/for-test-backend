@@ -81,12 +81,12 @@ server.app.get('/profile/:id', function(request, response){
     id = id.substring(1,id.length);
     console.log('#INFO [/profile/:id] request id: ',id);
 
-    db_service.getUsersById(id).then(function (result) {
+    db_service.getUsersById(id).then(function (result) { //MUST search in db on back end not in cache on front
         console.log('#INFO [/profile/:id]  getUsers result: ',result);
 
         if (result.token !== undefined){
             console.log(`#INFO [/profile:id] token: `,result.token);
-            response.render('profile', { 'id': id, 'token':result.token});
+            response.render('profile', { 'id': id, 'token':result.token, 'url':'/profile'});
         }else{
             console.log(`#INFO [/profile] refirect to /sign-in `);
             response.redirect('/sign-in');
@@ -99,7 +99,7 @@ server.app.get('/profile/:id', function(request, response){
 server.app.get('/bookmarks', function (request, response) {
     db_service.getUsersByIdSession(request.sessionID).then(function (result) {
         if (typeof result.token !== 'undefined'){
-            response.render('parts/profile-parts/center/bookmarks/bookmarks.ejs');
+            response.render('parts/profile-parts/center/bookmarks/bookmarks.ejs', { 'id': result.id_account, 'token':result.token, 'url':'/bookmarks'});
         }else{
             response.redirect('/sign-in');
         }
@@ -120,7 +120,7 @@ server.app.get('/advertisement', function (request, response) {
 
         if (result.token !== undefined) {
 
-            response.render('parts/find-pet.ejs', { 'id': result.id_account, 'token':result.token});
+            response.render('parts/find-pet.ejs', { 'id': result.id_account, 'token':result.token, 'url':'/advertisement'});
         }else{
             response.redirect('/sign-in');
         }
