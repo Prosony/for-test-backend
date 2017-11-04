@@ -6,12 +6,12 @@
 //        console.log('if url:', url)
         if(typeof url !=='undefined' && url !== '/advertisement'){
     %>
-
         <a class="item" onclick="show_home('<%=token%>', '<%=id%>')">
             <i class="home icon" ></i>Home
         </a>
     <%}else{%>
-        <a class="item" href="/profile/:<%=id%>">
+    <!--href="/profile/:<%=id%>-->
+        <a class="item" onclick="load_home('<%=token%>', '<%=id%>')">
             <i class="home icon" ></i>Home
         </a>
     <%}%>
@@ -30,14 +30,23 @@
                 <i class="paw icon"></i>Find a pet
             </a>
         </div>
-
-        <div data-tooltip="That is your bookmarks!" data-position="bottom center">
-            <a class="ui item" onclick="show_bookmarks()" >
-                <i class="bookmark icon"></i>Bookmarks
-                <div class="floating ui teal label"></div>
-            </a>
-        </div>
-
+        <% if(typeof url !=='undefined' && url !== '/advertisement'){ %>
+            <div data-tooltip="That is your bookmarks!" data-position="bottom center">
+                <a class="ui item" onclick="show_bookmarks()" >
+                    <i class="bookmark icon"></i>Bookmarks
+                    <div class="floating ui teal label"></div>
+                </a>
+            </div>
+        <% }else{
+            url = undefined;
+        %>
+            <div data-tooltip="That is your bookmarks!" data-position="bottom center">
+                <a class="ui item" onclick="load_bookmarks(window.token, window.id)" >
+                    <i class="bookmark icon"></i>Bookmarks
+                    <div class="floating ui teal label"></div>
+                </a>
+            </div>
+        <% } %>
         <div data-tooltip="Do you want to sign out?" data-position="bottom right">
             <a class="ui item"  href="/log-out">
                 <i class="sign out icon"></i>Logout

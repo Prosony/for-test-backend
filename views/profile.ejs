@@ -24,12 +24,10 @@
     <script>
         var token = '<%= token %>';
         var id_account = '<%=id%>';
-//        $(document).ready(function() {
+
         window.onload = function() {
             console.log('profile token: ',token)
-            update_data_profile(token, id_account);
-            update_data_post_ad(token, id_account)
-
+            load_home(token, id_account);
         }
     </script>
 </html>

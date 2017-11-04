@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="../semantic/front/find-pet/find-pet-data.js"></script>
+    <script src="../semantic/front/find-pet/show-find-pet-data.js"></script>
     <script src="../semantic/front/service/other_service.js"></script>
     <script src="../semantic/front/profile/show-profile-data.js"></script>
     <script src="../semantic/front/profile/profile-data.js"></script>
@@ -28,7 +29,8 @@
     var token = '<%= token %>';
     var id_account = '<%=id%>';
     window.onload = function() {
-        data_update_find_pet(token);
+        show_post_ad(token)
+//        data_update_find_pet(token);
         star_favorites_switch();
     };
 </script>
