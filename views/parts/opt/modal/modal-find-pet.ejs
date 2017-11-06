@@ -1,0 +1,37 @@
+<div id="modal-post-ad" class="ui longer modal">
+    <div class="ui equal width center aligned padded grid">
+        <div class="row">
+            <a class="ui header" id="header-post-ad-modal"></a>
+        </div>
+    </div>
+    <div class="ui two column grid">
+        <div class="column" style="margin-left: 5px; height: auto; width: 230px">
+            <!--<div class="scrolling image content" >-->
+                <div class="ui shape">
+                    <div class="sides" id="slide-image-div">
+                        <div class="active side">
+                            <img id="first-image-modal" src="" style="height: auto; width: 230px">
+                        </div>
+                    </div>
+                <!--</div>-->
+                <script>
+                    $('.ui.shape').unbind("click").click(function() {
+                        $('.ui.shape').shape('flip back');
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="column" style="width: 450px; margin-left: 10px">
+            <div class="scrolling content" style="height: 350px;">
+                <div class="description">
+                    <p id="text-wall"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui primary approve button"> Proceed
+            <i class="right chevron icon"></i>
+        </div>
+    </div>
+</div>

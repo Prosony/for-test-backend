@@ -21,16 +21,33 @@
                 <div class="ui label">
                     Limited
                 </div>
-                <div class="ui right floated button">Watch
+                <div id="watch-modal-preview" class="ui right floated button">Watch
                     <i class="right chevron icon"></i>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div id="modaldiv" class="ui modal">
+    <div class="scrolling image content">
+        <div class="ui medium image">
+            <img src="../semantic/dist/images/2017-10-26_02-19-43.png">
+        </div>
+        <div class="description">
+            <div class="ui header">Header</div>
+
+            <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui primary approve button"> Proceed
+            <i class="right chevron icon"></i>
+        </div>
+    </div>
+</div>
 <script>
     $(document).ready(function() {
-//        console.log('favorite profile token: ',window.token);
-        star_favorites_switch();
+
+        modal_event_switch();
     });
 </script>

@@ -6,7 +6,11 @@ function load_home(token, id) {
         getImage(JSON.stringify({'path': [profile.path_avatar]})).then(function (base64string) {
             $('#content-column-block').load('../parts/profile-parts/center/main/post-content.ejs', function () {
                 $('#left-column-block').load('../parts/profile-parts/left/left-column.ejs', function () {
+
                     $('#avatar').attr("src", "data:image/png;base64,"+base64string);
+                    let dateString = get_date(profile.dateCreateAccount);
+                    console.log("dateString ",dateString);
+                    $('#date-create-account').html(dateString);
                     $('#name-user').html(profile.name +' '+ profile.surname);
                     $('#data-birthday').html(profile.birthday);
                     $('#data-phone').html(profile.phone);
@@ -36,7 +40,7 @@ function set_post_ad(post_ad){
                         $('#second-image').attr("src", "data:image/png;base64," + base_array[1]);
                         $('#header-post-ad').html(post_ad[index].header);
                         $('#meta-data-postad').html(post_ad[index].date.day + '.' + post_ad[index].date.month + '.' + post_ad[index].date.year);
-                        $('#text-wall').html(post_ad[index].wallText);
+                        $('#text-wall').html(post_ad[index].wallText.substring(0, 162) +'...');
                         $('#id').attr("id", post_ad[index].id);
 
                         if (typeof favorites_post_ad !== 'undefined') {
@@ -79,7 +83,7 @@ function show_bookmarks(){
                     getImage(json_image).then(function (base64string) {
                         let base_array = JSON.parse(JSON.stringify(base64string));
                         $.get('../parts/profile-parts/center/main/post-ad-active.ejs', function (data) {
-                            let textWall = favorites_post_ad[index].wallText.substring(0, 162);
+                            let textWall = favorites_post_ad[index].wallText.substring(0, 162) +'...';
                             $('#ad-post-content').prepend(data);
                             $('#first-image').attr("src", "data:image/png;base64," + base_array[0]);
                             $('#second-image').attr("src", "data:image/png;base64," + base_array[1]);

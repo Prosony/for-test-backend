@@ -1,6 +1,5 @@
 
 <div id="main-menu-mpm" class="ui pointing menu" style=" margin-top: -2px; margin-left: 45px; margin-right: 45px;">
-
     <img src="../semantic/dist/images/k-horizontal(small).png" style="margin-top: 6px; height: 25px; width: auto">
     <%if (typeof token !=='undefined') {
 //        console.log('if url:', url)
@@ -10,7 +9,6 @@
             <i class="home icon" ></i>Home
         </a>
     <%}else{%>
-    <!--href="/profile/:<%=id%>-->
         <a class="item" onclick="load_home('<%=token%>', '<%=id%>')">
             <i class="home icon" ></i>Home
         </a>
@@ -18,7 +16,6 @@
     <a class="item">
         <i class="icon mail"></i> Messages
         <div class="floating-down ui red label">5</div>
-        <!--<div class="floating  ui red label" >22</div>-->
     </a>
     <a class="item">
         <i class="alarm icon"></i> Notification
@@ -66,19 +63,3 @@
     </div>
     <%}%>
 </div>
-<script>
-    $(document).ready(function() {
-
-        $('#main-menu-mpm').sticky({
-            onStick: function() {
-                $(this).css({'margin-top': '-2px','margin-left':'45px', 'margin-right':'45px','left':'0px'});
-//                console.log('slide!');
-            },
-            onUnstick: function() {
-                $(this).css({ 'margin-top': '-2px','margin-left':'45px', 'margin-right':'45px','left':'0px'});
-//                console.log('UNslide!');
-            }
-        });
-    });
-
-</script>

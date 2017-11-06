@@ -22,6 +22,8 @@
             </div>
         </div>
     </div>
+    <div class="ui dimmer modals page transition hidden">
+    </div>
 </body>
 </html>
 
@@ -30,7 +32,8 @@
     var id_account = '<%=id%>';
     window.onload = function() {
         show_post_ad(token)
-//        data_update_find_pet(token);
+        menu_sticky();
         star_favorites_switch();
+        modal_event_switch();
     };
 </script>

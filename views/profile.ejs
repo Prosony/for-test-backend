@@ -20,14 +20,18 @@
             </div>
         </div>
 
+    <div class="ui dimmer modals page transition hidden">
+    </div>
     </body>
     <script>
         var token = '<%= token %>';
         var id_account = '<%=id%>';
 
         window.onload = function() {
-            console.log('profile token: ',token)
+            star_favorites_switch();
+            menu_sticky();
             load_home(token, id_account);
+            modal_event_switch();
         }
     </script>
 </html>
