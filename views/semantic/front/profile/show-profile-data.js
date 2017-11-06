@@ -66,6 +66,9 @@ function load_bookmarks(token,id){
             $('#left-column-block').load('../parts/profile-parts/left/left-column.ejs', function () {
                 $('#avatar').attr("src", "data:image/png;base64," + base64string);
                 $('#name-user').html(profile.name + ' ' + profile.surname);
+                let dateString = get_date(profile.dateCreateAccount);
+                $('#date-create-account').html(dateString);
+
             });
             show_bookmarks();
         });

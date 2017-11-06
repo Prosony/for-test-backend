@@ -9,7 +9,9 @@
             <i class="home icon" ></i>Home
         </a>
     <%}else{%>
-        <a class="item" onclick="load_home('<%=token%>', '<%=id%>')">
+
+        <a class="item" href="/profile/:<%=id%>">
+    <!--onclick="load_home('<%=token%>', '<%=id%>')-->
             <i class="home icon" ></i>Home
         </a>
     <%}%>
@@ -34,9 +36,7 @@
                     <div class="floating ui teal label"></div>
                 </a>
             </div>
-        <% }else{
-            url = undefined;
-        %>
+        <% }else{url = undefined;%>
             <div data-tooltip="That is your bookmarks!" data-position="bottom center">
                 <a class="ui item" onclick="load_bookmarks(window.token, window.id)" >
                     <i class="bookmark icon"></i>Bookmarks
