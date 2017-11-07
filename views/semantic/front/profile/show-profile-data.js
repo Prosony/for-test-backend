@@ -26,35 +26,40 @@ function load_home(token, id) {
 function set_post_ad(post_ad){
     update_favorites_post_ad(window.token).then(function (favorites_post_ad) {
         if (typeof post_ad !== 'undefined') {
+
             for (let index = 0; index < post_ad.length; index++) {
                 console.log('post_ad[index].pathToImageFirst: ', post_ad[index].pathToImageFirst);
                 console.log('post_ad[index].pathToImageSecond: ', post_ad[index].pathToImageSecond);
                 let json_image = JSON.stringify({'path': [post_ad[index].pathToImageFirst, post_ad[index].pathToImageSecond]});
-
-                getImage(json_image).then(function (base64string) {
-                    let base_array = JSON.parse(JSON.stringify(base64string));
-                    $.get('../parts/profile-parts/center/main/post-ad-noactive.ejs', function(data){
-                        $('#ad-post-content').prepend(data);
-
-                        $('#first-image').attr("src", "data:image/png;base64," + base_array[0]);
-                        $('#second-image').attr("src", "data:image/png;base64," + base_array[1]);
-                        $('#header-post-ad').html(post_ad[index].header);
-                        $('#meta-data-postad').html(post_ad[index].date.day + '.' + post_ad[index].date.month + '.' + post_ad[index].date.year);
-                        $('#text-wall').html(post_ad[index].wallText.substring(0, 162) +'...');
-                        $('#id').attr("id", post_ad[index].id);
-
-                        if (typeof favorites_post_ad !== 'undefined') {
-                            for (let index_fav = 0; index_fav < favorites_post_ad.length; index_fav++) {
-                                console.log('index_fav: ', favorites_post_ad[index_fav].id);
-                                console.log('index: ', post_ad[index].id);
-                                if (favorites_post_ad[index_fav].id === post_ad[index].id) {
-                                    console.log('your favorites');
-                                    $('#' + favorites_post_ad[index_fav].id).find('.favorite.icon').addClass('active');
-                                    $('#' + favorites_post_ad[index_fav].id).find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?');
-                                }
+                $.get('../parts/profile-parts/center/main/post-ad-noactive.ejs', function(data){
+                    $('#ad-post-content').append(data);
+                    $('#id').attr("id", post_ad[index].id);
+                    $('#'+post_ad[index].id).find('#header-post-ad').html(post_ad[index].header);
+                    $('#'+post_ad[index].id).find('#meta-data-postad').html(post_ad[index].date.day + '.' + post_ad[index].date.month + '.' + post_ad[index].date.year);
+                    $('#'+post_ad[index].id).find('#text-wall').html(post_ad[index].wallText.substring(0, 162) +'...');
+                    getImage(json_image).then(function (base64string) {
+                        let base_array = JSON.parse(JSON.stringify(base64string));
+                        $('#'+post_ad[index].id).find('#first-image').attr("src", "data:image/png;base64," + base_array[0]);
+                        $('#'+post_ad[index].id).find('#second-image').attr("src", "data:image/png;base64," + base_array[1]);
+                    });
+                    for (let i = 0; i < post_ad[index].listTag.length; i++){
+                        $.get('../parts/profile-parts/center/main/tag-post-ad.ejs', function(data) {
+                            $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend(data);
+                            console.log('post_ad.listTag: ',post_ad[index].listTag[i]);
+                            $('#'+post_ad[index].id).find('#tag-post-ad').html(post_ad[index].listTag[i]);
+                        });
+                    }
+                    if (typeof favorites_post_ad !== 'undefined') {
+                        for (let index_fav = 0; index_fav < favorites_post_ad.length; index_fav++) {
+                            console.log('index_fav: ', favorites_post_ad[index_fav].id);
+                            console.log('index: ', post_ad[index].id);
+                            if (favorites_post_ad[index_fav].id === post_ad[index].id) {
+                                console.log('your favorites');
+                                $('#' + favorites_post_ad[index_fav].id).find('.favorite.icon').addClass('active');
+                                $('#' + favorites_post_ad[index_fav].id).find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?');
                             }
                         }
-                    });
+                    }
                 });
             }
         }

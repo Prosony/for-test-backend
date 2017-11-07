@@ -1,32 +1,38 @@
-function star_favorites_switch(){
-    $('.right.floated.star').unbind("click").click(function() {
-        let id_post_ad = $(this).closest('.ui.items').attr('id');
-        let class_name = $(this).find('.favorite.icon').attr('class');
-        console.log(id_post_ad);
+function star_favorites_switch(id_post_ad, class_name){
+    // $('.right.floated.star').unbind("click").click(function() {
+    //     let id_post_ad = $(this).closest('.ui.items').attr('id');
+    //     let class_name = $(this).find('.favorite.icon').attr('class');
+    //     console.log(id_post_ad);
         if (class_name !== 'favorite icon active' && class_name !== 'favorite active icon'){
 
             add_bookmark(window.token, id_post_ad);
-            $(this).find('.favorite.icon').addClass('active');
-            $(this).find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?');
+            $('#'+id_post_ad).find('.favorite.icon').addClass('active');
+            $('#'+id_post_ad).find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?');
         }else{
             delete_bookmark(window.token, id_post_ad);
-            $(this).find('.favorite.icon.active').removeClass('active');
-            $(this).find('#data-tooltip-win').attr('data-tooltip', 'Add to Bookmarks?');
+            $('#'+id_post_ad).find('.favorite.icon.active').removeClass('active');
+            $('#'+id_post_ad).find('#data-tooltip-win').attr('data-tooltip', 'Add to Bookmarks?');
         }
-    });
+    // });
 }
-function modal_event_switch(){
-    $('.ui.right.floated.button').unbind("click").click(function() {
-        let id_post =$(this).closest('.ui.items').attr('id');
+function modal_event_switch(id_post){
         console.log(id_post);
-        // $.get('../parts/opt/modal/modal-find-pet.ejs', function(modal){
-            // $('#main-menu-mpm')
-        $('.ui.dimmer.modals.page.transition.hidden').load('../parts/opt/modal/modal-find-pet.ejs', function () {
+        $.get('../parts/opt/modal/modal-find-pet.ejs', function(modal){
+            $('.ui.dimmer.modals.page.transition.hidden').append(modal);
             console.log('id view post: ',id_post);
             get_post_ad_by_id_post(window.token,id_post).then(function (post_ad) {
                 console.log('post_ad: ',post_ad);
                 console.log('post_ad.listPath: ',post_ad.listPath);
+                update_data_profile(window.token, post_ad.idAccount).then(function (profile_man) {
+                    $('#id-account').attr('id',profile_man.id);
+                    $('#head-name-user').html(profile_man.name +' '+ profile_man.surname);
+                    $('#head-name-user').attr("href","/profile/:"+profile_man.id);
+                    $('#phone-account').html(profile_man.phone);
+                    getImage(JSON.stringify({'path': [profile_man.path_avatar]})).then(function (base64string) {
+                        $('#avatar-mini').attr("src", "data:image/png;base64," + base64string);
 
+                    });
+                });
                 getImage(JSON.stringify({'path': post_ad.listPath})).then(function (base64image) {
                     for (let index = 0; index < base64image.length; index++ ){
                         if (index === 0){
@@ -38,9 +44,19 @@ function modal_event_switch(){
                             });
                         }
                     }
-                    $('#modal-post-ad').find('#text-wall').html(post_ad.wallText);
-                    $('#modal-post-ad').find('#header-post-ad-modal').html(post_ad.header);
                 });
+                $('#modal-post-ad').find('#text-wall').html(post_ad.wallText);
+                $('#modal-post-ad').find('#header-post-ad-modal').html(post_ad.header);
+                console.log('post_ad.listTag.length: ',post_ad.listTag.length);
+                console.log('post_ad.listTag: ',post_ad.listTag);
+
+                for (let i = 0; i < post_ad.listTag.length; i++){
+                    $.get('../parts/opt/modal/tag.ejs', function(data) {
+                        $('#tag-column').prepend(data);
+                        console.log('post_ad.listTag: ',post_ad.listTag[i]);
+                        $('#tag-pet').html(post_ad.listTag[i]);
+                    });
+                }
                 $('#modal-post-ad').modal({
                     onHidden: function(){
                         $('.ui.dimmer.modals.page.transition.hidden').empty();
@@ -48,13 +64,11 @@ function modal_event_switch(){
                     },
                     onShow: function(){
                         console.log('shown');
-                    }
-                    // blurring: true
+                    },
+                    blurring: true
                 }).modal('show');
             });
         });
-
-    });
 }
 function get_date(date){
 

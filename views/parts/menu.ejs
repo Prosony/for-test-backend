@@ -3,15 +3,14 @@
     <img src="../semantic/dist/images/k-horizontal(small).png" style="margin-top: 6px; height: 25px; width: auto">
     <%if (typeof token !=='undefined') {
 //        console.log('if url:', url)
-        if(typeof url !=='undefined' && url !== '/advertisement'){
+        console.log('isMe:', is_me)
+        if(typeof url !=='undefined' && url !== '/advertisement' && is_me){
     %>
         <a class="item" onclick="show_home('<%=token%>', '<%=id%>')">
             <i class="home icon" ></i>Home
         </a>
     <%}else{%>
-
-        <a class="item" href="/profile/:<%=id%>">
-    <!--onclick="load_home('<%=token%>', '<%=id%>')-->
+        <a class="item" href="/profile/:">
             <i class="home icon" ></i>Home
         </a>
     <%}%>
@@ -29,7 +28,7 @@
                 <i class="paw icon"></i>Find a pet
             </a>
         </div>
-        <% if(typeof url !=='undefined' && url !== '/advertisement'){ %>
+        <% if(typeof url !=='undefined' && url !== '/advertisement' && is_me){ %>
             <div data-tooltip="That is your bookmarks!" data-position="bottom center">
                 <a class="ui item" onclick="show_bookmarks()" >
                     <i class="bookmark icon"></i>Bookmarks

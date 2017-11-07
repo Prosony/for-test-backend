@@ -18,6 +18,7 @@
             <div id="content-column-block" class="column" style="width: 800px;  margin-left: 25px;">
                 <% include parts/profile-parts/center/main/post-content.ejs%>
             </div>
+
         </div>
 
     <div class="ui dimmer modals page transition hidden">
@@ -28,10 +29,13 @@
         var id_account = '<%=id%>';
 
         window.onload = function() {
-            star_favorites_switch();
             menu_sticky();
             load_home(token, id_account);
-            modal_event_switch();
+            $(document.body).unbind('click').on('click', '#previews-button' ,function(){
+                modal_event_switch($(this).closest('.ui.items').attr('id'));
+            }).on('click', '.right.floated.star' ,function(){
+                star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));
+            });
         }
     </script>
 </html>

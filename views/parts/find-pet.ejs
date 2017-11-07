@@ -33,7 +33,10 @@
     window.onload = function() {
         show_post_ad(token)
         menu_sticky();
-        star_favorites_switch();
-        modal_event_switch();
+        $(document.body).unbind('click').on('click', '#previews-button' ,function(){
+            modal_event_switch($(this).closest('.ui.items').attr('id'));
+        }).on('click', '.right.floated.star' ,function(){
+            star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));
+        });
     };
 </script>
