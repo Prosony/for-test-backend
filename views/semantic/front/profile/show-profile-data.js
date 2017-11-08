@@ -43,11 +43,7 @@ function set_post_ad(post_ad){
                         $('#'+post_ad[index].id).find('#second-image').attr("src", "data:image/png;base64," + base_array[1]);
                     });
                     for (let i = 0; i < post_ad[index].listTag.length; i++){
-                        $.get('../parts/profile-parts/center/main/tag-post-ad.ejs', function(data) {
-                            $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend(data);
-                            console.log('post_ad.listTag: ',post_ad[index].listTag[i]);
-                            $('#'+post_ad[index].id).find('#tag-post-ad').html(post_ad[index].listTag[i]);
-                        });
+                            $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].listTag[i]+'</div>');
                     }
                     if (typeof favorites_post_ad !== 'undefined') {
                         for (let index_fav = 0; index_fav < favorites_post_ad.length; index_fav++) {
@@ -83,26 +79,35 @@ function load_bookmarks(token,id){
  * show data
  * */
 function show_bookmarks(){
-    $('#content-column-block').load('../parts/profile-parts/center/bookmarks/bookmarks.ejs', function () {
+
         update_favorites_post_ad(window.token).then(function (favorites_post_ad) {
-            if (typeof favorites_post_ad !== 'undefined') {
-                for (let index = 0; index < favorites_post_ad.length; index++) {
-                    let json_image = JSON.stringify({'path': [favorites_post_ad[index].pathToImageFirst, favorites_post_ad[index].pathToImageSecond]});
-                    getImage(json_image).then(function (base64string) {
-                        let base_array = JSON.parse(JSON.stringify(base64string));
+            $.get('../parts/profile-parts/center/bookmarks/bookmarks.ejs', function(data){
+                $('#content-column-block').empty().append(data);
+
+                if (typeof favorites_post_ad !== 'undefined') {
+
+                    for (let index = 0; index < favorites_post_ad.length; index++) {
+                        let json_image = JSON.stringify({'path': [favorites_post_ad[index].pathToImageFirst, favorites_post_ad[index].pathToImageSecond]});
+
                         $.get('../parts/profile-parts/center/main/post-ad-active.ejs', function (data) {
                             let textWall = favorites_post_ad[index].wallText.substring(0, 162) +'...';
                             $('#ad-post-content').prepend(data);
-                            $('#first-image').attr("src", "data:image/png;base64," + base_array[0]);
-                            $('#second-image').attr("src", "data:image/png;base64," + base_array[1]);
-                            $('#header-post-ad').html(favorites_post_ad[index].header);
-                            $('#meta-data-postad').html(favorites_post_ad[index].date.day + '.' + favorites_post_ad[index].date.month + '.' + favorites_post_ad[index].date.year);
-                            $('#text-wall').html(textWall);
                             $('#id').attr("id", favorites_post_ad[index].id);
+                            $(`#${favorites_post_ad[index].id}`).find('#header-post-ad').html(favorites_post_ad[index].header);
+                            $(`#${favorites_post_ad[index].id}`).find('#meta-data-postad').html(favorites_post_ad[index].date.day + '.' + favorites_post_ad[index].date.month + '.' + favorites_post_ad[index].date.year);
+                            $(`#${favorites_post_ad[index].id}`).find('#text-wall').html(textWall);
+                            getImage(json_image).then(function (base64string) {
+                                let base_array = JSON.parse(JSON.stringify(base64string));
+                                $(`#${favorites_post_ad[index].id}`).find('#first-image').attr("src", "data:image/png;base64," + base_array[0]);
+                                $(`#${favorites_post_ad[index].id}`).find('#second-image').attr("src", "data:image/png;base64," + base_array[1]);
+
+                            });
+                            for (let i = 0; i < favorites_post_ad[index].listTag.length; i++){
+                                $(`#${favorites_post_ad[index].id}`).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+favorites_post_ad[index].listTag[i]+'</div>');
+                            }
                         });
-                    });
+                    }
                 }
-            }
         });
     });
 }

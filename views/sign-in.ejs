@@ -7,40 +7,77 @@
     <body>
     <% include ./parts/menu.ejs%>
 
-        <div style="width: 350px; margin: auto;">
-                <form id="form" class="ui form" method="post">
-                        <div class="field">
+        <div id="form-main" class="column" style="width: 350px; margin: auto">
+            <div class="ui error message transition hidden">
+                <i class="close icon"></i>
+                <div class="header">
+                    password or phone invalid!
+                </div>
+                <ul class="list">
+                    <li>You must include both a upper and lower case letters in your password.</li>
+                </ul>
+            </div>
+                <form class="ui form" method="post">
+
+                    <div class="field">
                             <label>Email</label>
-                            <input id="email" type="text" maxlength="25" placeholder="email">
+                            <input name="email" type="text" maxlength="25" placeholder="email">
                         </div>
                         <div class="field">
                             <label>Password</label>
-                            <input id="password" type="password" maxlength="35" placeholder="Password">
+                            <input name ="password" type="password" maxlength="35" placeholder="Password">
                         </div>
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" tabindex="0" class="hidden">
-                                <label>I agree to the Terms and Conditions</label>
-                            </div>
-                        </div>
-                            <button class="ui button" id="button" type="button" name="button">Sign-in</button>
+                            <button class="ui submit button" id="button" type="button" name="button">Sign-in</button>
                     </form>
         </div>
         <script>
                 $(document).ready(function(){
-                    $("button").on('click',function(){
-                        let email = document.getElementById("email").value;//$("input#phone").val();
-                        let password = document.getElementById("password").value;//$("input#password").val();
-                        console.log(JSON.stringify({ 'email':email, 'password':password}));
-                        $.ajax({
-                            url: 'http://185.77.205.82:3000/check', // url where to submit the request
-                                type : "POST", // type of action POST || GET
-                                dataType : 'JSON', // data type
-                                data : JSON.stringify({ 'email':email, 'password':password})
-                        }).then(function(data) {
-                            console.log('data',data)
-                            window.location = data.redirectUrl;
-                        });
+                    $('.ui.form').form(
+                        {
+                            inline : true,
+                            on     : 'blur',
+                            fields: {
+                                email: {
+                                    identifier  : 'email', rules: [{type   : 'empty', prompt : 'field email is empty'}, {type   : 'email', prompt : 'email error'}],
+                                },
+                                password: {
+                                    identifier  : 'password', rules: [{type   : 'empty', prompt : 'field password is empty'}, {type   : 'maxLength[35]', prompt : 'Max 35 symbols'}],
+                                }
+                            },
+                            onFailure: function()
+                            {
+                                console.log('failed');
+                                return false;
+                            },
+                            onSuccess: function(event, fields)
+                            {
+                                console.log(event);
+                                console.log(fields);
+                                $.ajax({
+                                    url: 'http://185.77.205.82:3000/check', // url where to submit the request
+                                    type : "POST", // type of action POST || GET
+                                    contentType: 'application/json',
+                                    data : JSON.stringify({ 'email':fields.email, 'password':fields.password}),
+                                    success: function (data) {
+                                        console.log('data',data)
+                                        if(data.err === 204){
+                                            console.log('account not found')
+                                            $("#form-main").find('.ui.error.message.transition.hidden').removeClass('transition').removeClass('hidden');
+                                      }else{
+                                            window.location = data.redirectUrl;
+                                        }
+                                    },
+                                    error: function(xhr, status, error) {
+                                        console.log('error')
+                                        console.log(xhr.responseText + '|\n' + status + '|\n' +error);
+                                    }
+                                });
+                                return false;
+                            }
+                        },
+                    );
+                    $(".close.icon").on('click',function(){
+                        $("#form-main").find('.ui.error.message').addClass('transition').addClass('hidden');
                     });
                 });
             
