@@ -14,9 +14,32 @@
 
 <div class="main ui container" >
     <h2 class="ui dividing header">New Advertisement</h2>
+    <div class="ui four cards" id="upload-preview-image">
+        <div class="card" style="height: 100px; width: 70px">
+        <div class="blurring dimmable image" style="height: 100px; width: 70px">
+            <div class="ui dimmer" style="height: 100px; width: 70px">
+                <div class="content">
+                    <div class="center">
+                        <a id="btn-delete-img" class="ui item">
+                            <i class="remove icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                <img src="../semantic/dist/images/example.jpg" style="width:100%; height:100%">
+            </div>
+        </div>
+
+
+    </div>
     <form class="ui form">
         <div class="ui two column grid">
             <div class="column">
+                <div class="field">
+                    <label for="input-file" class="ui icon button"><i class="file icon"></i>Upload Image</label>
+                    <input type="file" multiple="multiple" id="input-file" name="inputFile" style="display:none">
+
+                </div>
                 <div class="two fields">
                     <div class="field">
                         <label>Email</label>
@@ -27,12 +50,17 @@
                         <input name="phone" type="text" placeholder="+89999999999">
                     </div>
                 </div>
+                <div class="field">
+                    <label>Header</label>
+                    <input name="header" type="text" placeholder="Who search new home?">
+                </div>
+                <div class="field">
+                    <label>About</label>
+                    <textarea id="wallTextArea" name="wallTextArea" type="text" placeholder="Text about advertisement" cols="5"></textarea>
+                </div>
             </div>
             <div class="column">
-                <div class="field">
-                <label>About</label>
-                <textarea id="wallTextArea" name="wallTextArea" type="text" placeholder="Text about advertisement" cols="5"></textarea>
-                </div>
+
             </div>
         </div>
         <div class="right floated ui submit button">Submit</div>
@@ -40,15 +68,22 @@
     </form>
 </div>
 <!--<div class="ui dimmer modals page transition hidden">-->
-</div>
+<!--</div>-->
 </body>
 </html>
 
 <script>
+    let array = {};
     var token = '<%= token %>';
     var id_account = '<%=id%>';
     window.onload = function() {
         menu_sticky();
+        $(document).on('mouseenter', '.blurring.dimmable.image' ,function(){
+            console.log('over')
+            $(this).dimmer('show');
+        }).on('mouseleave', '.blurring.dimmable.image' ,function(){
+            $(this).dimmer('hide');
+        });
 
         $('.ui.form').form(
             {
@@ -61,6 +96,8 @@
                         identifier  : 'phone', rules: [{type   : 'empty', prompt : 'field phone is empty'}, {type   : 'maxLength[25]', prompt : 'Max 25 symbols'},
                             {type : 'regExp', value : '/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\\s\\./0-9]*$/g', prompt : 'not a phone'}],
                     },
+                    header: { identifier  : 'header',  rules: [{type   : 'empty', prompt : 'Who search new home?'}, {type   : 'maxLength[30]', prompt : 'So mach symbols, maximum 35!'}],
+                    },
                     wallTextArea: { identifier  : 'wallTextArea',  rules: [{type   : 'empty', prompt : 'Write something about pet!'}, {type   : 'maxLength[250]', prompt : 'So mach symbols, maximum 250!'}],
                     }
                 },
@@ -71,11 +108,61 @@
                 },
                 onSuccess: function(event, fields)
                 {
+                    let reader = new FileReader();
+                    reader.onload = function(answer){
+
+                        console.log('src',answer.target.result);
+                    };
+                    for (let index = 0; index < event.target[0].files.length; index++){
+                        console.log('event.target.files['+index+']: ',event.target[0].files[index]);
+                    }
+//                    reader.readAsDataURL(e.target.files[0]);
                     console.log(`fields: `,fields);
                     return false;
                 }
 
              },
             );
+        $(document.body).on('click', '#btn-delete-img' ,function(e){
+            let index = $(this).closest('.card').attr('id');
+            console.log('click e.target: ',e.target);
+            console.log('click button! id: ',index);
+            console.log('before delete array: ',array);
+            delete array[index];
+            console.log('after delete array: ',array);
+            $(this).closest('.card').remove();
+        });
+        $('#input-file').change(function (e) {
+            console.log('e.target: ',e.target);
+            console.log('e: ',e.target.files[0]);
+            $.each(e.target.files, function(idx, elm){
+                array[idx] = elm;
+            });
+
+            //            let reader = new FileReader();
+//
+//            reader.onload = function(answer){
+//
+//                console.log('src',answer.target.result);
+//            };
+//            reader.readAsDataURL(e.target.files[0]);
+            for (let index = 0; index < e.target.files.length; index++){
+                $('#upload-preview-image').append(
+                    ' <div class="card" id="'+index+'" style="height: 100px; width: 70px">\n' +
+                    '        <div class="blurring dimmable image" style="height: 100px; width: 70px">\n' +
+                    '            <div class="ui dimmer" style="height: 100px; width: 70px">\n' +
+                    '                <div class="content">\n' +
+                    '                    <div class="center">\n' +
+                    '                        <a id="btn-delete-img" class="ui item">\n' +
+                    '                            <i class="remove icon"></i>\n' +
+                    '                        </a>\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '            </div>\n' +
+                    '                <img src="'+URL.createObjectURL(e.target.files[index])+'" style="width:100%; height:100%">\n' +
+                    '            </div>\n' +
+                    '        </div>');
+            }
+        });
     };
 </script>
