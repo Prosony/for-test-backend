@@ -7,9 +7,9 @@ let db = mongoose.connect('mongodb://127.0.0.1:27017/db_session', { useMongoClie
 exports.createUsers = function(userData, sessionID){
 	console.log('#INFO [db.js][createUsers] session id:',sessionID,'userData:',userData);
 	let users = {
-        id_account: userData.id.toString(),
-        id_session: sessionID.toString(),
-		token: userData.token.toString(),
+        id_account: userData.id,
+        id_session: sessionID,
+		token: userData.token,
     };
 	return new Users(users).save();
 };

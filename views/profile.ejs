@@ -11,18 +11,20 @@
     <body>
     <% include ./parts/menu.ejs %>
 
-        <div id="main" class="ui stackable two column grid" style="margin-left: 32px" >
-            <div id="left-column-block" class="column" style="width: 260px; ">
-            <% include parts/profile-parts/left/left-column.ejs%>
-            </div>
-            <div id="content-column-block" class="column" style="width: 800px;  margin-left: 25px;">
-                <% include parts/profile-parts/center/main/post-content.ejs%>
+            <div id="main" class="ui stackable two column grid" style="margin-left: 32px" >
+                <div id="left-column-block" class="column" style="width: 260px; ">
+                <% include parts/profile-parts/left/left-column.ejs%>
+                </div>
+
+                <div id="content-column-block" class="column" style="width: 800px;  margin-left: 25px;">
+                    <% include parts/profile-parts/center/main/post-content.ejs%>
+                </div>
+
             </div>
 
+        <div class="ui dimmer modals page transition hidden">
         </div>
 
-    <div class="ui dimmer modals page transition hidden">
-    </div>
     </body>
     <script>
         var token = '<%= token %>';

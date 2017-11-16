@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jcrop Demo</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+    <script src="jcrop/jquery.min.js"></script>
+    <script src="jcrop/jquery.Jcrop.js"></script>
+    <script src="jcrop/jquery.color.js"></script>
+    <script type="text/javascript">
+        jQuery(function($){
+
+            var api;
+
+            $('#target').Jcrop({
+                // start off with jcrop-light class
+                bgOpacity: 0.5,
+                bgColor: 'white',
+                addClass: 'jcrop-light',
+                aspectRatio: 1
+            },function(){
+                api = this;
+                api.setSelect([100,50,100+300,50+300]);
+                api.setOptions({ bgFade: true });
+                api.ui.selection.addClass('jcrop-selection');
+                api.setOptions({ bgColor: 'black', bgOpacity: 0.4 });
+            });
+        });
+
+
+
+    </script>
+    <link rel="stylesheet" href="jcrop/jquery.Jcrop.css" type="text/css" />
+    <link rel="stylesheet" href="semantic/dist/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="semantic/dist/semantic.css" type="text/css" />
+    <link rel="stylesheet" href="semantic/dist/semantic.js" type="text/css" />
+</head>
+<body>
+
+<div class="ui two column centered grid">
+    <div class="column">
+        <img src="../semantic/dist/images/example.jpg" id="target" alt="[Jcrop Example]" />
+    </div>
+    <div class="four column centered row">
+        <div class="column">
+            <div class="ui  button">Cancel</div>
+        </div>
+        <div class="column">
+            <div class="ui right labeled icon button">
+                Save
+                <i class="right arrow icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

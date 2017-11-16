@@ -14,22 +14,7 @@
 
 <div class="main ui container" >
     <h2 class="ui dividing header">New Advertisement</h2>
-    <div class="ui four cards" id="upload-preview-image">
-        <div class="card" style="height: 100px; width: 70px">
-        <div class="blurring dimmable image" style="height: 100px; width: 70px">
-            <div class="ui dimmer" style="height: 100px; width: 70px">
-                <div class="content">
-                    <div class="center">
-                        <a id="btn-delete-img" class="ui item">
-                            <i class="remove icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-                <img src="../semantic/dist/images/example.jpg" style="width:100%; height:100%">
-            </div>
-        </div>
-
+    <div class="ui four centered cards" id="upload-preview-image">
 
     </div>
     <form class="ui form">
@@ -60,7 +45,45 @@
                 </div>
             </div>
             <div class="column">
-
+                <div class="ui floating labeled icon dropdown button">
+                    <i class="paw icon"></i>
+                    <span class="text">Animals</span>
+                    <div class="menu">
+                        <div class="header">
+                            What kind of animal do you want to give?
+                        </div>
+                    </div>
+                </div>
+                <div class="ui floating labeled icon dropdown button ">
+                    <i class="leaf icon"></i>
+                    <span class="text">Breeds</span>
+                    <div class="menu">
+                        <div class="header">
+                            Some text
+                        </div>
+                    </div>
+                </div>
+                <div class="ui floating labeled icon dropdown button">
+                    <i class="birthday icon"></i>
+                    <span class="text">Age</span>
+                    <div class="menu">
+                        <div class="header">
+                            Some text
+                        </div>
+                    </div>
+                </div>
+                <div class="ui floating labeled icon dropdown button">
+                    <i class="heterosexual icon"></i>
+                    <span class="text">Gender</span>
+                    <div class="menu">
+                        <div class="header">
+                            Some text
+                        </div>
+                        <div class="item">
+                            example
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="right floated ui submit button">Submit</div>
@@ -69,13 +92,23 @@
 </div>
 <!--<div class="ui dimmer modals page transition hidden">-->
 <!--</div>-->
+
+    <canvas id="canvas">
+
+    </canvas>
+
 </body>
 </html>
 
 <script>
-    let array = {};
     var token = '<%= token %>';
     var id_account = '<%=id%>';
+    let array = {};
+
+    $('.ui.dropdown').dropdown({
+        transition: 'drop'
+    });
+
     window.onload = function() {
         menu_sticky();
         $(document).on('mouseenter', '.blurring.dimmable.image' ,function(){
@@ -116,7 +149,11 @@
                     for (let index = 0; index < event.target[0].files.length; index++){
                         console.log('event.target.files['+index+']: ',event.target[0].files[index]);
                     }
-//                    reader.readAsDataURL(e.target.files[0]);
+
+                    reader.onload = function(answer){
+//                        console.log('src',answer.target.result);
+                    };
+                    reader.readAsDataURL(e.target.files[0]);
                     console.log(`fields: `,fields);
                     return false;
                 }
@@ -139,18 +176,12 @@
                 array[idx] = elm;
             });
 
-            //            let reader = new FileReader();
-//
-//            reader.onload = function(answer){
-//
-//                console.log('src',answer.target.result);
-//            };
-//            reader.readAsDataURL(e.target.files[0]);
             for (let index = 0; index < e.target.files.length; index++){
+
                 $('#upload-preview-image').append(
-                    ' <div class="card" id="'+index+'" style="height: 100px; width: 70px">\n' +
-                    '        <div class="blurring dimmable image" style="height: 100px; width: 70px">\n' +
-                    '            <div class="ui dimmer" style="height: 100px; width: 70px">\n' +
+                    ' <div class="card" id="'+index+'" style="height: 100px; width: auto">\n' +
+                    '        <div class="blurring dimmable image" style="height: 100px; width: auto">\n' +
+                    '            <div class="ui dimmer" >\n' +
                     '                <div class="content">\n' +
                     '                    <div class="center">\n' +
                     '                        <a id="btn-delete-img" class="ui item">\n' +
@@ -159,7 +190,7 @@
                     '                    </div>\n' +
                     '                </div>\n' +
                     '            </div>\n' +
-                    '                <img src="'+URL.createObjectURL(e.target.files[index])+'" style="width:100%; height:100%">\n' +
+                    '                <img src="'+URL.createObjectURL(e.target.files[index])+'" style="height: 100px; width: auto">\n' +
                     '            </div>\n' +
                     '        </div>');
             }

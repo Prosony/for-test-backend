@@ -54,13 +54,24 @@ server.app.post('/check', function(request, response){
         console.log(`#INFO [/check] STATUS: ${res.statusCode}`);
         res.setEncoding('utf8');
         res.on('data', (chunk) => {
-            answerFromBackEnd = JSON.parse(chunk);
-            db_service.createUsers(answerFromBackEnd, request.sessionID).then(function (result) {
-                console.log('createUsers result: ',JSON.stringify(result));
-                response.send({err: 0, redirectUrl: '/profile/:'+result.id_account});
-            }).catch(function(error){
-                console.log('Error create users, ',error);
-            });
+            console.log('chunk: ',chunk);
+            if  (res.statusCode !== 500){
+                answerFromBackEnd = JSON.parse(chunk);
+                if (typeof answerFromBackEnd .id !=='undefined' && typeof answerFromBackEnd .token !=='undefined'){
+                    db_service.createUsers(answerFromBackEnd, request.sessionID).then(function (result) {
+                        console.log('createUsers result: ',JSON.stringify(result));
+                        response.send({err: 0, redirectUrl: '/profile/:'+result.id_account});
+                    }).catch(function(error){
+                        console.log('Error create users, ',error);
+                    });
+                }else{
+                    console.log('typeof chunk.id !==undefined && typeof chunk.token !==undefined');
+                    response.send({err: 204, redirectUrl: '/sign-in'});
+                }
+            }else{
+                response.send({err: 204, redirectUrl: '/sign-in'});
+            }
+
         });
        if (res.statusCode === 204){
            response.send({err: 204, redirectUrl: '/sign-in'});
@@ -77,7 +88,9 @@ server.app.post('/check', function(request, response){
         response.send({err: 204, redirectUrl: '/sign-in'});
           }
 });
-
+server.app.get('/test-photo', function (request, response) {
+    response.render('test-photo');
+});
 
 server.app.get('/profile/:id', function(request, response){
     let id = request.params.id;
