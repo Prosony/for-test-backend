@@ -7,12 +7,13 @@
     <script src="semantic/front/profile/show-profile-data.js"></script>
     <script src="semantic/front/profile/profile-data.js"></script>
     <script src="semantic/front/service/bookmarks-service.js"></script>
+    <script src="semantic/front/add-advertisement/add-advertisement-data.js"></script>
     <%include parts/opt/head.ejs%>
 </head>
 <body>
 <%include parts/menu.ejs%>
 
-<div class="main ui container" >
+<div class="main ui container">
     <h2 class="ui dividing header">New Advertisement</h2>
     <div class="ui four centered cards" id="upload-preview-image">
 
@@ -20,24 +21,35 @@
     <form class="ui form">
         <div class="ui two column grid">
             <div class="column">
-                <div class="field">
+                <div class="field" style="margin-top: 5px">
                     <label for="input-file" class="ui icon button"><i class="file icon"></i>Upload Image</label>
                     <input type="file" multiple="multiple" id="input-file" name="inputFile" style="display:none">
-
                 </div>
                 <div class="two fields">
                     <div class="field">
-                        <label>Email</label>
-                        <input name="email" type="text" placeholder="Email">
+                        <div class="ui corner labeled input">
+                            <input name="email" type="text" placeholder="Email">
+                            <div class="ui corner label">
+                                <i class="asterisk icon"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="field">
-                        <label>Phone</label>
-                        <input name="phone" type="text" placeholder="+89999999999">
+                        <div class="ui corner labeled input">
+                            <input name="phone" type="text" placeholder="+89999999999">
+                            <div class="ui corner label">
+                                <i class="asterisk icon"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
-                    <label>Header</label>
-                    <input name="header" type="text" placeholder="Who search new home?">
+                    <div class="ui corner labeled input">
+                        <input name="header" type="text" placeholder="Who search new home?">
+                        <div class="ui corner label">
+                            <i class="asterisk icon"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="field">
                     <label>About</label>
@@ -45,69 +57,23 @@
                 </div>
             </div>
             <div class="column">
-                <div class="ui floating labeled icon dropdown button">
-                    <i class="paw icon"></i>
-                    <span class="text">Animals</span>
-                    <div class="menu">
-                        <div class="header">
-                            What kind of animal do you want to give?
-                        </div>
-                    </div>
-                </div>
-                <div class="ui floating labeled icon dropdown button ">
-                    <i class="leaf icon"></i>
-                    <span class="text">Breeds</span>
-                    <div class="menu">
-                        <div class="header">
-                            Some text
-                        </div>
-                    </div>
-                </div>
-                <div class="ui floating labeled icon dropdown button">
-                    <i class="birthday icon"></i>
-                    <span class="text">Age</span>
-                    <div class="menu">
-                        <div class="header">
-                            Some text
-                        </div>
-                    </div>
-                </div>
-                <div class="ui floating labeled icon dropdown button">
-                    <i class="heterosexual icon"></i>
-                    <span class="text">Gender</span>
-                    <div class="menu">
-                        <div class="header">
-                            Some text
-                        </div>
-                        <div class="item">
-                            example
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <%include parts/advertiesement-parts/tags-fields.ejs%>
         </div>
+
         <div class="right floated ui submit button">Submit</div>
         <div class="ui error message"></div>
     </form>
 </div>
-<!--<div class="ui dimmer modals page transition hidden">-->
+<!--<div class="ui segment" id="segmentimage" style="margin-top: 50px">-->
 <!--</div>-->
-
-    <canvas id="canvas">
-
-    </canvas>
-
 </body>
 </html>
 
 <script>
     var token = '<%= token %>';
     var id_account = '<%=id%>';
-    let array = {};
 
-    $('.ui.dropdown').dropdown({
-        transition: 'drop'
-    });
+
 
     window.onload = function() {
         menu_sticky();
@@ -132,68 +98,81 @@
                     header: { identifier  : 'header',  rules: [{type   : 'empty', prompt : 'Who search new home?'}, {type   : 'maxLength[30]', prompt : 'So mach symbols, maximum 35!'}],
                     },
                     wallTextArea: { identifier  : 'wallTextArea',  rules: [{type   : 'empty', prompt : 'Write something about pet!'}, {type   : 'maxLength[250]', prompt : 'So mach symbols, maximum 250!'}],
+                    },
+                    inputFile: { identifier  : 'inputFile',  rules: [{type   : 'empty', prompt : 'No one photo?'}, {type   : 'maxLength[5]', prompt : 'So mach photo, maximum 5!'}],
+                    },
+                    animalsInputHidden: { identifier  : 'animalsInputHidden',  rules: [{type   : 'empty', prompt : 'Please select category'}],
                     }
+
                 },
-                onFailure: function()
-                {
+                onFailure: function() {
                     console.log('failed');
                     return false;
                 },
-                onSuccess: function(event, fields)
-                {
-                    let reader = new FileReader();
-                    reader.onload = function(answer){
-
-                        console.log('src',answer.target.result);
-                    };
-                    for (let index = 0; index < event.target[0].files.length; index++){
-                        console.log('event.target.files['+index+']: ',event.target[0].files[index]);
-                    }
-
-                    reader.onload = function(answer){
-//                        console.log('src',answer.target.result);
-                    };
-                    reader.readAsDataURL(e.target.files[0]);
+                onSuccess: function(event, fields) {
+                    console.log('event.target[0].files.length: ', event.target[0].files.length);
+//                    console.log('array.length: ',array);
+//                    for(let index = 0; index < array.length; index++){
+//                        $('#segmentimage').append('<img src="'+array[index]+'">');
+////                        console.log('array['+index+']: ',array[index].toString().substring(200,250));
+//                    }
                     console.log(`fields: `,fields);
+
                     return false;
                 }
 
              },
             );
-        $(document.body).on('click', '#btn-delete-img' ,function(e){
-            let index = $(this).closest('.card').attr('id');
-            console.log('click e.target: ',e.target);
-            console.log('click button! id: ',index);
-            console.log('before delete array: ',array);
-            delete array[index];
-            console.log('after delete array: ',array);
-            $(this).closest('.card').remove();
-        });
-        $('#input-file').change(function (e) {
-            console.log('e.target: ',e.target);
-            console.log('e: ',e.target.files[0]);
-            $.each(e.target.files, function(idx, elm){
-                array[idx] = elm;
-            });
-
-            for (let index = 0; index < e.target.files.length; index++){
-
-                $('#upload-preview-image').append(
-                    ' <div class="card" id="'+index+'" style="height: 100px; width: auto">\n' +
-                    '        <div class="blurring dimmable image" style="height: 100px; width: auto">\n' +
-                    '            <div class="ui dimmer" >\n' +
-                    '                <div class="content">\n' +
-                    '                    <div class="center">\n' +
-                    '                        <a id="btn-delete-img" class="ui item">\n' +
-                    '                            <i class="remove icon"></i>\n' +
-                    '                        </a>\n' +
-                    '                    </div>\n' +
-                    '                </div>\n' +
-                    '            </div>\n' +
-                    '                <img src="'+URL.createObjectURL(e.target.files[index])+'" style="height: 100px; width: auto">\n' +
-                    '            </div>\n' +
-                    '        </div>');
-            }
-        });
     };
+    /******************************************************************
+     *                              image                             *
+     *****************************************************************/
+
+    let array = [];
+    $(document.body).on('click', '#btn-delete-img' ,function(e){
+        let index = $(this).closest('.card').attr('id');
+        console.log('click e.target: ',e.target,' id: ',index);
+        console.log('before delete array: ',array);
+        delete array[index];
+        console.log('after delete array: ',array);
+        $(this).closest('.card').remove();
+    });
+    $('#input-file').change(function (e) {
+        let files = e.target.files
+        console.log('e: ',files);
+        for(let inx = 0; inx < files.length; inx++){
+//            (function (file) {
+//                blob_to_base64(file);
+//            })(files[inx]);
+            blob_to_base64(files[inx]);
+        }
+        for (let index = 0; index < e.target.files.length; index++){
+            $('#upload-preview-image').append(
+                ' <div class="card" id="'+index+'" style="height: 100px; width: auto">\n' +
+                '        <div class="blurring dimmable image" style="height: 100px; width: auto">\n' +
+                '            <div class="ui dimmer" >\n' +
+                '                <div class="content">\n' +
+                '                    <div class="center">\n' +
+                '                        <a id="btn-delete-img" class="ui item">\n' +
+                '                            <i class="remove icon"></i>\n' +
+                '                        </a>\n' +
+                '                    </div>\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '                <img src="'+URL.createObjectURL(e.target.files[index])+'" style="height: 100px; width: auto">\n' +
+                '            </div>\n' +
+                '        </div>');
+        }
+    });
+
+    function blob_to_base64(file) {
+            let reader = new FileReader();
+            reader.onload = function(f) {
+                console.log('answer: ',f);
+                console.log('answer.substring(0,10): ',f.target.result.toString().substring(0,50));
+                array.push(f.target.result);
+
+            };
+            reader.readAsDataURL(file);
+    }
 </script>
