@@ -12,15 +12,11 @@ $('#animals-tag').dropdown({
         console.log('change to text: ', text);
         $('#group-tag').removeClass('disabled').find('.scrolling.menu').empty();
         update_tags_dropdown('#group-tag',text);
-        array_tags.animals =text;
-        console.log('array_tags: ',array_tags);
     }
 });
 $('#group-tag').dropdown({
     transition: 'drop',
     onChange: function(value, text, $selectedItem) {
-        console.log('change to: ', text);
-        array_tags.group = text;
         $('#breeds-tag').removeClass('disabled').find('.scrolling.menu').empty();
         $('#breeds-tag').children('span').html('Breeds');
         update_tags_dropdown('#breeds-tag',text);
@@ -29,8 +25,6 @@ $('#group-tag').dropdown({
 $('#breeds-tag').dropdown({
     transition: 'drop',
     onChange: function(value, text, $selectedItem) {
-        console.log('change to: ', text);
-        array_tags.breeds = text;
         $('#age-tag').removeClass('disabled').find('.scrolling.menu').empty();
         let menu = $('#age-tag').find('.scrolling.menu');
         for (let index = 1; index <= 25; index++){
@@ -48,8 +42,6 @@ $('#breeds-tag').dropdown({
 $('#age-tag').dropdown({
     transition: 'drop',
     onChange: function(value, text, $selectedItem) {
-        console.log('change to: ', text);
-        array_tags.age = text;
         $('#gender-tag').removeClass('disabled').find('.scrolling.menu').empty();
         update_tags_dropdown('#gender-tag','gender');
     }
@@ -57,31 +49,22 @@ $('#age-tag').dropdown({
 $('#gender-tag').dropdown({
     transition: 'drop',
     onChange: function(value, text, $selectedItem) {
-        console.log('change to: ', text);
-        array_tags.gender = text;
     }
 });
 let count_click = 0;
-//    let tags_array = [];
+
 $(document).on('click', '.ui.tag.label' ,function(){
     console.log('click tags');
     array_tags.own_tags.splice(count_click, 0, $(this).closest('.ui.right.labeled.left.icon.input').find('#input-own-tags')[0].value);
     console.log('array_tags.own_tags: ', array_tags.own_tags);
-    $('#block-own-tags').append('' +
-        '<a class="ui label transition visible" id="'+count_click+'" style="display: inline-block !important; margin-top: 5px">' +
-        $(this).closest('.ui.right.labeled.left.icon.input').find('#input-own-tags')[0].value +
-        '<i class="delete icon"></i>'+
-        '</a>');
-    $('#own-tags-input').attr('value',count_click);
+    preview_own_tags();
     count_click++;
 });
 
 $(document).on('click', '.delete.icon' ,function(){
     let index = $(this).closest('.ui.label.transition.visible').attr('id');
-//        tags_array.splice(index, 1);
-    delete array_tags.own_tags[index];
-//        array_tags.own_tags.splice(index, 1);
-    $(this).closest('.ui.label.transition.visible').remove();
+    array_tags.own_tags.splice(index, 1);
+    preview_own_tags();
     console.log('tags_array: ',array_tags.own_tags);
 });
 
@@ -96,4 +79,15 @@ function update_tags_dropdown(element, title){
         for (let index = 0; index < json_tags.length; index++){
             menu.append('<div class="item">'+json_tags[index]+'</div>');
         }});
+}
+
+function preview_own_tags() {
+    $('#block-own-tags').find('.ui.label.transition.visible').remove();
+    for (let index = 0; index < array_tags.own_tags.length; index++){
+        $('#block-own-tags').append('' +
+            '<a class="ui label transition visible" id="'+index+'" style="display: inline-block !important; margin-top: 5px">'
+            + array_tags.own_tags[index] +
+            '<i class="delete icon"></i>'+
+            '</a>');
+    }
 }
