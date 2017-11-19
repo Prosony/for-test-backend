@@ -3,6 +3,7 @@
  * */
 function load_home(token, id) {
     update_data_profile(token,id).then(function (profile) {
+
         getImage(JSON.stringify({'path': [profile.path_avatar]})).then(function (base64string) {
             $('#content-column-block').load('../parts/profile-parts/center/main/post-content.ejs', function () {
                 $('#left-column-block').load('../parts/profile-parts/left/left-column.ejs', function () {
@@ -16,6 +17,10 @@ function load_home(token, id) {
                     $('#data-phone').html(profile.phone);
                     $('#data-about').html(profile.about);
                     update_data_post_ad(token,id).then(function (post_ad) {
+
+                       // console.log('post_ad: ',JSON.parse(JSON.stringify(post_ad)));
+                       console.log('post_ad',post_ad);
+                       // console.log('post_ad.id: ',post_ad[0].jsonTags.age);
                         set_post_ad(post_ad);
                     });
                 });
@@ -28,9 +33,9 @@ function set_post_ad(post_ad){
         if (typeof post_ad !== 'undefined') {
 
             for (let index = 0; index < post_ad.length; index++) {
-                console.log('post_ad[index].pathToImageFirst: ', post_ad[index].pathToImageFirst);
-                console.log('post_ad[index].pathToImageSecond: ', post_ad[index].pathToImageSecond);
-                let json_image = JSON.stringify({'path': [post_ad[index].pathToImageFirst, post_ad[index].pathToImageSecond]});
+                // console.log('post_ad[index].pathToImageFirst: ', post_ad[index].pathToImageFirst);
+                // console.log('post_ad[index].pathToImageSecond: ', post_ad[index].pathToImageSecond);
+                let json_image = JSON.stringify({'path': [post_ad[index].jsonPathAvatar[0], post_ad[index].jsonPathAvatar[0]]});
                 $.get('../parts/profile-parts/center/main/post-ad-noactive.ejs', function(data){
                     $('#ad-post-content').append(data);
                     $('#id').attr("id", post_ad[index].id);
