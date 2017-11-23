@@ -6,7 +6,7 @@
     </head>
     <body>
     <% include ./parts/menu.ejs%>
-        <div id="form-main" class="column" style="width: 350px; margin: auto">
+        <div id="form-main" class="ui center aligned container" style="width: 350px; margin-top: 60px">
             <div class="ui error message transition hidden">
                 <i class="close icon"></i>
                 <div class="header">
@@ -30,9 +30,12 @@
                         <input name ="password" type="password" maxlength="35" placeholder="Password">
                     </div>
                 </div>
-                <button class="ui submit button" id="button" type="button" name="button">Sign-in</button>
+                <button class="ui submit button" id="button" type="button" name="button" style="width: 100%">Sign-in</button>
             </form>
         </div>
+    <script>
+
+    </script>
         <script src="semantic/front/authentication/sign-in/sign-in-validation.js"></script>
         <script src="semantic/front/service/data/authentication/sign-in/sign-in-data.js"></script>
     </body>

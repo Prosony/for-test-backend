@@ -90,13 +90,26 @@ function get_date(date){
 }
 function menu_sticky() {
     $('#main-menu-mpm').sticky({
+        context:'#main',
         onStick: function() {
-            $(this).css({'margin-top': '-2px','margin-left':'45px', 'margin-right':'45px','left':'0px'});
+            $(this).css({'margin-left':'45px', 'margin-right':'45px','left':'0'});
 //                console.log('slide!');
         },
         onUnstick: function() {
-            $(this).css({ 'margin-top': '-2px','margin-left':'45px', 'margin-right':'45px','left':'0px'});
+            $(this).css({'margin-left':'45px', 'margin-right':'45px','left':'0', 'top':'0'});
 //                console.log('UNslide!');
         }
     });
 }
+
+// $(window).scroll(function(e){
+//     var $el = $('.ui.pointing.menu');
+//     var isPositionFixed = ($el.css('position') == 'fixed');
+//     if ($(this).scrollTop() > 1 && !isPositionFixed){
+//         $('.ui.pointing.menu').css({'position': 'fixed', 'top': '0px', 'left':'0','right':'0'});
+//     }
+//     if ($(this).scrollTop() < 1 && isPositionFixed)
+//     {
+//         $('.ui.pointing.menu').css({'position': 'static', 'top': '0px', 'left':'0','right':'0'});
+//     }
+// });

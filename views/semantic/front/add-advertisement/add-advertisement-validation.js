@@ -63,8 +63,14 @@ window.onload = function() {
                     console.log('array_text: ',array_text);
                     console.log('array_tags: ',array_tags);
                     console.log('array_image.length: ',array_image.length);
-                    send_post_ad(window.token, array_text, array_image, array_tags);
-                    window.location.href = 'http://185.77.205.82:3000/profile/:'+id_account;
+                    send_post_ad(window.token, array_text, array_image, array_tags).then(function (answer) {
+                        console.log('answer: ',answer);
+                       if (answer === true){
+                           window.location.href = 'http://185.77.205.82:3000/profile/:'+id_account;
+                       }else{
+                        console.log('something wrong, Check logs!');
+                       }
+                    });
                 }
                 return false;
             }
