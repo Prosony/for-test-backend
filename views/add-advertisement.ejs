@@ -1,55 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="semantic/front/find-pet/find-pet-data.js"></script>
-    <script src="semantic/front/find-pet/show-find-pet-data.js"></script>
-    <script src="semantic/front/service/other_service.js"></script>
-    <script src="semantic/front/profile/show-profile-data.js"></script>
-    <script src="semantic/front/profile/profile-data.js"></script>
-    <script src="semantic/front/service/bookmarks-service.js"></script>
-    <script src="semantic/front/add-advertisement/add-advertisement-data.js"></script>
-
     <%include parts/opt/head.ejs%>
 </head>
 <body>
-<%include parts/menu.ejs%>
+    <%include parts/menu.ejs%>
 
-<div class="main ui container">
-    <h2 class="ui dividing header">
-    <!--<h2 class="ui center aligned icon header">-->
-        <i class="newspaper icon"></i>
-        New Advertisement
-    </h2>
-    <div class="ui four centered cards" id="upload-preview-image"></div>
-    <form class="ui form">
-        <div class="ui two column grid">
-            <div class="column">
-                <%include parts/advertisement-parts/right-column.ejs%>
+    <div class="main ui container">
+        <h2 class="ui dividing header">
+            <i class="newspaper icon"></i>
+            New Advertisement
+        </h2>
+        <div class="ui four centered cards" id="upload-preview-image"></div>
+        <form class="ui form">
+            <div class="ui two column grid">
+                <div class="column">
+                    <%include parts/advertisement-parts/right-column.ejs%>
+                </div>
+                <div class="column">
+                    <%include parts/advertisement-parts/left-tags-fields.ejs%>
+                </div>
             </div>
-            <div class="column">
-                <%include parts/advertisement-parts/left-tags-fields.ejs%>
-            </div>
-        </div>
-            <div class="ui right floated animated fade submit button" tabindex="0">
-                <div class="visible content">Add advertisement</div>
-                <div class="hidden content">All right?</div>
-            </div>
-        <div class="ui error message"></div>
-    </form>
-</div>
-<!--for test-->
-<!--<div class="ui segment" style="margin-top: 50px">-->
-    <!--<div class="ui right floated button" id="clearprintimg" tabindex="0">clear</div>-->
-    <!--<div class="ui right floated button" id="printimg" tabindex="0">print</div>-->
-<!--</div>-->
-<!--<div class="ui segment" id="segmentimage" style="margin-top: 50px">-->
-<!--</div>-->
+                <div class="ui right floated animated fade submit button" tabindex="0">
+                    <div class="visible content">Add advertisement</div>
+                    <div class="hidden content">All right?</div>
+                </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
 </body>
-</html>
 <script>
     var token = '<%= token %>';
     var id_account = '<%=id%>';
 </script>
-<script src="semantic/front/add-advertisement/validation.js"></script>
+<script src="semantic/front/add-advertisement/add-advertisement-validation.js"></script>
 <script src="semantic/front/add-advertisement/image-service.js"></script>
-<script src="semantic/front/add-advertisement/tags-service.js"></script>
+
+<script src="semantic/front/service/other_service.js"></script>
+<script src="semantic/front/service/tags-service.js"></script>
+
+<script src="semantic/front/service/data/post-ad/post-ad-data.js"></script>
+<script src="semantic/front/service/data/file/image-data.js"></script>
+<script src="semantic/front/service/data/tags/tags-data.js"></script>
+</html>

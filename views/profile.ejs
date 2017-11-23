@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="../semantic/front/profile/profile-data.js"></script>
-        <script src="../semantic/front/profile/show-profile-data.js"></script>
-        <script src="../semantic/front/service/bookmarks-service.js"></script>
-        <script src="../semantic/front/service/other_service.js"></script>
-        <% include ./parts/opt/head.ejs%>
-    </head>
+    <head><% include ./parts/opt/head.ejs%></head>
     <body>
     <% include ./parts/menu.ejs %>
 
@@ -28,15 +22,29 @@
     <script>
         var token = '<%= token %>';
         var id_account = '<%=id%>';
-
+        var is_me = '<%= is_me %>';
         window.onload = function() {
+            console.log('is_me: ',is_me);
             menu_sticky();
             load_home(token, id_account);
             $(document.body).unbind('click').on('click', '#previews-button' ,function(){
                 modal_event_switch($(this).closest('.ui.items').attr('id'));
             }).on('click', '.right.floated.star' ,function(){
                 star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));
+            }).on('click','.right.floated.icon-remove', function () {
+                console.log('click .right.floated.icon-remove');
+                delete_post_ad($(this).closest('.ui.items').attr('id'));
             });
         }
     </script>
+    <script src="../semantic/front/profile/profile-event.js"></script>
+    <script src="../semantic/front/profile/profile-data.js"></script>
+
+    <script src="../semantic/front/service/other_service.js"></script>
+    <script src="../semantic/front/service/post-ad-service.js"></script>
+    <script src="../semantic/front/service/bookmarks-service.js"></script>
+
+    <script src="../semantic/front/service/data/file/image-data.js"></script>
+    <script src="../semantic/front/service/data/post-ad/post-ad-data.js"></script>
+    <script src="../semantic/front/service/data/bookmarks/bookmarks-data.js"></script>
 </html>

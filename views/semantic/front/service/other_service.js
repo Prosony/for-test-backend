@@ -1,3 +1,8 @@
+function delete_post_ad(id_post_ad){
+    delete_post_ad_server(window.token, id_post_ad);
+    $(`#${id_post_ad}`).remove();
+}
+
 function star_favorites_switch(id_post_ad, class_name){
         if (class_name !== 'favorite icon active' && class_name !== 'favorite active icon'){
             add_bookmark(window.token, id_post_ad);
@@ -14,40 +19,43 @@ function modal_event_switch(id_post){
     console.log(id_post);
     $.get('../parts/opt/modal/modal-find-pet.ejs', function(modal){
         $('.ui.dimmer.modals.page.transition.hidden').append(modal);
-        console.log('id view post: ',id_post);
-        get_post_ad_by_id_post(window.token,id_post).then(function (post_ad) {
+
+        get_post_ad_by_id_post(window.token, id_post).then(function (post_ad) {
             console.log('post_ad: ',post_ad);
-            console.log('post_ad.listPath: ',post_ad.listPath);
             update_data_profile(window.token, post_ad.idAccount).then(function (profile_man) {
                 $('#id-account').attr('id',profile_man.id);
                 $('#head-name-user').html(profile_man.name +' '+ profile_man.surname);
                 $('#head-name-user').attr("href","/profile/:"+profile_man.id);
-                $('#phone-account').html(profile_man.phone);
+                $('#phone-account').html(post_ad.jsonText.phone);
                 getImage(JSON.stringify({'path': [profile_man.path_avatar]})).then(function (base64string) {
-                    $('#avatar-mini').attr("src", "data:image/png;base64," + base64string);
+                    $('#avatar-mini').attr("src", base64string);
 
                 });
             });
-            getImage(JSON.stringify({'path': post_ad.listPath})).then(function (base64image) {
+            getImage(JSON.stringify({'path': post_ad.jsonPathImage})).then(function (base64image) {
                 for (let index = 0; index < base64image.length; index++ ){
                     if (index === 0){
-                        $('#modal-post-ad').find('#first-image-modal').attr("src", "data:image/png;base64," + base64image[0]);
+                        $('#modal-post-ad').find('#first-image-modal').attr("src", base64image[0]);
                     }else{
                         $.get('../parts/opt/modal/img-post.ejs', function(data){
                             $('#modal-post-ad').find('#slide-image-div').prepend(data);
-                            $('#modal-post-ad').find('#slide-image-modal').attr("src", "data:image/png;base64," + base64image[index]);
+                            $('#modal-post-ad').find('#slide-image-modal').attr("src", base64image[index]);
                         });
                     }
                 }
             });
-            $('#modal-post-ad').find('#text-wall').html(post_ad.wallText);
+            $('#modal-post-ad').find('#text-wall').html(post_ad.jsonText.wallTextArea);
             $('#modal-post-ad').find('#header-post-ad-modal').html(post_ad.header);
-            console.log('post_ad.listTag.length: ',post_ad.listTag.length);
-            console.log('post_ad.listTag: ',post_ad.listTag);
 
-            for (let i = 0; i < post_ad.listTag.length; i++){
-                $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.listTag[i]+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.animals+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.group+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.breeds+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.age+'</div>');
+
+            for (let i = 0; i < post_ad.jsonTags.own_tags.length; i++){
+                $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.own_tags[i]+'</div>');
             }
+
             $('#modal-post-ad').modal({
                 onHidden: function(){
                     $('.ui.dimmer.modals.page.transition.hidden').empty();

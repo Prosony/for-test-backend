@@ -16,9 +16,9 @@ window.onload = function() {
                     identifier  : 'phone', rules: [{type   : 'empty', prompt : 'field phone is empty'}, {type   : 'maxLength[25]', prompt : 'Max 25 symbols'},
                         {type : 'regExp', value : '/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\\s\\./0-9]*$/g', prompt : 'not a phone'}],
                 },
-                header: { identifier  : 'header',  rules: [{type   : 'empty', prompt : 'Who search new home?'}, {type   : 'maxLength[30]', prompt : 'So mach symbols, maximum 35!'}],
+                header: { identifier  : 'header',  rules: [{type   : 'empty', prompt : 'Who search new home?'}, {type   : 'maxLength[45]', prompt : 'So mach symbols, maximum 45!'}],
                 },
-                wallTextArea: { identifier  : 'wallTextArea',  rules: [{type   : 'empty', prompt : 'Write something about pet!'}, {type   : 'maxLength[250]', prompt : 'So mach symbols, maximum 250!'}],
+                wallTextArea: { identifier  : 'wallTextArea',  rules: [{type   : 'empty', prompt : 'Write something about pet!'}, {type   : 'maxLength[1000]', prompt : 'So mach symbols, maximum 1000!'}],
                 },
                 inputFile: { identifier  : 'inputFile',  rules: [{type   : 'empty', prompt : 'No one photo?'}],
                 },
@@ -55,28 +55,17 @@ window.onload = function() {
                     array_text.phone = fields.phone;
                     array_text.wallTextArea = fields.wallTextArea;
 
-
-
                     array_tags.animals = fields.animalsInput;
                     array_tags.group = fields.groupInput;
                     array_tags.breeds = fields.breedsInput;
                     array_tags.age = fields.ageInput;
 
-
                     console.log('array_text: ',array_text);
                     console.log('array_tags: ',array_tags);
                     console.log('array_image.length: ',array_image.length);
                     send_post_ad(window.token, array_text, array_image, array_tags);
+                    window.location.href = 'http://185.77.205.82:3000/profile/:'+id_account;
                 }
-
-
-
-
-                //                    for(let index = 0; index < array.length; index++){
-//                        $('#segmentimage').append('<img src="'+array[index]+'">');
-////                        console.log('array['+index+']: ',array[index].toString().substring(200,250));
-//                    }
-
                 return false;
             }
 
