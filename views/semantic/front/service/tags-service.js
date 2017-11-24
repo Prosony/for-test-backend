@@ -6,6 +6,22 @@ let array_tags = JSON.parse(
     '"age":"null",' +
     '"own_tags":[]' +
     '}');
+/**********************************************************
+ *                      Category                          *
+ * *******************************************************/
+
+$(document).ready(function() {
+    update_tags_dropdown('#animals-tag','header');
+});
+function update_tags_dropdown(element, title){
+    get_json_tag(window.token, title).then(function (tags) {
+        let json_tags = JSON.parse(tags);
+        console.log('answer db: ',json_tags);
+        let menu = $(element).find('.scrolling.menu');
+        for (let index = 0; index < json_tags.length; index++){
+            menu.append('<div class="item">'+json_tags[index]+'</div>');
+        }});
+}
 $('#animals-tag').dropdown({
     transition: 'drop',
     onChange: function(value, text, $selectedItem) {
@@ -51,11 +67,23 @@ $('#gender-tag').dropdown({
     onChange: function(value, text, $selectedItem) {
     }
 });
-let count_click = 0;
+/**********************************************************
+ *                      OWN TAGS                          *
+ * *******************************************************/
+// let count_click = 0;
+// $(document).on('click', '#btn-own-tag' ,function(){
+//     console.log('click tags');
+//     array_tags.own_tags.splice(count_click, 0, $(this).closest('.ui.right.labeled.left.icon.input').find('#input-own-tags')[0].value);
+//     console.log('array_tags.own_tags: ', array_tags.own_tags);
+//     preview_own_tags();
+//     count_click++;
+// });
 
-$(document).on('click', '.ui.tag.label' ,function(){
+let count_click = 0;
+$(document).on('click', '#btn-own-tag' ,function(){
     console.log('click tags');
-    array_tags.own_tags.splice(count_click, 0, $(this).closest('.ui.right.labeled.left.icon.input').find('#input-own-tags')[0].value);
+    console.log('input value: ',$(this).closest('#searching-tags-db').find('#input-own-tags')[0].value);
+    array_tags.own_tags.splice(count_click, 0, $(this).closest('#searching-tags-db').find('#input-own-tags')[0].value);
     console.log('array_tags.own_tags: ', array_tags.own_tags);
     preview_own_tags();
     count_click++;
@@ -68,19 +96,6 @@ $(document).on('click', '.delete.icon' ,function(){
     console.log('tags_array: ',array_tags.own_tags);
 });
 
-$(document).ready(function() {
-    update_tags_dropdown('#animals-tag','header')
-});
-function update_tags_dropdown(element, title){
-    get_json_tag(window.token, title).then(function (tags) {
-        let json_tags = JSON.parse(tags);
-        console.log('answer db: ',json_tags);
-        let menu = $(element).find('.scrolling.menu');
-        for (let index = 0; index < json_tags.length; index++){
-            menu.append('<div class="item">'+json_tags[index]+'</div>');
-        }});
-}
-
 function preview_own_tags() {
     $('#block-own-tags').find('.ui.label.transition.visible').remove();
     for (let index = 0; index < array_tags.own_tags.length; index++){
@@ -91,3 +106,33 @@ function preview_own_tags() {
             '</a>');
     }
 }
+
+let content = [
+    { title: 'Andorra' },
+    { title: 'United Arab Emirates' },
+    { title: 'Afghanistan' },
+    { title: 'Antigua' },
+    { title: 'Anguilla' },
+    { title: 'Albania' },
+    { title: 'Armenia' },
+    { title: 'Netherlands Antilles' }];
+$('#searching-tags-db').search({ source: content });
+function update_tags_preview(){
+    get_json_tag(window.token, 'own').then(function (json_tags) {
+        json_tags = JSON.parse(json_tags);
+        console.log('preview tags: ', json_tags);
+    });
+}
+// -------------Think about it----------------
+// let array_preview_tags_by_input;
+// $(document).on('keyup', '#input-own-tags' , function () {
+//     console.log('change: ', $(this)[0].value);
+//     array_preview_tags_by_input = [];
+//     array_preview_tags_by_input.splice(count_click, 0, $(this).closest('#searching-tags-db').find('#input-own-tags')[0].value);
+//     if ($(this)[0].value.length < 3){
+//         console.log('< 3');
+//     }else{
+//         get_json_tag_for_search(window.token, array_preview_tags_by_input);
+//         console.log('> 3');
+//     }
+// });

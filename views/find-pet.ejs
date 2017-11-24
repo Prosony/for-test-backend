@@ -31,6 +31,7 @@
         show_post_ad(token);
         menu_sticky();
         tags_sticky();
+        update_tags_preview();
         $(document.body).unbind('click').on('click', '#previews-button' ,function(){
             modal_event_switch($(this).closest('.ui.items').attr('id'));
         }).on('click', '.right.floated.star' ,function(){
@@ -41,6 +42,7 @@
 
 <script src="semantic/front/find-pet/find-pet-data.js"></script>
 <script src="semantic/front/find-pet/find-pet-event.js"></script>
+<script src="semantic/front/find-pet/find-pet-validaion.js"></script>
 
 <script src="semantic/front/service/data/bookmarks/bookmarks-data.js"></script>
 

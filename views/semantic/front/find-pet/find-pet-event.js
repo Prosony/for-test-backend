@@ -7,7 +7,6 @@ function tags_sticky() {
     $('#search-tags-block').sticky({
         observeChanges: true,
         context: '#ad-post-content',
-        pushing: true,
         offset: 56
     }).sticky('refresh');
 }
