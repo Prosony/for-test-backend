@@ -13,15 +13,7 @@ let array_tags = JSON.parse(
 $(document).ready(function() {
     update_tags_dropdown('#animals-tag','header');
 });
-function update_tags_dropdown(element, title){
-    get_json_tag(window.token, title).then(function (tags) {
-        let json_tags = JSON.parse(tags);
-        console.log('answer db: ',json_tags);
-        let menu = $(element).find('.scrolling.menu');
-        for (let index = 0; index < json_tags.length; index++){
-            menu.append('<div class="item">'+json_tags[index]+'</div>');
-        }});
-}
+
 $('#animals-tag').dropdown({
     transition: 'drop',
     onChange: function(value, text, $selectedItem) {
@@ -67,6 +59,16 @@ $('#gender-tag').dropdown({
     onChange: function(value, text, $selectedItem) {
     }
 });
+
+function update_tags_dropdown(element, title){
+    get_json_tag(window.token, title).then(function (tags) {
+        let json_tags = JSON.parse(tags);
+        console.log('#INFO [update_tags_dropdown] json_tags: ',json_tags);
+        let menu = $(element).find('.scrolling.menu');
+        for (let index = 0; index < json_tags.length; index++){
+            menu.append('<div class="item">'+json_tags[index]+'</div>');
+        }});
+}
 /**********************************************************
  *                      OWN TAGS                          *
  * *******************************************************/
@@ -107,20 +109,19 @@ function preview_own_tags() {
     }
 }
 
-let content = [
-    { title: 'Andorra' },
-    { title: 'United Arab Emirates' },
-    { title: 'Afghanistan' },
-    { title: 'Antigua' },
-    { title: 'Anguilla' },
-    { title: 'Albania' },
-    { title: 'Armenia' },
-    { title: 'Netherlands Antilles' }];
-$('#searching-tags-db').search({ source: content });
+let content = [];
 function update_tags_preview(){
-    get_json_tag(window.token, 'own').then(function (json_tags) {
-        json_tags = JSON.parse(json_tags);
+    get_json_own_tag(window.token, 'own').then(function (json_tags) {
         console.log('preview tags: ', json_tags);
+        for (let index = 0; index < json_tags.length; index++){
+            content.push({'title':json_tags[index]});
+        }
+        console.log('# INFO [update_tags_preview] content: ',content);
+        $('#searching-tags-db').search({
+            source: content,
+            minCharacters: 0
+        });
+
     });
 }
 // -------------Think about it----------------
