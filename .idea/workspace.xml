@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="881c52ab-39a7-4d23-8f2b-01d12fc90038" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/views/find-pet.ejs" afterPath="$PROJECT_DIR$/views/find-pet.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validaion.js" afterPath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" afterPath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js" afterPath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/other_service.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/other_service.js" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js" />
       <change beforePath="$PROJECT_DIR$/views/semantic/front/service/tags-service.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/tags-service.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +24,8 @@
       <file leaf-file-name="find-pet.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/find-pet.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+            <state relative-caret-position="0">
+              <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -36,9 +36,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,10 +44,10 @@
       <file leaf-file-name="tags-service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/semantic/front/service/tags-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="0">
+              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding>
-                <marker date="1511990440164" expanded="true" signature="4015:4064" ph="..." />
+                <marker date="1512084090420" expanded="true" signature="4040:4089" ph="..." />
               </folding>
             </state>
           </provider>
@@ -65,11 +63,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find-pet-validation.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post-ad-service.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+              <folding>
+                <marker date="1512084757755" expanded="true" signature="1915:1930" ph="..." />
+                <marker date="1512084757755" expanded="true" signature="2127:2142" ph="..." />
+                <marker date="1512084757755" expanded="true" signature="2312:2327" ph="..." />
+                <marker date="1512084757755" expanded="true" signature="2494:2509" ph="..." />
+                <marker date="1512084757755" expanded="true" signature="2679:2694" ph="..." />
+                <marker date="1512084757755" expanded="true" signature="2863:2878" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="other_service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/semantic/front/service/other_service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+              <folding>
+                <marker date="1512084710710" expanded="true" signature="2744:2759" ph="..." />
+                <marker date="1512084710710" expanded="true" signature="2898:2913" ph="..." />
+                <marker date="1512084710710" expanded="true" signature="3032:3047" ph="..." />
+                <marker date="1512084710710" expanded="true" signature="3163:3178" ph="..." />
+                <marker date="1512084710710" expanded="true" signature="3297:3312" ph="..." />
+                <marker date="1512084710710" expanded="true" signature="3430:3445" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="find-pet-validation.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="79" lean-forward="true" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+            <state relative-caret-position="405">
+              <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -79,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="37" lean-forward="true" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+              <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -141,29 +173,29 @@
         <option value="$PROJECT_DIR$/views/semantic/front/service/data/tags-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/tags/tags-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/data/authentication/sign-in/sign-in-data.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/bookmarks-service.js" />
         <option value="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" />
         <option value="$PROJECT_DIR$/views/parts/opt/head.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/authentication/sign-in/sign-in-validation.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-data.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" />
         <option value="$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs" />
         <option value="$PROJECT_DIR$/views/parts/menu.ejs" />
         <option value="$PROJECT_DIR$/views/sign-in.ejs" />
         <option value="$PROJECT_DIR$/views/add-advertisement.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" />
         <option value="$PROJECT_DIR$/views/profile.ejs" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/other_service.js" />
         <option value="$PROJECT_DIR$/views/parts/advertisement-parts/left-tags-fields.ejs" />
         <option value="$PROJECT_DIR$/views/parts/find-pet/left-column-search.ejs" />
         <option value="$PROJECT_DIR$/views/find-pet.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/tags-service.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validaion.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js" />
+        <option value="$PROJECT_DIR$/views/semantic/front/service/tags-service.js" />
+        <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" />
+        <option value="$PROJECT_DIR$/views/semantic/front/service/other_service.js" />
+        <option value="$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js" />
       </list>
     </option>
   </component>
@@ -390,16 +422,6 @@
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="post-ad" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -503,11 +525,12 @@
       <workItem from="1511732690952" duration="826000" />
       <workItem from="1511988916371" duration="474000" />
       <workItem from="1511989727273" duration="4048000" />
+      <workItem from="1512077642974" duration="5032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="469689000" />
+    <option name="totallyTimeSpent" value="474721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,9 +545,9 @@
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1459431" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16807166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.428125" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258064" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
@@ -698,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/service/data/file/image-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -789,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/other_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/parts/advertisement-parts/right-column.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -817,19 +826,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="131" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="131" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -837,14 +837,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
           <caret line="13431" column="15" lean-forward="false" selection-start-line="13431" selection-start-column="8" selection-end-line="13431" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/find-pet.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -860,7 +859,7 @@
     <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="true" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -869,9 +868,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -883,21 +888,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/tags-service.js">
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/other_service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="420">
+          <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
           <folding>
-            <marker date="1511990440164" expanded="true" signature="4015:4064" ph="..." />
+            <marker date="1512084710710" expanded="true" signature="2744:2759" ph="..." />
+            <marker date="1512084710710" expanded="true" signature="2898:2913" ph="..." />
+            <marker date="1512084710710" expanded="true" signature="3032:3047" ph="..." />
+            <marker date="1512084710710" expanded="true" signature="3163:3178" ph="..." />
+            <marker date="1512084710710" expanded="true" signature="3297:3312" ph="..." />
+            <marker date="1512084710710" expanded="true" signature="3430:3445" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js">
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/tags-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="79" lean-forward="true" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding>
+            <marker date="1512084090420" expanded="true" signature="4040:4089" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="61" column="58" lean-forward="false" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding>
+            <marker date="1512084757755" expanded="true" signature="1915:1930" ph="..." />
+            <marker date="1512084757755" expanded="true" signature="2127:2142" ph="..." />
+            <marker date="1512084757755" expanded="true" signature="2312:2327" ph="..." />
+            <marker date="1512084757755" expanded="true" signature="2494:2509" ph="..." />
+            <marker date="1512084757755" expanded="true" signature="2679:2694" ph="..." />
+            <marker date="1512084757755" expanded="true" signature="2863:2878" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

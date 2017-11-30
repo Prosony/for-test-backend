@@ -24,7 +24,7 @@ $('.ui.form').form(
 
             console.log('#INFO [find-pet-validation] array_tags: ',array_tags);
             get_post_ad_by_tags(token, array_tags).then(function (answer) {
-
+                console.log('#INFO [get_post_ad_by_tags].[THEN] answer: \n',answer,"\n");
             });
             return false;
         }

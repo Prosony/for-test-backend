@@ -47,14 +47,17 @@ function modal_event_switch(id_post){
             $('#modal-post-ad').find('#text-wall').html(post_ad.jsonText.wallTextArea);
             $('#modal-post-ad').find('#header-post-ad-modal').html(post_ad.header);
 
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.animals+'</div>');
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.group+'</div>');
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.breeds+'</div>');
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.age+'</div>');
-
             for (let i = 0; i < post_ad.jsonTags.own_tags.length; i++){
                 $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.own_tags[i]+'</div>');
             }
+
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.gender+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.age+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.breeds+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.group+'</div>');
+            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.animals+'</div>');
+
+
 
             $('#modal-post-ad').modal({
                 onHidden: function(){

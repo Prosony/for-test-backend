@@ -4,6 +4,7 @@ let array_tags = JSON.parse(
     '"group":"null",' +
     '"breeds":"null",' +
     '"age":"null",' +
+    '"gender":"null",' +
     '"own_tags":[]' +
     '}');
 /**********************************************************

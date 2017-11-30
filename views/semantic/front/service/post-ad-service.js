@@ -23,13 +23,15 @@ function set_post_ad(post_ad){
                         $('#'+post_ad[index].id).find('#first-image').attr("src", base_array[0]); //
                         $('#'+post_ad[index].id).find('#second-image').attr("src", base_array[1]);
                     });
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.animals+'</div>');
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.group+'</div>');
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.breeds+'</div>');
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.age+'</div>');
                     for (let i = 0; i < post_ad[index].jsonTags.own_tags.length; i++){
                         $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.own_tags[i]+'</div>');
                     }
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.gender+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.age+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.breeds+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.group+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.animals+'</div>');
+
                     if (typeof favorites_post_ad !== 'undefined') {
                         for (let index_fav = 0; index_fav < favorites_post_ad.length; index_fav++) {
                             console.log('index_fav: ', favorites_post_ad[index_fav].id);

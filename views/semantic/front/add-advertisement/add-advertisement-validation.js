@@ -59,6 +59,7 @@ window.onload = function() {
                     array_tags.group = fields.groupInput;
                     array_tags.breeds = fields.breedsInput;
                     array_tags.age = fields.ageInput;
+                    array_tags.gender = fields.genderInput;
 
                     console.log('array_text: ',array_text);
                     console.log('array_tags: ',array_tags);
