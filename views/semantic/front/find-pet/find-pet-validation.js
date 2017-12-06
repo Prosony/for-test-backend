@@ -23,8 +23,10 @@ $('.ui.form').form(
             array_tags.age = fields.ageInput;
 
             console.log('#INFO [find-pet-validation] array_tags: ',array_tags);
-            get_post_ad_by_tags(token, array_tags).then(function (answer) {
-                console.log('#INFO [get_post_ad_by_tags].[THEN] answer: \n',answer,"\n");
+            get_post_ad_by_tags(token, array_tags).then(function (post_ad) {
+                console.log('#INFO [get_post_ad_by_tags].[THEN] post_ad: \n',post_ad,"\n");
+                clear_pos_ad();
+                set_post_ad(post_ad);
             });
             return false;
         }

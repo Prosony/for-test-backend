@@ -1,7 +1,3 @@
-function delete_post_ad(id_post_ad){
-    delete_post_ad_server(window.token, id_post_ad);
-    $(`#${id_post_ad}`).remove();
-}
 
 function star_favorites_switch(id_post_ad, class_name){
         if (class_name !== 'favorite icon active' && class_name !== 'favorite active icon'){
@@ -51,11 +47,11 @@ function modal_event_switch(id_post){
                 $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.own_tags[i]+'</div>');
             }
 
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.gender+'</div>');
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.age+'</div>');
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.breeds+'</div>');
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.group+'</div>');
-            $('#tag-column').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.animals+'</div>');
+            $('#tag-column').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.gender+'</div>');
+            $('#tag-column').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.age+'</div>');
+            $('#tag-column').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.breeds+'</div>');
+            $('#tag-column').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.group+'</div>');
+            $('#tag-column').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.animals+'</div>');
 
 
 
@@ -73,7 +69,6 @@ function modal_event_switch(id_post){
     });
 }
 function get_date(date){
-
     let result;
     switch (date.month){
         case 1: result = date.day +' January ' +date.year; break;
@@ -93,7 +88,7 @@ function get_date(date){
 }
 function menu_sticky() {
     $('#main-menu-mpm').sticky({
-        context:'#main',
+        context:'body',
         onStick: function() {
             $(this).css({'margin-left':'45px', 'margin-right':'45px','left':'0'});
 //                console.log('slide!');

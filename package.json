@@ -2,12 +2,14 @@
   "name": "for-test-backend",
   "version": "0.0.1",
   "dependencies": {
+    "async": "latest",
     "body-parser": "latest",
     "connect-mongo": "latest",
-    "express-session": "latest",
+    "ejs": "^2.5.7",
     "express": "latest",
+    "express-session": "latest",
     "mongoose": "latest",
-    "superagent": "latest",
-    "async": "latest"
+    "socket.io": "^2.0.4",
+    "superagent": "latest"
   }
 }

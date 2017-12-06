@@ -10,3 +10,21 @@ function tags_sticky() {
         offset: 56
     }).sticky('refresh');
 }
+$('#clear-tags').on('click', function() {
+        $('.ui.floating.labeled.icon.dropdown.button').dropdown('clear');
+
+        $('#animals-tag').children('span').html('Animals');
+
+        $('#group-tag').children('span').html('Group');
+        $('#group-tag').addClass('disabled');
+
+        $('#breeds-tag').children('span').html('Breeds');
+        $('#breeds-tag').addClass('disabled');
+
+        $('#age-tag').children('span').html('Age').addClass('disabled');
+        $('#age-tag').addClass('disabled');
+
+        $('#gender-tag').children('span').html('Gender').addClass('disabled');
+        $('#gender-tag').addClass('disabled');
+})
+;

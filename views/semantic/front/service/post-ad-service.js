@@ -26,11 +26,11 @@ function set_post_ad(post_ad){
                     for (let i = 0; i < post_ad[index].jsonTags.own_tags.length; i++){
                         $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.own_tags[i]+'</div>');
                     }
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.gender+'</div>');
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.age+'</div>');
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.breeds+'</div>');
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.group+'</div>');
-                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.animals+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.gender+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.age+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.breeds+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.group+'</div>');
+                    $('#'+post_ad[index].id).find('#tag-column-post-ad').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad[index].jsonTags.animals+'</div>');
 
                     if (typeof favorites_post_ad !== 'undefined') {
                         for (let index_fav = 0; index_fav < favorites_post_ad.length; index_fav++) {
@@ -48,3 +48,12 @@ function set_post_ad(post_ad){
         }
     });
 }
+
+function clear_pos_ad(){
+    $('#ad-post-content').find('.ui.items').remove();
+}
+function delete_post_ad(id_post_ad){
+    delete_post_ad_server(window.token, id_post_ad);
+    $(`#${id_post_ad}`).remove();
+}
+

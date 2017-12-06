@@ -1,6 +1,4 @@
-let mongoose = require("mongoose");
 let express = require('express');
-let router = express.Router();
 let session = require('express-session');
 let MongoStore = require('connect-mongo')(session);
 let path = require('path');

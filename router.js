@@ -3,6 +3,22 @@ let server = require('./server.js');
 let opt = require('./options/options.js');
 let db_service = require('./service/db.js');
 let other_service = require('./service/other_service.js');
+
+server.app.get('/messages',function (request, response) {
+    db_service.getUsersByIdSession(request.sessionID).then(function (result) {
+
+        if (result.token !== undefined){
+            response.render('messages.ejs', { 'id': result.id_account, 'token':result.token, 'url':'/add-advertisement', 'is_me':true});
+        }else{
+            console.log(`#INFO [/messages] token not found, redirect to /sign-in `);
+            response.redirect('/sign-in');
+        }
+    }).catch(function(error){
+        console.log('Error get users by sessionID, ',error);
+        response.redirect('/sign-in');
+    });
+});
+
 server.app.get('/',function(request, response){
     console.log('#INFO [router.js] address: [%s], sessionID: %s',request.url,request.sessionID);
     if (request.sessionID !== null && request.sessionID !== undefined){
@@ -23,74 +39,7 @@ server.app.get('/',function(request, response){
     }
 
 });
-server.app.get('/sign-in',function(request, response){
-        if (request.sessionID !== null && request.sessionID !== undefined){
-            db_service.getUsersByIdSession(request.sessionID).then(function (result) {
 
-                console.log("#INFO [router.js] result: ",result);
-                if (result.token !== undefined){
-                    response.redirect('/profile/:'+result.id_account);
-                }else{
-                    response.render('sign-in.ejs');
-                }
-            }).catch(function(error){
-                console.log('Error get account, ',error);
-                response.render('sign-in.ejs');
-            });
-        }else{
-            response.render('sign-in.ejs');
-        }
-    });
-
-server.app.post('/check', function(request, response){
-    console.log('#INFO address: %s',request.url);
-    console.log('request.body: ', request.body);
-    let email = request.body.email;
-    let password = request.body.password;
-    console.log('email %s, token: %s', email, password);
-
-    let requestToServer =  http.request(opt.options_sign_in, (res) => {
-        let answerFromBackEnd;
-        console.log(`#INFO [/check] STATUS: ${res.statusCode}`);
-        res.setEncoding('utf8');
-        res.on('data', (chunk) => {
-            console.log('chunk: ',chunk);
-            if  (res.statusCode !== 500){
-                answerFromBackEnd = JSON.parse(chunk);
-                if (typeof answerFromBackEnd .id !=='undefined' && typeof answerFromBackEnd .token !=='undefined'){
-                    db_service.createUsers(answerFromBackEnd, request.sessionID).then(function (result) {
-                        console.log('createUsers result: ',JSON.stringify(result));
-                        response.send({err: 0, redirectUrl: '/profile/:'+result.id_account});
-                    }).catch(function(error){
-                        console.log('Error create users, ',error);
-                    });
-                }else{
-                    console.log('typeof chunk.id !==undefined && typeof chunk.token !==undefined');
-                    response.send({err: 204, redirectUrl: '/sign-in'});
-                }
-            }else{
-                response.send({err: 204, redirectUrl: '/sign-in'});
-            }
-
-        });
-       if (res.statusCode === 204){
-           response.send({err: 204, redirectUrl: '/sign-in'});
-           // response.redirect('/profile/:'+result.id_account);
-       }
-    });
-    requestToServer.on('error', (e) => {
-            console.error(`#INFO [/check] [http.request][/check].on[error] problem with request: ${e.message}`);
-          });
-    if (email !== undefined && password!== undefined ){
-              requestToServer.write(JSON.stringify({'email':email, 'password':password})); // write data to request body
-              requestToServer.end();
-          }else{
-        response.send({err: 204, redirectUrl: '/sign-in'});
-          }
-});
-server.app.get('/test-photo', function (request, response) {
-    response.render('test-photo');
-});
 
 server.app.get('/profile/:id', function(request, response){
     let id = request.params.id;
@@ -110,6 +59,7 @@ server.app.get('/profile/:id', function(request, response){
 
                 if (result_my.token !== undefined){
                     console.log(`#INFO [/profile:id] token: `,result_my.token);
+
                     response.render('profile', { 'id': id, 'token':result_my.token, 'url':'/profile', 'is_me':is_me});
                 }else{
                     console.log(`#INFO [/profile] refirect to /sign-in `);
@@ -187,6 +137,77 @@ server.app.get('/add-advertisement',function (request, response) {
         response.redirect('/sign-in');
     });
 });
+
+/********************************************************************************************
+ *                                      AUTHENTICATION                                      *
+ *******************************************************************************************/
+
+server.app.get('/sign-in',function(request, response){
+    if (request.sessionID !== null && request.sessionID !== undefined){
+        db_service.getUsersByIdSession(request.sessionID).then(function (result) {
+
+            console.log("#INFO [router.js] result: ",result);
+            if (result.token !== undefined){
+                response.redirect('/profile/:'+result.id_account);
+            }else{
+                response.render('sign-in.ejs');
+            }
+        }).catch(function(error){
+            console.log('Error get account, ',error);
+            response.render('sign-in.ejs');
+        });
+    }else{
+        response.render('sign-in.ejs');
+    }
+});
+
+server.app.post('/check', function(request, response){
+    console.log('#INFO address: %s',request.url);
+    console.log('request.body: ', request.body);
+    let email = request.body.email;
+    let password = request.body.password;
+    console.log('email %s, token: %s', email, password);
+
+    let requestToServer =  http.request(opt.options_sign_in, (res) => {
+        let answerFromBackEnd;
+        console.log(`#INFO [/check] STATUS: ${res.statusCode}`);
+        res.setEncoding('utf8');
+        res.on('data', (chunk) => {
+            console.log('chunk: ',chunk);
+            if  (res.statusCode !== 500){
+                answerFromBackEnd = JSON.parse(chunk);
+                if (typeof answerFromBackEnd .id !=='undefined' && typeof answerFromBackEnd .token !=='undefined'){
+                    db_service.createUsers(answerFromBackEnd, request.sessionID).then(function (result) {
+                        console.log('createUsers result: ',JSON.stringify(result));
+                        response.send({err: 0, redirectUrl: '/profile/:'+result.id_account});
+                    }).catch(function(error){
+                        console.log('Error create users, ',error);
+                    });
+                }else{
+                    console.log('typeof chunk.id !==undefined && typeof chunk.token !==undefined');
+                    response.send({err: 204, redirectUrl: '/sign-in'});
+                }
+            }else{
+                response.send({err: 204, redirectUrl: '/sign-in'});
+            }
+
+        });
+        if (res.statusCode === 204){
+            response.send({err: 204, redirectUrl: '/sign-in'});
+            // response.redirect('/profile/:'+result.id_account);
+        }
+    });
+    requestToServer.on('error', (e) => {
+        console.error(`#INFO [/check] [http.request][/check].on[error] problem with request: ${e.message}`);
+    });
+    if (email !== undefined && password!== undefined ){
+        requestToServer.write(JSON.stringify({'email':email, 'password':password})); // write data to request body
+        requestToServer.end();
+    }else{
+        response.send({err: 204, redirectUrl: '/sign-in'});
+    }
+});
+
 server.app.get('/log-out', function(request, response){
 
     db_service.getUsersByIdSession(request.sessionID).then(function (result) {
