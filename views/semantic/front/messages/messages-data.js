@@ -28,3 +28,21 @@ function get_messages_by_id_dialog(token, id_dialog){
         }
     });
 }
+
+
+
+function get_uuid(){
+    return $.ajax({
+        url: 'http://185.77.205.82:8080/generate-uuid',
+        method: 'GET',
+        // data: JSON.stringify({'token': token, 'id_dialog' : id_dialog}),
+        // ContentType: 'application/json',
+        // charset: 'UTF-8',
+        success: function (json_uuid) {
+            return json_uuid;
+        },
+        error: function (xhr, status, error) {
+            console.log(xhr.responseText + '|\n' + status + '|\n' + error);
+        }
+    });
+}
