@@ -8,7 +8,7 @@ server.app.get('/messages',function (request, response) {
     db_service.getUsersByIdSession(request.sessionID).then(function (result) {
 
         if (result.token !== undefined){
-            response.render('messages.ejs', { 'id': result.id_account, 'token':result.token, 'url':'/add-advertisement', 'is_me':true});
+            response.render('messages.ejs', { 'id': result.id_account, 'token':result.token, 'url':'/add-advertisement', 'is_me':false}); //TODO delete url param and rename is_me to mustLoad
         }else{
             console.log(`#INFO [/messages] token not found, redirect to /sign-in `);
             response.redirect('/sign-in');

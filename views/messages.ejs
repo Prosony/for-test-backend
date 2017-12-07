@@ -7,48 +7,37 @@
 <body>
     <% include ./parts/menu.ejs %>
 
-        <div id="left-column-block" class="ui three column grid" style="min-width: 260px; min-width: 1024px">
+        <div id="left-column-block" class="ui three column center aligned grid" style="min-width: 260px; min-width: 1024px">
 
             <div class="two column row" style="min-height: 600px;  max-height: 600px">
 
-                <div class="column" style="max-width: 25%; margin-left: 3%; margin-top: 0%; ">
-                    <div class="ui segment"  style="height: 100%;">
-                        <div class="ui link items" style="height: 100%; overflow-y: scroll;">
-                            <div class="item" style="height: auto;">
-                                <div class="ui mini image">
-                                    <img src="semantic/dist/images/adam.png">
-                                </div>
-                                <div class="content">
-                                    <h4 class="ui header">Stevie Feliciano</h4>
-                                    <!--<div class="header">Stevie Feliciano</div>-->
-                                    <div class="description">
-                                        <p>Last message</p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="column" style="max-width: 25%; margin-left: 3%; ">
 
-                            <div class="item" style="height: auto">
-                                <div class="ui mini image">
-                                    <img src="semantic/dist/images/adam.png">
-                                </div>
-                                <div class="content">
-                                    <h4 class="ui header">Stevie Feliciano</h4>
-                                    <div class="description">
-                                        <p>Last message</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="ui segment" style="height: 100%;">
+                        <div class="ui link items" id="dialog-block" style="height: 100%; overflow-y: scroll;">
+
+                            <!--<div class="item" style="height: auto">-->
+                                <!--<div class="ui mini image">-->
+                                    <!--<img src="semantic/dist/images/adam.png">-->
+                                <!--</div>-->
+                                <!--<div class="content">-->
+                                    <!--<h4 class="ui header">Stevie Feliciano</h4>-->
+                                    <!--<div class="description">-->
+                                        <!--<p>Last message</p>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
                         </div>
                     </div>
 
                 </div>
                 <div class="column" >
 
-                    <div class="ui segment" id="echoText" style="overflow-y: scroll; height: 100%"> </div>
+                    <div class="ui segment" id="messages-block" style="overflow-y: scroll; height: 100%"> </div>
 
                     <div class="field" >
                         <div class="ui icon input" style="width: 90%">
-                            <!--<textarea id="echoText" rows="5" cols="30"></textarea>-->
                             <input id="message" type="text" placeholder="Write something" value="" style="height: auto">
                             <i class="circular image link icon"></i>
                         </div>
@@ -62,11 +51,20 @@
             </div>
 
         </div>
+    <script src="semantic/front/messages/messages-event.js"></script>
+    <script src="semantic/front/messages/messages-data.js"></script>
+    <script src="semantic/front/profile/profile-event.js"></script>
+    <script src="semantic/front/profile/profile-data.js"></script>
     <script>
         var token = '<%= token %>';
         var id_account = '<%=id%>';
         var is_me = '<%= is_me %>';
+        set_dialog_block();
+        get_my_data();
     </script>
+
+
     <script src="semantic/front/messages/messages-socket.js"></script>
+    <script src="semantic/front/service/data/file/image-data.js"></script>
 </body>
 </html>
