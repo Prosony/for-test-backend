@@ -1,32 +1,24 @@
 <!doctype html>
 <html>
 <head>
-    <title>Socket.IO chat</title>
-    <% include ./parts/opt/head.ejs%>
+    <title>Messages</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
+    <script src="../semantic/dist/jquery-3.2.1.min.js"></script>
+    <script src="../semantic/dist/semantic.js"></script>
+    <link href="../semantic/dist/c13f37b67e.js" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/font-awesome.css">
 </head>
 <body>
     <% include ./parts/menu.ejs %>
 
-        <div id="left-column-block" class="ui three column center aligned grid" style="min-width: 260px; min-width: 1024px">
+        <div id="left-column-block" class="ui three column grid" style="max-height: 650px; min-width: 1024px">
 
             <div class="two column row" style="min-height: 600px;  max-height: 600px">
-
                 <div class="column" style="max-width: 25%; margin-left: 3%; ">
+                    <div class="ui segment" style="overflow-y: scroll;">
+                        <div class="ui link items" id="dialog-block" style="min-height: 570px; max-height: 570px">
 
-                    <div class="ui segment" style="height: 100%;">
-                        <div class="ui link items" id="dialog-block" style="height: 100%; overflow-y: scroll;">
-
-                            <!--<div class="item" style="height: auto">-->
-                                <!--<div class="ui mini image">-->
-                                    <!--<img src="semantic/dist/images/adam.png">-->
-                                <!--</div>-->
-                                <!--<div class="content">-->
-                                    <!--<h4 class="ui header">Stevie Feliciano</h4>-->
-                                    <!--<div class="description">-->
-                                        <!--<p>Last message</p>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
 
                         </div>
                     </div>
@@ -34,19 +26,24 @@
                 </div>
                 <div class="column" >
 
-                    <div class="ui segment" id="messages-block" style="overflow-y: scroll; height: 100%"> </div>
+                    <div class="ui segment" style="min-height: 600px;  max-height: 600px">
+                        <div class="ui segment disabled" id="message-scroll-block" style="overflow-y: scroll; min-height: 520px;  max-height: 520px">
+                            <div class="ui minimal comments" id="messages-block">
 
-                    <div class="field" >
-                        <div class="ui icon input" style="width: 90%">
-                            <input id="message" type="text" placeholder="Write something" value="" style="height: auto">
-                            <i class="circular image link icon"></i>
+                            </div>
                         </div>
-                        <div class="ui basic icon button" onclick="wsSendMessage();">
-                            <i class="send icon"></i>
+                        <div class="field" >
+                            <div class="ui disabled icon input" style="width: 90%" id="input-message">
+                                <input id="message" type="text" placeholder="Write something" value="" style="height: auto">
+                                <i class="circular image link icon"></i>
+                            </div>
+                            <div class="ui disabled basic icon button" id="send-msg-btn" onclick="wsSendMessage();">
+                                <i class="send icon"></i>
+                            </div>
                         </div>
+                        <!--<div class="ui based button" onclick="wsCloseConnection()" style="margin-top: 5px">Disconnect</div>-->
                     </div>
 
-                    <div class="ui based button" onclick="wsCloseConnection()" style="margin-top: 5px">Disconnect</div>
                 </div>
             </div>
 
@@ -59,6 +56,17 @@
         var token = '<%= token %>';
         var id_account = '<%=id%>';
         var is_me = '<%= is_me %>';
+
+        var audio = new Audio();
+        audio.preload = 'auto';
+        audio.src = 'semantic/dist/sound/BubblePopWav.wav';
+
+        $('#input-message').on('keydown', function (event) {
+            if (event.keyCode === 13) {
+                wsSendMessage();
+            }
+        });
+
         set_dialog_block();
         get_my_data();
     </script>

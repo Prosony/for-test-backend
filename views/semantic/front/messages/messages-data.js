@@ -30,14 +30,45 @@ function get_messages_by_id_dialog(token, id_dialog){
 }
 
 
+function get_last_message_by_id_dialog(token, id_dialog){
+    return $.ajax({
+        url: 'http://185.77.205.82:8080///message-last',
+        method: 'POST',
+        data: JSON.stringify({'token': token, 'id_dialog' : id_dialog}),
+        ContentType: 'application/json',
+        charset: 'UTF-8',
+        success: function (message) {
+            return message;
+        },
+        error: function (xhr, status, error) {
+            console.log(xhr.responseText + '|\n' + status + '|\n' + error);
+        }
+    });
+}
 
-function get_uuid(){
+function get_unread_messages(token, id_dialog){
+    return $.ajax({
+        url: 'http://185.77.205.82:8080//unread-messages',
+        method: 'POST',
+        data: JSON.stringify({'token': token, 'id_dialog':id_dialog}),
+        ContentType: 'application/json',
+        charset: 'UTF-8',
+        success: function (count) {
+            return count;
+        },
+        error: function (xhr, status, error) {
+            console.log(xhr.responseText + '|\n' + status + '|\n' + error);
+        }
+    });
+}
+
+function get_uuid(table){
     return $.ajax({
         url: 'http://185.77.205.82:8080/generate-uuid',
-        method: 'GET',
-        // data: JSON.stringify({'token': token, 'id_dialog' : id_dialog}),
-        // ContentType: 'application/json',
-        // charset: 'UTF-8',
+        method: 'POST',
+        data: JSON.stringify({'table': table}),
+        ContentType: 'application/json',
+        charset: 'UTF-8',
         success: function (json_uuid) {
             return json_uuid;
         },

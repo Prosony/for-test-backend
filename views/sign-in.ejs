@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>AniShelter</title>
-        <% include ./parts/opt/head.ejs%>
-    </head>
-    <body>
-    <% include ./parts/menu.ejs%>
-        <div id="form-main" class="ui center aligned container" style="width: 350px;">
-            <div class="ui error message transition hidden">
-                <i class="close icon"></i>
-                <div class="header">
-                    password or phone invalid!
-                </div>
-                <ul class="list">
-                    <li>You must include both a upper and lower case letters in your password.</li>
-                </ul>
-            </div>
-            <form class="ui form" method="post">
-
-                <div class="field">
-                    <div class="ui left icon input">
-                        <i class="user icon"></i>
-                        <input name="email" type="text" maxlength="25" placeholder="E-mail address">
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui left icon input">
-                        <i class="lock icon"></i>
-                        <input name ="password" type="password" maxlength="35" placeholder="Password">
-                    </div>
-                </div>
-                <button class="ui submit button" id="button" type="button" name="button" style="width: 100%">Sign-in</button>
-            </form>
+<head>
+    <title>AniShelter</title>
+    <% include ./parts/opt/head.ejs%>
+</head>
+<body>
+<% include ./parts/menu.ejs%>
+<div id="form-main" class="ui center aligned container" style="width: 350px;">
+    <div class="ui error message transition hidden">
+        <i class="close icon"></i>
+        <div class="header">
+            password or phone invalid!
         </div>
-    <script>
+        <ul class="list">
+            <li>You must include both a upper and lower case letters in your password.</li>
+        </ul>
+    </div>
+    <form class="ui form" method="post">
 
-    </script>
-        <script src="semantic/front/authentication/sign-in/sign-in-validation.js"></script>
-        <script src="semantic/front/service/data/authentication/sign-in/sign-in-data.js"></script>
-    </body>
+        <div class="field">
+            <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input name="email" type="text" maxlength="25" placeholder="E-mail address">
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input name ="password" type="password" maxlength="35" placeholder="Password">
+            </div>
+        </div>
+        <button class="ui submit button" id="button" type="button" name="button" style="width: 100%">Sign-in</button>
+    </form>
+</div>
+<script>
+
+</script>
+<script src="semantic/front/authentication/sign-in/sign-in-validation.js"></script>
+<script src="semantic/front/service/data/authentication/sign-in/sign-in-data.js"></script>
+</body>
 </html>

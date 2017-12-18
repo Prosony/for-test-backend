@@ -23,10 +23,16 @@
         var token = '<%= token %>';
         var id_account = '<%=id%>';
         var is_me = '<%= is_me %>';
+
+        var audio = new Audio();
+        audio.preload = 'auto';
+        audio.src = '../semantic/dist/sound/BubblePopWav.wav';
+
         $( document ).ready(function() {
             console.log('is_me: ',is_me);
             menu_sticky();
             load_home(token, id_account);
+
             $(document.body).unbind('click').on('click', '#previews-button' ,function(){
                 modal_event_switch($(this).closest('.ui.items').attr('id'));
             }).on('click', '.right.floated.star' ,function(){
@@ -37,6 +43,10 @@
             });
         });
     </script>
+    <script src="../semantic/front/messages/messages-socket.js"></script>
+    <script src="../semantic/front/messages/messages-event.js"></script>
+    <script src="../semantic/front/messages/messages-data.js"></script>
+
     <script src="../semantic/front/profile/profile-event.js"></script>
     <script src="../semantic/front/profile/profile-data.js"></script>
 

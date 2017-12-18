@@ -44,10 +44,13 @@ server.app.get('/',function(request, response){
 server.app.get('/profile/:id', function(request, response){
     let id = request.params.id;
     console.log('request.params.id: ',id);
+
     if(typeof id !== 'undefined' && id !== ':' ){
         db_service.getUsersByIdSession(request.sessionID).then(function (result_my) {
+
             id = id.substring(1,id.length);
             let is_me;
+
             if(id !== result_my.id_account){
                 is_me = false;
             }else{

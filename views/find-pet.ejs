@@ -30,7 +30,7 @@
     window.onload = function() {
         show_post_ad(token);
         menu_sticky();
-        tags_sticky();
+        // tags_sticky();
         update_tags_preview();
         $(document.body).unbind('click').on('click', '#previews-button' ,function(){
             modal_event_switch($(this).closest('.ui.items').attr('id'));

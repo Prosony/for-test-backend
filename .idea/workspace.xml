@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="881c52ab-39a7-4d23-8f2b-01d12fc90038" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/semantic/dist/sound/BubblePop.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/semantic/dist/sound/BubblePopWav.wav" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/router.js" afterPath="$PROJECT_DIR$/router.js" />
+      <change beforePath="$PROJECT_DIR$/views/find-pet.ejs" afterPath="$PROJECT_DIR$/views/find-pet.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/messages.ejs" afterPath="$PROJECT_DIR$/views/messages.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/parts/menu.ejs" afterPath="$PROJECT_DIR$/views/parts/menu.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs" afterPath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" afterPath="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/profile.ejs" afterPath="$PROJECT_DIR$/views/profile.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" afterPath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" />
       <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" />
       <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" />
       <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" afterPath="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
+      <change beforePath="$PROJECT_DIR$/views/sign-in.ejs" afterPath="$PROJECT_DIR$/views/sign-in.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,55 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="190" lean-forward="false" selection-start-line="10" selection-start-column="190" selection-end-line="10" selection-end-column="190" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="find-pet-data.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/messages.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="73" />
-              <folding>
-                <marker date="1512605515556" expanded="false" signature="684:696" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/profile.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="messages-event.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" column="58" lean-forward="false" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+            <state relative-caret-position="-565">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <marker date="1512656681241" expanded="true" signature="1189:1202" ph="..." />
+                <marker date="1513562392503" expanded="true" signature="1362:1375" ph="..." />
+                <marker date="1513562392503" expanded="true" signature="7426:7442" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,11 +47,41 @@
       <file leaf-file-name="messages-socket.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="48" column="41" lean-forward="true" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+            <state relative-caret-position="5">
+              <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/messages.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="590">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
-                <marker date="1512657248894" expanded="true" signature="1986:2003" ph="..." />
+                <marker date="1513559388574" expanded="false" signature="2185:2200" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/parts/menu.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/profile.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,8 +89,8 @@
       <file leaf-file-name="messages-data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state relative-caret-position="620">
+              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -113,8 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/parts/advertiesement-parts/tags-fields.ejs" />
-        <option value="$PROJECT_DIR$/views/parts/advertiesement-parts/left-tags-fields.ejs" />
         <option value="$PROJECT_DIR$/views/parts/advertiesement-parts/right-column.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/image-service.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/tags-service.js" />
@@ -130,38 +129,40 @@
         <option value="$PROJECT_DIR$/views/semantic/front/service/data/tags-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/tags/tags-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/data/authentication/sign-in/sign-in-data.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/bookmarks-service.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/authentication/sign-in/sign-in-validation.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-data.js" />
-        <option value="$PROJECT_DIR$/views/sign-in.ejs" />
         <option value="$PROJECT_DIR$/views/add-advertisement.ejs" />
         <option value="$PROJECT_DIR$/views/parts/advertisement-parts/left-tags-fields.ejs" />
-        <option value="$PROJECT_DIR$/views/find-pet.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validaion.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/tags-service.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" />
-        <option value="$PROJECT_DIR$/views/parts/opt/head.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js" />
         <option value="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-noactive.ejs" />
-        <option value="$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs" />
-        <option value="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" />
         <option value="$PROJECT_DIR$/options/options.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/views/parts/menu.ejs" />
         <option value="$PROJECT_DIR$/service/messages/messages.js" />
         <option value="$PROJECT_DIR$/messages.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/service/other_service.js" />
         <option value="$PROJECT_DIR$/views/parts/find-pet/left-column-search.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/messages/mesages-event.js" />
+        <option value="$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs" />
+        <option value="$PROJECT_DIR$/views/semantic/front/moment.js" />
+        <option value="$PROJECT_DIR$/views/sign-in.ejs" />
+        <option value="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs" />
         <option value="$PROJECT_DIR$/router.js" />
+        <option value="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
+        <option value="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" />
+        <option value="$PROJECT_DIR$/views/find-pet.ejs" />
+        <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" />
+        <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" />
+        <option value="$PROJECT_DIR$/views/parts/opt/head.ejs" />
         <option value="$PROJECT_DIR$/views/messages.ejs" />
         <option value="$PROJECT_DIR$/views/profile.ejs" />
-        <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" />
+        <option value="$PROJECT_DIR$/views/parts/menu.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" />
       </list>
@@ -169,6 +170,12 @@
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -198,52 +205,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-              <item name="center" type="cbb8eebc:String" user="center" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-              <item name="center" type="cbb8eebc:String" user="center" />
-              <item name="main" type="cbb8eebc:String" user="main" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,7 +237,44 @@
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="advertisement-parts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="opt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="opt" type="462c0819:PsiDirectoryNode" />
+              <item name="modal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="semantic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="semantic" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="semantic" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="sound" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
@@ -348,6 +346,52 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
+              <item name="center" type="cbb8eebc:String" user="center" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
+              <item name="center" type="cbb8eebc:String" user="center" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,17 +405,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\front\lib" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\front\service" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\service\messages" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\service" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\front\service\data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\jcrop" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\images" />
     </key>
@@ -456,12 +501,17 @@
       <workItem from="1512501298060" duration="8666000" />
       <workItem from="1512560991253" duration="9722000" />
       <workItem from="1512597151913" duration="9935000" />
-      <workItem from="1512645770281" duration="10285000" />
+      <workItem from="1512645770281" duration="11378000" />
+      <workItem from="1512681539366" duration="13288000" />
+      <workItem from="1512733536410" duration="12724000" />
+      <workItem from="1512781699986" duration="3734000" />
+      <workItem from="1513463783838" duration="5914000" />
+      <workItem from="1513515183155" duration="12778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548986000" />
+    <option name="totallyTimeSpent" value="598517000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,15 +558,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/semantic/dist/semantic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="1531" column="4" lean-forward="false" selection-start-line="1531" selection-start-column="4" selection-end-line="1531" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/searching.js" />
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/profile/show-profile-data.js" />
     <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/center/bookmarks/bookmarks.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -545,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/opt/modal/img-post.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/authentication/sign-in/sign-in-validation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -573,31 +607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/add-advertisement/image-service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/sign-in.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/advertisement-parts/right-column.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -622,24 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/opt/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-noactive.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -665,38 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/tags-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-13398">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/advertisement-parts/left-tags-fields.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="80" column="81" lean-forward="true" selection-start-line="80" selection-start-column="81" selection-end-line="80" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/find-pet.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/add-advertisement.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -714,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -732,27 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="7" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/other_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="70" column="24" lean-forward="false" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/menu.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -771,11 +714,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js">
+    <entry file="file://$PROJECT_DIR$/views/parts/opt/modal/img-post.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/other_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="70" column="24" lean-forward="false" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="669" column="10" lean-forward="false" selection-start-line="669" selection-start-column="10" selection-end-line="669" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/lib/moment.js" />
+    <entry file="file://$PROJECT_DIR$/views/parts/advertisement-parts/right-column.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/profile/profile-event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <marker date="1513516520687" expanded="true" signature="234:246" ph="..." />
+            <marker date="1513516520687" expanded="true" signature="476:488" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parts/advertisement-parts/left-tags-fields.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/add-advertisement.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/sign-in.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="7" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/tags-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="47" />
+          <folding>
+            <marker date="1512084090420" expanded="true" signature="4040:4089" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -787,79 +819,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js">
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="420">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/profile/profile-event.js">
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="64" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="64" />
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/find-pet.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="45">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/messages.ejs">
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="73" />
+        <state relative-caret-position="450">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1512605515556" expanded="false" signature="684:696" ph="..." />
+            <marker date="1512175791549" expanded="true" signature="1915:1930" ph="..." />
+            <marker date="1512175791549" expanded="true" signature="2132:2147" ph="..." />
+            <marker date="1512175791549" expanded="true" signature="2322:2337" ph="..." />
+            <marker date="1512175791549" expanded="true" signature="2509:2524" ph="..." />
+            <marker date="1512175791549" expanded="true" signature="2699:2714" ph="..." />
+            <marker date="1512175791549" expanded="true" signature="2888:2903" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/profile.ejs">
+    <entry file="file://$PROJECT_DIR$/views/test-photo.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="190" lean-forward="false" selection-start-line="10" selection-start-column="190" selection-end-line="10" selection-end-column="190" />
+        <state relative-caret-position="-1990">
+          <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parts/opt/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="620">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parts/menu.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/messages.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <marker date="1513559388574" expanded="false" signature="2185:2200" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/profile.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="58" lean-forward="false" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+        <state relative-caret-position="-565">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <marker date="1512656681241" expanded="true" signature="1189:1202" ph="..." />
+            <marker date="1513562392503" expanded="true" signature="1362:1375" ph="..." />
+            <marker date="1513562392503" expanded="true" signature="7426:7442" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="48" column="41" lean-forward="true" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-          <folding>
-            <marker date="1512657248894" expanded="true" signature="1986:2003" ph="..." />
-          </folding>
+        <state relative-caret-position="5">
+          <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
