@@ -1,6 +1,5 @@
 
 let webSocket = new WebSocket('ws://185.77.205.82:8080/messages-socket/{'+window.token+'}');
-let message_input = document.getElementById("message-inpt");//$('#message-inpt')[0];
 /**
  *  DATA WITHOUT LOCAL TIME *
  *
@@ -36,14 +35,14 @@ webSocket.onmessage = function(message){
     if(window.location.pathname ==='/messages'){
 
         console.log('answer: ',answer);
-        console.log('id_dialog: ',id_dialog,' answer.answer.id_dialog: ',answer.id_dialog);
-        $('#'+answer.id_dialog).find('#last-message-block').text(answer.message.substring(0,36));
-        if (typeof id_dialog !== 'undefined' && id_dialog === answer.id_dialog){
+        console.log('id_dialog: ',id_dialog,' answer.answer.id_dialog: ',answer.data.id_dialog);
+        $('#'+answer.data.id_dialog).find('#last-message-block').text(answer.data.message.substring(0,36));
+        if (typeof id_dialog !== 'undefined' && id_dialog === answer.data.id_dialog){
             show_message( answer, false);
         }
     }else{
         get_unread_messages(window.token, id_dialog).then(function (count) {
-            $('#unread-message-lable').html(count);
+            $('#unread-message-label').html(count);
             console.log('count unread message: ',count);
         });
     }
@@ -58,27 +57,46 @@ webSocket.onclose = function(message){
 webSocket.onerror = function(message){
 console.log('#INFO [message-socket] error: '+message)
 };
+$(window).bind("beforeunload", function() {
+    webSocket.close();
+});
 
+/************************
+ *          BUTTON
+ ************************/
 function wsSendMessage(){
-    let json_message = JSON.parse('{' +
-        '    "id_message" : "",' +
-        '    "id_dialog" : "",' +
-        '    "id_outcoming_account" : "",' +
+    // let json_message = JSON.parse('{' +
+    //     '    "id_message" : "",' +
+    //     '    "id_dialog" : "",' +
+    //     '    "id_outcoming_account" : "",' +
+    //     '    "date_time":"",' +
+    //     '    "message":"",' +
+    //     '    "is_read":""' +
+    //     '}');
+    let json_message = JSON.parse(
+        '{' +
+        '  "type":"message",' +
+        '  "data":{' +
+        '    "id_message":"",' +
+        '    "id_dialog":"",' +
+        '    "id_outcoming_account":"",' +
         '    "date_time":"",' +
         '    "message":"",' +
         '    "is_read":""' +
-        '}');
+        '  }' +
+        '}'
+    );
     let value = document.getElementById("message").value;
-
+    $('#'+id_dialog).find('#last-message-block').text(value.substring(0,36));
     if(typeof value !== 'undefined' && value !== ""){
         get_uuid('messages').then( function (uuid) {
-
-            json_message.id_message = uuid;
-            json_message.id_dialog = id_dialog;
-            json_message.id_outcoming_account = window.id_account;
-            json_message.date_time = Date.now();
-            json_message.message = value;
-            json_message.is_read = false;
+            json_message.type = "message";
+            json_message.data.id_message = uuid;
+            json_message.data.id_dialog = id_dialog;
+            json_message.data.id_outcoming_account = window.id_account;
+            json_message.data.date_time = Date.now();
+            json_message.data.message = value;
+            json_message.data.is_read = false;
             console.log('#INFO [SOCKET] [wsSendMessage] [SEND] message: ',json_message);
             webSocket.send(JSON.stringify(json_message));
             show_message(json_message, true);
@@ -88,11 +106,11 @@ function wsSendMessage(){
 function wsCloseConnection(){
     webSocket.close();
 }
-$(window).bind("beforeunload", function() {
-    webSocket.close();
-});
 
-function get_date_time(date){ //TODO USE Date.now() [timestamp]
+/************************
+ *          DATE
+ ************************/
+function get_date_time(date){ //TODO replace to date.js
     let years = date.getUTCFullYear();
     let month = date.getUTCMonth();
     let day = date.getUTCDate();

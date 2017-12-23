@@ -53,11 +53,6 @@ function show_dialog(id_account, json_dialog){
 }
 function open_dialog(id_dialog_block) {
 
-    // let id_incoming_account = $('#'+id_dialog_block).find('.ui.header').attr('id');
-    // console.log('click id_dialog_block: ',id_dialog_block);
-    // console.log('account imcoming id: ',id_incoming_account);
-    // console.log('header ', $('#'+id_dialog_block).find('.ui.header')[0].innerHTML);
-
     $('#message-scroll-block').removeClass('disabled');
     $('#input-message').removeClass('disabled');
     $('#send-msg-btn').removeClass('disabled');
@@ -66,14 +61,15 @@ function open_dialog(id_dialog_block) {
     j_array_data_incoming.full_name = $('#'+id_dialog_block).find('.ui.header')[0].innerHTML;
     j_array_data_incoming.img = $('#'+id_dialog_block).find('img').attr("src");
     $('#messages-block').find('.ui.minimal.comments').remove();
+
     get_messages_by_id_dialog(window.token, id_dialog_block).then( function (j_array_messages) {
 
         console.log('messages: ',j_array_messages);
         if (typeof j_array_messages !== 'undefined'){
             for (let index = 0; index < j_array_messages.length; index++){
                 if(j_array_messages[index].idOutcomingAccount === window.id_account){
-                    $('#messages-block').append(' <div class="ui minimal comments" id="'+j_array_messages[index].idMessage+'">\n' +
-                        '                    <div class="comment">\n' +
+                    $('#messages-block').append(
+                        '                    <div class="comment" id="'+j_array_messages[index].idMessage+'" >\n' +
                         '                        <a class="avatar">\n' +
                         '                            <img src="'+j_array_data_my.img+'">\n' +
                         '                        </a>\n' +
@@ -89,12 +85,11 @@ function open_dialog(id_dialog_block) {
                         '                                <a class="delete">Delete</a>\n' +
                         '                            </div>\n' +
                         '                        </div>\n' +
-                        '                    </div>\n' +
-                        '                </div>');
+                        '                    </div>\n');
                     $('#message-scroll-block').scrollTop($('#message-scroll-block')[0].scrollHeight);
                 }else{
-                    $('#messages-block').append(' <div class="ui minimal comments" id="'+j_array_messages[index].idMessage+'">\n' +
-                        '                    <div class="comment">\n' +
+                    $('#messages-block').append(
+                        '                    <div class="comment" id="'+j_array_messages[index].idMessage+'">\n' +
                         '                        <a class="avatar">\n' +
                         '                            <img src="'+j_array_data_incoming.img+'">\n' +
                         '                        </a>\n' +
@@ -110,47 +105,48 @@ function open_dialog(id_dialog_block) {
                         '                                <a class="delete">Delete</a>\n' +
                         '                            </div>\n' +
                         '                        </div>\n' +
-                        '                    </div>\n' +
-                        '                </div>');
+                        '                    </div>\n');
                     $('#message-scroll-block').scrollTop($('#message-scroll-block')[0].scrollHeight);
                 }
+                if (!j_array_messages[index].isRead){
+                    $('#'+j_array_messages[index].idMessage).css({'background-color':'rgba(113,111,122,0.11)'});
+                }
             }
+
         }else{
             console.log('#INFO [message-event] [open_dialog] message not found!');
         }
 
     });
 }
+
 function show_message(message, is_me) {
-    if (id_dialog === message.id_dialog){
+    if (id_dialog === message.data.id_dialog){
         let target;
         if(is_me){
             target = j_array_data_my;
         }else{
             target = j_array_data_incoming;
         }
-        $('#messages-block').append(' <div class="ui minimal comments" id="'+message.id_message+'" style="margin-top: 5px;">\n' +
-            '                    <div class="comment">\n' +
+        $('#messages-block').append(
+            '                    <div class="comment" id="'+message.data.id_message+'" style="background-color:rgba(113,111,122,0.11);">\n' +
             '                        <a class="avatar">\n' +
             '                            <img src="'+target.img+'">\n' +
             '                        </a>\n' +
             '                        <div class="content">\n' +
             '                            <a class="author">'+target.full_name+'</a>\n' +
             '                            <div class="metadata">\n' +
-            '                                <span class="date">'+get_date_time(new Date(message.date_time))+'</span>\n' +
+            '                                <span class="date">'+get_date_time(new Date(message.data.date_time))+'</span>\n' +
             '                            </div>\n' +
             '                            <div class="text">\n' +
-            '                                <p>'+message.message+'</p>\n' +
+            '                                <p>'+message.data.message+'</p>\n' +
             '                            </div>\n' +
             '                            <div class="actions">\n' +
             '                                <a class="delete">Delete</a>\n' +
             '                            </div>\n' +
             '                        </div>\n' +
-            '                    </div>\n' +
-            '                </div>');
+            '                    </div>\n');
         $('#message-scroll-block').scrollTop($('#message-scroll-block')[0].scrollHeight);
-        // console.log('#last-message-block ', $('#'+json_message.id_dialog).find('#last-message-block'));
-
     }
 }
  function get_my_data() {
@@ -162,5 +158,3 @@ function show_message(message, is_me) {
          });
      });
  }
-
- // function

@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="881c52ab-39a7-4d23-8f2b-01d12fc90038" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/semantic/dist/sound/BubblePop.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/semantic/dist/sound/BubblePopWav.wav" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/router.js" afterPath="$PROJECT_DIR$/router.js" />
-      <change beforePath="$PROJECT_DIR$/views/find-pet.ejs" afterPath="$PROJECT_DIR$/views/find-pet.ejs" />
       <change beforePath="$PROJECT_DIR$/views/messages.ejs" afterPath="$PROJECT_DIR$/views/messages.ejs" />
       <change beforePath="$PROJECT_DIR$/views/parts/menu.ejs" afterPath="$PROJECT_DIR$/views/parts/menu.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs" afterPath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" afterPath="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/profile.ejs" afterPath="$PROJECT_DIR$/views/profile.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" afterPath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" />
       <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" />
       <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" afterPath="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
-      <change beforePath="$PROJECT_DIR$/views/sign-in.ejs" afterPath="$PROJECT_DIR$/views/sign-in.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,25 +20,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="messages-event.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js">
+      <file leaf-file-name="messages-socket.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-565">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <marker date="1513562392503" expanded="true" signature="1362:1375" ph="..." />
-                <marker date="1513562392503" expanded="true" signature="7426:7442" ph="..." />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages-socket.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js">
+      <file leaf-file-name="messages-event.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-              <folding />
+            <state relative-caret-position="180">
+              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <folding>
+                <marker date="1513738927563" expanded="true" signature="1362:1375" ph="..." />
+                <marker date="1513738927563" expanded="true" signature="7160:7200" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,10 +46,10 @@
       <file leaf-file-name="messages.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/messages.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
               <folding>
-                <marker date="1513559388574" expanded="false" signature="2185:2200" ph="..." />
+                <marker date="1513736166219" expanded="false" signature="2219:2234" ph="..." />
               </folding>
             </state>
           </provider>
@@ -70,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/views/parts/menu.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+              <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -89,8 +78,8 @@
       <file leaf-file-name="messages-data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="28" />
+            <state relative-caret-position="945">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,11 +147,11 @@
         <option value="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" />
         <option value="$PROJECT_DIR$/views/find-pet.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" />
         <option value="$PROJECT_DIR$/views/parts/opt/head.ejs" />
-        <option value="$PROJECT_DIR$/views/messages.ejs" />
         <option value="$PROJECT_DIR$/views/profile.ejs" />
         <option value="$PROJECT_DIR$/views/parts/menu.ejs" />
+        <option value="$PROJECT_DIR$/views/messages.ejs" />
+        <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" />
       </list>
@@ -204,6 +193,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
+              <item name="center" type="cbb8eebc:String" user="center" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="parts" type="cbb8eebc:String" user="parts" />
+              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
+              <item name="center" type="cbb8eebc:String" user="center" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -346,52 +381,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-              <item name="center" type="cbb8eebc:String" user="center" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-              <item name="center" type="cbb8eebc:String" user="center" />
-              <item name="main" type="cbb8eebc:String" user="main" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,17 +397,17 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\jcrop" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\front\lib" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\front\service" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\service\messages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\jcrop" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -507,11 +496,13 @@
       <workItem from="1512781699986" duration="3734000" />
       <workItem from="1513463783838" duration="5914000" />
       <workItem from="1513515183155" duration="12778000" />
+      <workItem from="1513732850360" duration="6455000" />
+      <workItem from="1514037734628" duration="3112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="598517000" />
+    <option name="totallyTimeSpent" value="608084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,7 +522,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.428125" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36621195" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36621195" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -754,7 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-29">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,7 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="5" column="18" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="5" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,7 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" column="7" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,9 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="47" />
-          <folding>
-            <marker date="1512084090420" expanded="true" signature="4040:4089" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
           <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,7 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,14 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <marker date="1512175791549" expanded="true" signature="1915:1930" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2132:2147" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2322:2337" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2509:2524" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2699:2714" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2888:2903" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,7 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -878,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1990">
           <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,33 +855,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/parts/menu.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/messages.ejs">
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <marker date="1513559388574" expanded="false" signature="2185:2200" ph="..." />
-          </folding>
+        <state relative-caret-position="945">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -924,21 +882,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/messages.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <marker date="1513736166219" expanded="false" signature="2219:2234" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-565">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
-            <marker date="1513562392503" expanded="true" signature="1362:1375" ph="..." />
-            <marker date="1513562392503" expanded="true" signature="7426:7442" ph="..." />
+            <marker date="1513738927563" expanded="true" signature="1362:1375" ph="..." />
+            <marker date="1513738927563" expanded="true" signature="7160:7200" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+        <state relative-caret-position="345">
+          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
           <folding />
         </state>
       </provider>
