@@ -1,7 +1,7 @@
 function send_post_ad(token,array_text,array_image,array_tags){
     console.log(JSON.stringify({ 'token':token, 'array_text':array_text, 'array_image':'you know', 'array_tags':array_tags}));
    return $.ajax({
-        url:'http://185.77.205.82:8080/post-content/add',
+        url:'http://185.77.204.249:8080/post-content/add',
         method: 'POST',
         data: JSON.stringify({ 'token':window.token, 'array_text':array_text, 'array_image':array_image, 'array_tags':array_tags}),
         ContentType: 'application/json',

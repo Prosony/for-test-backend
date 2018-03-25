@@ -58,7 +58,8 @@ function modal_event_switch(id_post){
             $('#modal-post-ad').modal({
                 onHidden: function(){
                     $('.ui.dimmer.modals.page.transition.hidden').empty();
-                    console.log('hidden');
+                    console.log('hidden thats it imullika');
+                    $('body').removeClass('dimmable blurring');
                 },
                 onShow: function(){
                     console.log('shown');

@@ -1,6 +1,6 @@
 function data_update_find_pet(token){
     return $.ajax({
-            url:'http://185.77.205.82:8080/all-post-ad',
+            url:'http://185.77.204.249:8080/all-post-ad',
             method: 'POST',
             data: JSON.stringify({ 'token':token}),
             ContentType: 'application/json',
@@ -16,7 +16,7 @@ function data_update_find_pet(token){
 }
 function get_post_ad_by_tags(token, json_tags){
     return $.ajax({
-        url:'http://185.77.205.82:8080/all-post-ad',
+        url:'http://185.77.204.249:8080/all-post-ad',
         method: 'POST',
         data: JSON.stringify({ 'token':window.token, 'array_tags':array_tags}),
         ContentType: 'application/json',

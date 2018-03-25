@@ -1,6 +1,6 @@
 function update_data_profile(token,id){
    return $.ajax({
-            url:'http://185.77.205.82:8080/profile',
+            url:'http://185.77.204.249:8080/profile',
             method: 'POST',
             data: JSON.stringify({ 'token':token, 'id':id}),
             ContentType: 'application/json',
@@ -16,7 +16,7 @@ function update_data_profile(token,id){
 function checkAccount(id){
     console.log('#INFO [checkAccount] id_account', id);
     return $.ajax({
-        url: 'http://185.77.205.82:8080/check-account',
+        url: 'http://185.77.204.249:8080/check-account',
         method: 'POST',
         data: JSON.stringify({'id':id}),
         ContentType: 'application/json',

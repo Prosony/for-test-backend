@@ -1,5 +1,5 @@
 
-let webSocket = new WebSocket('ws://185.77.205.82:8080/messages-socket/{'+window.token+'}');
+let webSocket = new WebSocket('ws://localhost:8080/messages-socket/{'+window.token+'}');
 /**
  *  DATA WITHOUT LOCAL TIME *
  *
@@ -28,17 +28,31 @@ webSocket.onopen = function(message){
 
 };
 
-webSocket.onmessage = function(message){
-    let answer = JSON.parse(message.data);
-    console.log('#INFO [SOCKET] [onMessage}: ', answer);
-    play_sound_notification();
-    if(window.location.pathname ==='/messages'){
+webSocket.onmessage = function (packet){
+    console.log(packet);
+    let type = JSON.parse(packet.data).type;
+    let answer = JSON.parse(packet.data);
+    // console.log('#INFO [SOCKET] [onMessage}: ', answer);
+    console.log('TYPE: '+type);
 
-        console.log('answer: ',answer);
-        console.log('id_dialog: ',id_dialog,' answer.answer.id_dialog: ',answer.data.id_dialog);
-        $('#'+answer.data.id_dialog).find('#last-message-block').text(answer.data.message.substring(0,36));
-        if (typeof id_dialog !== 'undefined' && id_dialog === answer.data.id_dialog){
-            show_message( answer, false);
+    if(window.location.pathname ==='/messages'){
+        switch (type){
+            case 'message':
+                console.log('#INFO [message-socket.js][onmessage] type:[message] received the package with [answer]: ',answer);
+                $('#'+answer.data.id_dialog).find('#last-message-block').text(answer.data.message.substring(0,36));
+                if (typeof id_dialog !== 'undefined' && id_dialog === answer.data.id_dialog){
+                    play_sound_notification();
+                    show_message( answer, false);
+                }else{
+
+                }
+                break;
+            case 'read':
+                if (typeof id_dialog !== 'undefined' && answer.data.id_dialog === id_dialog){
+                    console.log("YEAAH");
+                    message_is_read(false); // change color messages
+                }
+                break;
         }
     }else{
         get_unread_messages(window.token, id_dialog).then(function (count) {
@@ -64,16 +78,9 @@ $(window).bind("beforeunload", function() {
 /************************
  *          BUTTON
  ************************/
+
 function wsSendMessage(){
-    // let json_message = JSON.parse('{' +
-    //     '    "id_message" : "",' +
-    //     '    "id_dialog" : "",' +
-    //     '    "id_outcoming_account" : "",' +
-    //     '    "date_time":"",' +
-    //     '    "message":"",' +
-    //     '    "is_read":""' +
-    //     '}');
-    let json_message = JSON.parse(
+    let package = JSON.parse(
         '{' +
         '  "type":"message",' +
         '  "data":{' +
@@ -90,20 +97,47 @@ function wsSendMessage(){
     $('#'+id_dialog).find('#last-message-block').text(value.substring(0,36));
     if(typeof value !== 'undefined' && value !== ""){
         get_uuid('messages').then( function (uuid) {
-            json_message.type = "message";
-            json_message.data.id_message = uuid;
-            json_message.data.id_dialog = id_dialog;
-            json_message.data.id_outcoming_account = window.id_account;
-            json_message.data.date_time = Date.now();
-            json_message.data.message = value;
-            json_message.data.is_read = false;
-            console.log('#INFO [SOCKET] [wsSendMessage] [SEND] message: ',json_message);
-            webSocket.send(JSON.stringify(json_message));
-            show_message(json_message, true);
+            package.type = "message";
+            package.data.id_message = uuid;
+            package.data.id_dialog = id_dialog;
+            package.data.id_outcoming_account = window.id_account;
+            package.data.date_time = Date.now();
+            package.data.message = value;
+            package.data.is_read = false;
+            console.log('#INFO [SOCKET] [wsSendMessage] [SEND] message: ',package);
+            webSocket.send(JSON.stringify(package));
+            show_message(package, true);
+            $('#message').val('')
         });
     }
 }
-function wsCloseConnection(){
+
+/**
+ * Send to the writer that the reader has read message
+ * @param id_dialog
+ */
+function ws_message_has_read(id_dialog){
+
+    let package = JSON.parse(
+        '{' +
+        '  "type":"read",' +
+        '  "data":{' +
+        '    "id_dialog":"",' +
+        '    "id_reader":""' +
+        '  }' +
+        '}'
+    );
+    package.type = "read";
+    package.data.id_dialog = id_dialog;
+    package.data.id_reader= window.id_account;
+    console.log("reading message")
+    console.log(package);
+    webSocket.send(JSON.stringify(package));
+    message_is_read(true);
+    //TODO set color message by isRead;
+
+}
+function ws_close_connection(){
     webSocket.close();
 }
 

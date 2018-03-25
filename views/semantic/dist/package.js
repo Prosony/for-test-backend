@@ -1,11 +1,9 @@
-var
-  where = 'client' // Adds files only to the client
-;
+const where = 'client'; // Adds files only to the client
 
 Package.describe({
   name    : 'semantic:ui-css',
   summary : 'Semantic UI - CSS Release of Semantic UI',
-  version : '2.2.13',
+  version : '2.3.1',
   git     : 'git://github.com/Semantic-Org/Semantic-UI-CSS.git',
 });
 

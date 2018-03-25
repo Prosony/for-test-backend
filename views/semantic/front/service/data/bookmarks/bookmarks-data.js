@@ -1,7 +1,7 @@
 function add_bookmark(token, id){
     // console.log('id post ad:',id);
     $.ajax({
-        url:'http://185.77.205.82:8080/favorites/add',
+        url:'http://185.77.204.249:8080/favorites/add',
         method: 'POST',
         data: JSON.stringify({ 'token':token, 'id':id}),
         ContentType: 'application/json',
@@ -18,7 +18,7 @@ function add_bookmark(token, id){
 function delete_bookmark(token, id){
     // console.log('id post ad:',id);
     $.ajax({
-        url:'http://185.77.205.82:8080/favorites/delete',
+        url:'http://185.77.204.249:8080/favorites/delete',
         method: 'POST',
         data: JSON.stringify({ 'token':token, 'id':id}),
         ContentType: 'application/json',
