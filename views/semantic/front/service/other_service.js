@@ -14,8 +14,7 @@ function star_favorites_switch(id_post_ad, class_name){
 function modal_event_switch(id_post){
     console.log(id_post);
     $.get('../parts/opt/modal/modal-find-pet.ejs', function(modal){
-        $('.ui.dimmer.modals.page.transition.hidden').append(modal);
-
+        $('#modal').append(modal);
         get_post_ad_by_id_post(window.token, id_post).then(function (post_ad) {
             console.log('post_ad: ',post_ad);
             update_data_profile(window.token, post_ad.idAccount).then(function (profile_man) {
@@ -31,7 +30,7 @@ function modal_event_switch(id_post){
             getImage(JSON.stringify({'path': post_ad.jsonPathImage})).then(function (base64image) {
                 for (let index = 0; index < base64image.length; index++ ){
                     if (index === 0){
-                        $('#modal-post-ad').find('#first-image-modal').attr("src", base64image[0]);
+                        $('#modal-post-ad').find('#first-image-modal').attr("src", base64image[index]);
                     }else{
                         $.get('../parts/opt/modal/img-post.ejs', function(data){
                             $('#modal-post-ad').find('#slide-image-div').prepend(data);
@@ -53,13 +52,10 @@ function modal_event_switch(id_post){
             $('#tag-column').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.group+'</div>');
             $('#tag-column').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+post_ad.jsonTags.animals+'</div>');
 
-
-
             $('#modal-post-ad').modal({
                 onHidden: function(){
-                    $('.ui.dimmer.modals.page.transition.hidden').empty();
-                    console.log('hidden thats it imullika');
-                    $('body').removeClass('dimmable blurring');
+                    $('#modal').empty();
+                    $('.modals').remove()
                 },
                 onShow: function(){
                     console.log('shown');

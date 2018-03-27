@@ -1,5 +1,5 @@
 function getImage(json_path) {
-    console.log('#INFO [getImage] json_path', json_path);
+    console.log('#INFO [image-data.js][getImage] json_path', json_path);
     return $.ajax({
         url: 'http://185.77.204.249:8080/files',
         method: 'POST',

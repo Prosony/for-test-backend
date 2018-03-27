@@ -1,6 +1,9 @@
 {
   "name": "for-test-backend",
   "version": "0.0.1",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
     "async": "latest",
     "body-parser": "latest",

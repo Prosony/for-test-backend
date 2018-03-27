@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <%include parts/opt/head.ejs%>
-</head>
-<body>
-    <%include parts/menu.ejs%>
-
-    <div id="main" class="ui three column grid" style="min-width: 1024px;margin-left: 35px; margin-top: 35px" >
-        <div id="left-column-block" class="four wide column" style="min-width: 260px">
-            <%include parts/find-pet/left-column-search.ejs%>
+  </head>
+  <body>
+    <div class="ui container">
+      <%include parts/menu.ejs%>
+      <div id="main" class="ui two column grid">
+        <div id="left-column-block" class="four wide column">
+          <%include parts/find-pet/left-column-search.ejs%>
         </div>
-        <div id="content-column-block" class="eight wide column" style="min-width: 728px; ">
-            <div class="ui top attached segment" id="ad-post-content">
-
-            </div>
+        <div id="content-column-block" class="twelve wide column"">
+          <div class="ui top attached segment" id="ad-post-content"></div>
         </div>
         <div class="four wide column"></div>
+      </div>
+      <div id="modal"></div>
     </div>
-    <div class="ui dimmer modals page transition hidden">
-    </div>
-</body>
+  </body>
 </html>
 
 <script>
     var token = '<%= token %>';
     var id_account = '<%=id%>';
-    window.onload = function() {
-        show_post_ad(token);
-        menu_sticky();
-        // tags_sticky();
-        update_tags_preview();
-        $(document.body).unbind('click').on('click', '#previews-button' ,function(){
-            modal_event_switch($(this).closest('.ui.items').attr('id'));
-        }).on('click', '.right.floated.star' ,function(){
-            star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));
-        });
-    };
 </script>
-
 <script src="semantic/front/find-pet/find-pet-data.js"></script>
 <script src="semantic/front/find-pet/find-pet-event.js"></script>
 <script src="semantic/front/find-pet/find-pet-validation.js"></script>
+
+<script src="semantic/front/messages/messages-data.js"></script>
+<script src="semantic/front/messages/messages-socket.js"></script>
+<script src="semantic/front/messages/messages-socket-handle.js"></script>
+
+<script src="semantic/front/service/data/bookmarks/bookmarks-data.js"></script>
 
 <script src="semantic/front/service/data/bookmarks/bookmarks-data.js"></script>
 
@@ -54,3 +46,18 @@
 <script src="semantic/front/service/data/tags/tags-data.js"></script>
 <script src="semantic/front/service/data/file/image-data.js"></script>
 <script src="semantic/front/service/data/post-ad/post-ad-data.js"></script>
+    <script>
+    window.onload = function() {
+        show_post_ad(token);
+        menu_sticky();
+        // tags_sticky();
+        update_tags_preview();
+        $(document.body).unbind('click').on('click', '#previews-button' ,function(){
+            modal_event_switch($(this).closest('.ui.items').attr('id'));
+        }).on('click', '.right.floated.star' ,function(){
+            star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));
+        });
+    };
+</script>
+
+

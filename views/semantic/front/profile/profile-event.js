@@ -1,11 +1,10 @@
 /**HOME-PROFILE*/
-function render_page_element(){
-    console.log('is_me:', is_me);
-    if (is_me && is_me !== 'false'){
+function render_page_element() {
+    if (is_me && is_me !== 'false') {
         $('#left-column-block').append(
-            '<a class="ui basic button" href="/add-advertisement" style="width: 230px">\n' +
-            '        <i class="add icon"></i>Add Advertisement\n' +
-            '    </a>');
+            '<a class="ui basic fluid button" href="/add-advertisement">\n' +
+            '    <i class="add icon"></i>Add Advertisement\n' +
+            '</a>');
 
     }else{
         $('#left-column-block').append(
@@ -23,11 +22,11 @@ function load_home(token, id) {
                     $('#avatar').attr("src", base64string);
                     let dateString = get_date(profile.dateCreateAccount);
                     // console.log("dateString ",dateString);
-                    $('#date-create-account').html(dateString);
-                    $('#name-user').html(profile.name +' '+ profile.surname);
-                    $('#data-birthday').html(profile.birthday);
-                    $('#data-phone').html(profile.phone);
-                    $('#data-about').html(profile.about);
+                    $('#date-create-account').append(dateString);
+                    $('#name-user').append(profile.name +' '+ profile.surname);
+                    $('#data-birthday').append(profile.birthday);
+                    $('#data-phone').append(profile.phone);
+                    $('#data-about').append(profile.about);
                     update_data_post_ad(token,id).then(function (post_ad) {
                         console.log('post_ad',post_ad);
                         set_post_ad(post_ad);

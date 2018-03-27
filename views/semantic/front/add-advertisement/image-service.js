@@ -8,13 +8,17 @@ $(document.body).on('click', '#btn-delete-img' ,function(e){
     console.log('before delete array: ',array_image);
     array_image.splice(index, 1);
     console.log('after delete array: ',array_image);
+    if (array_image.length == 0) {
+      $('#upload-preview-image').hide()
+    }
     preview_image();
 
 });
 
 $('#input-file').change(function (e) {
     let files = e.target.files;
-    console.log('files.length: ',files.length);
+    $('#upload-preview-image').show()
+    console.log('#INFO [image-service.js] files.length: ',files.length);
     for(let inx = 0; inx < files.length; inx++){
         blob_to_base64(files[inx]);
     }

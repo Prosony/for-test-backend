@@ -52,11 +52,11 @@ function get_last_message_by_id_dialog(token, id_dialog){
  * @param id_dialog
  * @returns count unread message
  */
-function get_unread_messages(token, id_dialog){
+function get_unread_messages(token){
     return $.ajax({
         url: 'http://185.77.204.249:8080//unread-messages',
         method: 'POST',
-        data: JSON.stringify({'token': token, 'id_dialog':id_dialog}),
+        data: JSON.stringify({'token': token}),
         ContentType: 'application/json',
         charset: 'UTF-8',
         success: function (count) {

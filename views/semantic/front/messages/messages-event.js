@@ -12,9 +12,6 @@ var j_array_data_incoming = JSON.parse('{' +
     '    "id_account":""' +
     '}');
 
-function play_sound_notification() {
-    audio.play();
-}
 function set_dialog_block(){
     get_all_dialogs(window.token).then(function (json_dialogs) {
         console.log('#INFO [set_dialog_block] json_dialogs: ',json_dialogs);
@@ -37,34 +34,34 @@ function show_dialog(id_account, json_dialog){
         j_array_data_incoming.id_account = id_account;
         getImage(JSON.stringify({'path': [profile.path_avatar]})).then(function (base64image) {
             get_last_message_by_id_dialog(window.token, json_dialog.idDialog).then( function (last_message) {
-                $('#dialog-block').append('<div class="item" id="'+json_dialog.idDialog+'" style="height: auto;" onclick="open_dialog($(this).attr(\'id\'))">\n' +
-                    '                                <div class="ui mini image">\n' +
-                    '                                    <img src="'+base64image+'">\n' +
-                    '                                </div>\n' +
-                    '                                <div class="content">\n' +
-                    '                                    <h4 class="ui header" id="'+id_account+'">'+profile.name +' '+ profile.surname+' </h4>\n' +
-                    '                                    <div class="description" id="last-message-block">\n' +
-                    '                                        <p>'+id_account+'</p>\n' +
-                    '                                    </div>\n' +
-                    '                                </div>\n' +
-                    '                            </div>\n');
-                $('#'+json_dialog.idDialog).find('#last-message-block').text(last_message.message.substring(0,36));
+                $('#dialog-block').append(
+                  '<div class="item" id="' + json_dialog.idDialog + '" onclick="open_dialog($(this).attr(\'id\'))">\n' +
+                  '  <div class="ui mini image">\n' +
+                  '    <img src="' + base64image + '">\n' +
+                  '  </div>\n' +
+                  '  <div class="content">\n' +
+                  '    <h4 class="ui header" id="' + id_account + '">' + profile.name + ' ' + profile.surname + '</h4>\n' +
+                  '    <div class="description" id="last-message-block">\n' +
+                  '      <p>' + id_account + '</p>\n' +
+                  '    </div>\n' +
+                  '  </div>\n' +
+                  '</div>\n');
+                $('#' + json_dialog.idDialog).find('#last-message-block').text(last_message.message.substring(0, 36));
             });
-
         });
-
     });
 }
 function open_dialog(id_dialog_block) {
     $('#messages-block').empty();
-    $('#message-scroll-block').removeClass('disabled');
     $('#input-message').removeClass('disabled');
-    $('#send-msg-btn').removeClass('disabled');
+    $('.input').removeClass('disabled');
+    $('.button').removeClass('disabled');
 
     id_dialog = id_dialog_block;
     j_array_data_incoming.full_name = $('#'+id_dialog_block).find('.ui.header')[0].innerHTML;
     j_array_data_incoming.img = $('#'+id_dialog_block).find('img').attr("src");
     j_array_data_incoming.id_account =
+    $('#name').html(j_array_data_incoming.full_name)
     $('#messages-block').find('.ui.minimal.comments').remove();
 
     get_messages_by_id_dialog(window.token, id_dialog_block).then( function (j_array_messages) {

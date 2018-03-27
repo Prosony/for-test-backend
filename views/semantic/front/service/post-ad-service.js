@@ -1,6 +1,6 @@
 function set_post_ad(post_ad){
     update_favorites_post_ad(window.token).then(function (favorites_post_ad) {
-        if (typeof post_ad !== 'undefined') {
+        if (post_ad !== null && post_ad !== undefined && post_ad !== 'undefined' ) {
             let path;
             console.log('is_me its',window.is_me);
             if (window.is_me ==='true'){
@@ -9,13 +9,14 @@ function set_post_ad(post_ad){
                 path = '../parts/profile-parts/center/main/post-ad-noactive.ejs'
             }
             for (let index = 0; index < post_ad.length; index++) {
+                console.log("post ad: "+post_ad[index]);
                 let json_image = JSON.stringify({'path': [post_ad[index].jsonPathAvatar[0], post_ad[index].jsonPathAvatar[1]]});
                 $.get(path, function(data){
                     console.log('post_ad[index]: ',post_ad[index]);
                     $('#ad-post-content').append(data);
                     $('#id').attr("id", post_ad[index].id);
                     $('#'+post_ad[index].id).find('#header-post-ad').html(post_ad[index].jsonText.header);
-                    $('#'+post_ad[index].id).find('#meta-data-postad').html(post_ad[index].jsonText.date);
+                    $('#'+post_ad[index].id).find('#meta-data-postad').html(get_date_time(new Date(post_ad[index].timestamp))); //get_date_time(new Date(j_array_messages[index].date))
                     $('#'+post_ad[index].id).find('#text-wall').html(post_ad[index].jsonText.wallTextArea.substring(0, 162) +'...');
                     getImage(json_image).then(function (base64string) {
                         let base_array = JSON.parse(JSON.stringify(base64string));
@@ -45,6 +46,9 @@ function set_post_ad(post_ad){
                     }
                 });
             }
+        }else{
+            $('#ad-post-content').append('' +
+                '<div>List is empty</div>');
         }
     });
 }

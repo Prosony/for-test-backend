@@ -67,7 +67,7 @@ window.onload = function() {
                     send_post_ad(window.token, array_text, array_image, array_tags).then(function (answer) {
                         console.log('answer: ',answer);
                        if (answer === true){
-                           window.location.href = 'http://149.62.50.125:3000/profile/:'+id_account;
+                           window.location.href = 'http://185.77.204.249:3000/profile/:'+id_account;
                        }else{
                         console.log('something wrong, Check logs!');
                        }

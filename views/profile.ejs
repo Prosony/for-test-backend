@@ -1,25 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head><% include ./parts/opt/head.ejs%></head>
-    <body>
-    <% include ./parts/menu.ejs %>
-
-            <div id="main" class="ui three column  grid" style="min-width: 1024px;margin-left: 35px;" >
-                <div id="left-column-block" class="four wide column" style="min-width: 260px; ">
-                <% include parts/profile-parts/left/left-column.ejs%>
-                </div>
-
-                <div id="content-column-block" class="eight wide column" style="min-width: 750px; ">
-                    <% include parts/profile-parts/center/main/post-content.ejs%>
-                </div>
-                <div class="four wide column"></div>
-            </div>
-
-        <div class="ui dimmer modals page transition hidden" style="max-width: 500px">
-        </div>
-
-    </body>
+<head>
+    <% include ./parts/opt/head.ejs %>
     <script>
+        window.localStorage = '<%= token %>';
         var token = '<%= token %>';
         var id_account = '<%=id%>';
         var is_me = '<%= is_me %>';
@@ -27,28 +11,15 @@
         var audio = new Audio();
         audio.preload = 'auto';
         audio.src = '../semantic/dist/sound/BubblePopWav.wav';
-
-        $( document ).ready(function() {
-            console.log('is_me: ',is_me);
-            menu_sticky();
-            load_home(token, id_account);
-
-            $(document.body).unbind('click').on('click', '#previews-button' ,function(){
-                modal_event_switch($(this).closest('.ui.items').attr('id'));
-            }).on('click', '.right.floated.star' ,function(){
-                star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));
-            }).on('click','.right.floated.icon-remove', function () {
-                console.log('click .right.floated.icon-remove');
-                delete_post_ad($(this).closest('.ui.items').attr('id'));
-            });
-        });
     </script>
+
+    <script src="../semantic/front/messages/messages-socket-handle.js"></script>
     <script src="../semantic/front/messages/messages-socket.js"></script>
-    <script src="../semantic/front/messages/messages-event.js"></script>
     <script src="../semantic/front/messages/messages-data.js"></script>
 
-    <script src="../semantic/front/profile/profile-event.js"></script>
+
     <script src="../semantic/front/profile/profile-data.js"></script>
+    <script src="../semantic/front/profile/profile-event.js"></script>
 
     <script src="../semantic/front/service/other_service.js"></script>
     <script src="../semantic/front/service/post-ad-service.js"></script>
@@ -57,4 +28,40 @@
     <script src="../semantic/front/service/data/file/image-data.js"></script>
     <script src="../semantic/front/service/data/post-ad/post-ad-data.js"></script>
     <script src="../semantic/front/service/data/bookmarks/bookmarks-data.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+            console.log('is_me: ',is_me);
+            menu_sticky();
+            load_home(token, id_account);
+            update_notification();
+            $(document.body).unbind('click').on('click', '#previews-button' ,function(){
+                modal_event_switch($(this).closest('.ui.items').attr('id'));
+            }).on('click', '.right.floated.star' ,function(){
+                star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));
+            }).on('click','.right.floated.icon-remove', function () {
+                console.log('click .right.floated.icon-remove');
+                delete_post_ad($(this).closest('.ui.items').attr('id'));
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="ui container">
+    <% include ./parts/menu.ejs %>
+    <div class="ui two column grid">
+        <div class="row">
+            <div id="left-column-block" class="four wide column">
+                <% include parts/profile-parts/left/left-column.ejs %>
+            </div>
+            <div id="content-column-block" class="twelve wide column">
+                <% include parts/profile-parts/center/main/post-content.ejs %>
+            </div>
+        </div>
+    </div>
+    <div id="modal"></div>
+</div>
+</body>
 </html>

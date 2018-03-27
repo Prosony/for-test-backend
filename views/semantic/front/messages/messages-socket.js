@@ -1,5 +1,8 @@
 
-let webSocket = new WebSocket('ws://localhost:8080/messages-socket/{'+window.token+'}');
+let webSocket = new WebSocket('ws://185.77.204.249:8080/messages-socket/{'+window.token+'}');
+var audio = new Audio();
+audio.preload = 'auto';
+audio.src = '../semantic/dist/sound/BubblePopWav.wav';
 /**
  *  DATA WITHOUT LOCAL TIME *
  *
@@ -18,13 +21,12 @@ let webSocket = new WebSocket('ws://localhost:8080/messages-socket/{'+window.tok
  * var UTCseconds = (Math.floor(x.getTime()/1000) + x.getTimezoneOffset()*60)
  */
 webSocket.onopen = function(message){
-    console.log('Connection success, date.now '+Date.now());
-    console.log("url: ",window.location.pathname);
-
-    get_unread_messages(window.token, id_dialog).then(function (count) {
-        console.log('count unread message: ',count);
-        $('#unread-message-lable').html(count)
-    });
+    console.log('#INFO [message-socket.js][onopen] Connection success, date.now: ['+Date.now()+"], url: [",window.location.pathname+"]");
+    update_notification();
+    // get_unread_messages(window.token, id_dialog).then(function (count) {
+    //     console.log('count unread message: ',count);
+    //     $('#unread-message-lable').html(count)
+    // });
 
 };
 
@@ -34,7 +36,8 @@ webSocket.onmessage = function (packet){
     let answer = JSON.parse(packet.data);
     // console.log('#INFO [SOCKET] [onMessage}: ', answer);
     console.log('TYPE: '+type);
-
+    console.log("FUCK");
+    console.log(window.location.pathname ==='/messages');
     if(window.location.pathname ==='/messages'){
         switch (type){
             case 'message':
@@ -55,10 +58,16 @@ webSocket.onmessage = function (packet){
                 break;
         }
     }else{
-        get_unread_messages(window.token, id_dialog).then(function (count) {
-            $('#unread-message-label').html(count);
-            console.log('count unread message: ',count);
-        });
+        switch (type){
+            case "message":
+                get_unread_messages(window.token).then(function (count) {
+                    $('#unread-message-label').html(count);
+                    play_sound_notification();
+                    console.log('count unread message: ',count);
+                });
+                break;
+        }
+
     }
 };
 webSocket.onclose = function(message){
@@ -69,17 +78,14 @@ webSocket.onclose = function(message){
 };
 
 webSocket.onerror = function(message){
-console.log('#INFO [message-socket] error: '+message)
+    console.log('#INFO [message-socket] error: '+message)
 };
-$(window).bind("beforeunload", function() {
-    webSocket.close();
-});
 
 /************************
  *          BUTTON
  ************************/
 
-function wsSendMessage(){
+function ws_send_message(){
     let package = JSON.parse(
         '{' +
         '  "type":"message",' +
@@ -112,6 +118,16 @@ function wsSendMessage(){
     }
 }
 
+/**
+ * EVENTS
+ */
+
+function play_sound_notification() {
+    audio.play();
+}
+$(window).bind("beforeunload", function() {
+    webSocket.close();
+});
 /**
  * Send to the writer that the reader has read message
  * @param id_dialog

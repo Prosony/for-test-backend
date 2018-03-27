@@ -4,14 +4,47 @@
     <%include parts/opt/head.ejs%>
 </head>
 <body>
+  <div class="ui container">
     <%include parts/menu.ejs%>
 
-    <div id="main" class="main ui container">
-        <h2 class="ui dividing header">
+      <div class="row" style="margin-top: 2%; margin-bottom: 2%">
+        <div class="sixteen wide column">
+          <h2 class="ui dividing header">
             <i class="newspaper icon"></i>
             New Advertisement
-        </h2>
-        <div class="ui four centered cards" id="upload-preview-image"></div>
+          </h2>
+        </div>
+      </div>
+
+      <form class="ui form">
+        <div class="ui two column grid">
+          <div class="row">
+
+            <div class="ui twelve wide column">
+              <div class="ui segment">
+                <div class="ui four centered cards" id="upload-preview-image" style="display: none"></div>
+                  <%include parts/advertisement-parts/right-column.ejs%>
+              </div>
+            </div>
+
+            <div class="ui four wide column">
+              <div class="ui segment">
+                <%include parts/advertisement-parts/left-tags-fields.ejs%>
+              </div>
+
+              <div class="ui segment">
+                <div class="ui fluid animated fade submit button" tabindex="0">
+                  <div class="visible content">Add advertisement</div>
+                  <div class="hidden content">All right?</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+  </div>
+<!--
         <form class="ui form">
             <div class="ui two column grid">
                 <div class="column">
@@ -28,10 +61,20 @@
             <div class="ui error message"></div>
         </form>
     </div>
+  </div>
+-->
 </body>
 <script>
     var token = '<%= token %>';
     var id_account = '<%=id%>';
+</script>
+
+
+<script src="semantic/front/messages/messages-socket-handle.js"></script>
+<script src="semantic/front/messages/messages-socket.js"></script>
+<script src="semantic/front/messages/messages-data.js"></script>
+<script>
+    update_notification();
 </script>
 <script src="semantic/front/add-advertisement/add-advertisement-validation.js"></script>
 <script src="semantic/front/add-advertisement/add-advertisement-data.js"></script>
