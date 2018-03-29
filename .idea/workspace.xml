@@ -2,28 +2,271 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="881c52ab-39a7-4d23-8f2b-01d12fc90038" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/views/find-pet.ejs" afterPath="$PROJECT_DIR$/views/find-pet.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/messages.ejs" afterPath="$PROJECT_DIR$/views/messages.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/parts/menu.ejs" afterPath="$PROJECT_DIR$/views/parts/menu.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs" afterPath="$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/dist/font-awesome.css" afterPath="$PROJECT_DIR$/views/semantic/dist/font-awesome.css" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/dist/package.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/dist/semantic.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/dist/semantic.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" afterPath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" afterPath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/profile/profile-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/profile/profile-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/authentication/sign-in/sign-in-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/data/authentication/sign-in/sign-in-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/bookmarks/bookmarks-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/data/bookmarks/bookmarks-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/file/image-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/data/file/image-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/post-ad/post-ad-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/data/post-ad/post-ad-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js" />
-      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/other_service.js" afterPath="$PROJECT_DIR$/views/semantic/front/service/other_service.js" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/audio/audio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/bookmarks/bookmarks.ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/bookmarks/bookmarks.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/date/date.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/image/image.ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/messages/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/notification/notification.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/post/post.ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/js/jquery-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/sound/BubblePop.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/assets/sound/BubblePopWav.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/posts/post-ad-active.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/posts/post-ad-me.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/posts/post-ad-noactive.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/posts/post-content.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/views/posts/tag-post-ad.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/proso.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/for-test-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/for-test-backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/options/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/DataBase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/other_service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/add-advertisement.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/find-pet.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/get-started.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jcrop/demos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jcrop/jquery.Jcrop.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jcrop/jquery.Jcrop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jcrop/jquery.color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jcrop/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/jcrop/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/messages.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/advertisement-parts/left-tags-fields.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/advertisement-parts/right-column.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/find-pet/left-column-search.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/menu.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/opt/head.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/opt/modal/img-post.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/opt/modal/tag.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/bookmarks/bookmarks.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-active.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-me.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-noactive.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/center/main/tag-post-ad.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/accordion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/accordion.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/accordion.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/ad.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/ad.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/api.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/breadcrumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/breadcrumb.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/button.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/card.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/checkbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/checkbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/checkbox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/checkbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/colorize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/colorize.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/comment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/comment.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/container.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dimmer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dimmer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dimmer.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dimmer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/divider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/divider.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dropdown.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dropdown.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/dropdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/embed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/embed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/embed.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/embed.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/feed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/feed.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/flag.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/flag.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/form.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/form.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/header.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/icon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/icon.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/input.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/input.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/item.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/item.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/label.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/label.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/list.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/loader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/loader.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/menu.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/message.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/message.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/modal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/modal.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/modal.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/nag.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/nag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/nag.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/nag.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/popup.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/popup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/progress.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/progress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/progress.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/progress.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/rail.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/rail.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/rating.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/rating.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/rating.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/rating.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/reset.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/reveal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/reveal.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/search.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/search.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/segment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/segment.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/shape.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/shape.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/shape.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/shape.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sidebar.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sidebar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/site.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/site.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/site.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/state.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/statistic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/statistic.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/step.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/step.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sticky.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sticky.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/sticky.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/tab.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/tab.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/tab.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/table.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/transition.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/transition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/transition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/video.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/video.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/visibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/visibility.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/visit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/components/visit.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/Jackie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/Putin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/adam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/batya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/cat-one.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/cat-two.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/example.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/flags.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/k-horizontal(small).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/k-horizontal-head(small).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/kristy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/label.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/label2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/label3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/logo4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/images/logo4_100x35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/semantic.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/semantic.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/sound/BubblePop.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/sound/BubblePopWav.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/brand-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/brand-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/brand-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/brand-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/brand-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/icons.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/outline-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/outline-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/outline-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/outline-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/fonts/outline-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/dist/themes/default/assets/images/flags.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/add-advertisement/image-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/authentication/sign-in/sign-in-validation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket-handle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/profile/profile-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/bookmarks-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/authentication/sign-in/sign-in-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/bookmarks/bookmarks-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/file/image-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/post-ad/post-ad-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/other_service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/socket.io.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/semantic/front/service/tags-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/sign-in.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/test-photo.ejs" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,37 +280,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="messages.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/messages.ejs">
+      <file leaf-file-name="socket.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/socket/socket.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
               <folding>
-                <marker date="1522012842398" expanded="false" signature="2219:2234" ph="..." />
+                <element signature="e#0#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages-event.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js">
+      <file leaf-file-name="profile-event.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile-event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="141" column="46" lean-forward="true" selection-start-line="141" selection-start-column="46" selection-end-line="141" selection-end-column="46" />
-              <folding>
-                <marker date="1522016311456" expanded="true" signature="1654:1667" ph="..." />
-                <marker date="1522016311456" expanded="true" signature="7783:7823" ph="..." />
-              </folding>
+            <state relative-caret-position="646">
+              <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages-socket.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js">
+      <file leaf-file-name="audio.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/audio/audio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="51">
+              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -102,36 +340,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-active.ejs" />
-        <option value="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-me.ejs" />
-        <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/validation.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/find-pet/searching.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/data/file/image.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/profile/show-profile-data.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/data/tags-data.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/tags/tags-data.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/bookmarks-service.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/authentication/sign-in/sign-in-validation.js" />
-        <option value="$PROJECT_DIR$/views/add-advertisement.ejs" />
-        <option value="$PROJECT_DIR$/views/parts/advertisement-parts/left-tags-fields.ejs" />
-        <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validaion.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/tags-service.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js" />
-        <option value="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-noactive.ejs" />
-        <option value="$PROJECT_DIR$/options/options.js" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/service/messages/messages.js" />
-        <option value="$PROJECT_DIR$/messages.js" />
-        <option value="$PROJECT_DIR$/views/parts/find-pet/left-column-search.ejs" />
-        <option value="$PROJECT_DIR$/views/semantic/front/messages/mesages-event.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/moment.js" />
-        <option value="$PROJECT_DIR$/views/sign-in.ejs" />
-        <option value="$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs" />
-        <option value="$PROJECT_DIR$/router.js" />
-        <option value="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
-        <option value="$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs" />
-        <option value="$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js" />
         <option value="$PROJECT_DIR$/views/profile.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js" />
         <option value="$PROJECT_DIR$/views/parts/menu.ejs" />
@@ -152,7 +360,37 @@
         <option value="$PROJECT_DIR$/views/semantic/dist/semantic.css" />
         <option value="$PROJECT_DIR$/views/messages.ejs" />
         <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" />
+        <option value="$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
         <option value="$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/project/views/authentication/sign-in.ejs" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/service/other_service.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/messages-socket-handle.js" />
+        <option value="$PROJECT_DIR$/project/views/layout/foot.ejs" />
+        <option value="$PROJECT_DIR$/project/views/columns/profile/right.ejs" />
+        <option value="$PROJECT_DIR$/project/views/columns/profile/left.ejs" />
+        <option value="$PROJECT_DIR$/project/views/posts/post-ad-active.ejs" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/service/data/post-ad/post-ad-data.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile-event.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/messages-socket.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/service/post-ad-service.js" />
+        <option value="$PROJECT_DIR$/project/index.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/socket/socket.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/socket/socket-service.js" />
+        <option value="$PROJECT_DIR$/project/views/layout/head.ejs" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/posts/post.module.js" />
+        <option value="$PROJECT_DIR$/project/Modules/Router/routes/Profile.js" />
+        <option value="$PROJECT_DIR$/project/Modules/Session.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js" />
+        <option value="$PROJECT_DIR$/project/views/profile/index.ejs" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/post/post.ajax.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/bookmarks/bookmarks.ajax.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/bookmarks/bookmarks.module.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/message.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/audio/audio.js" />
       </list>
     </option>
   </component>
@@ -162,7 +400,9 @@
     <bower.json value="" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -177,73 +417,16 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="468" />
-    <option name="y" value="7" />
-    <option name="width" value="974" />
-    <option name="height" value="1233" />
+    <option name="x" value="-8" />
+    <option name="y" value="22" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-              <item name="center" type="cbb8eebc:String" user="center" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="parts" type="cbb8eebc:String" user="parts" />
-              <item name="profile-parts" type="cbb8eebc:String" user="profile-parts" />
-              <item name="center" type="cbb8eebc:String" user="center" />
-              <item name="main" type="cbb8eebc:String" user="main" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,175 +437,216 @@
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="options" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Router" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="opt" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="opt" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="profile-parts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="add-advertisement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="find-pet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
               <item name="profile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
             </path>
             <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
             </path>
             <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="sign-in" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="Modules" type="cbb8eebc:String" user="Modules" />
             </path>
             <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="bookmarks" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="Modules" type="cbb8eebc:String" user="Modules" />
+              <item name="Router" type="cbb8eebc:String" user="Router" />
             </path>
             <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="Modules" type="cbb8eebc:String" user="Modules" />
+              <item name="Router" type="cbb8eebc:String" user="Router" />
+              <item name="routes" type="cbb8eebc:String" user="routes" />
             </path>
             <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="post-ad" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
             </path>
             <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+              <item name="custom" type="cbb8eebc:String" user="custom" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+              <item name="custom" type="cbb8eebc:String" user="custom" />
+              <item name="audio" type="cbb8eebc:String" user="audio" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+              <item name="custom" type="cbb8eebc:String" user="custom" />
+              <item name="notification" type="cbb8eebc:String" user="notification" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+              <item name="custom" type="cbb8eebc:String" user="custom" />
+              <item name="post" type="cbb8eebc:String" user="post" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+              <item name="custom" type="cbb8eebc:String" user="custom" />
+              <item name="profile" type="cbb8eebc:String" user="profile" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+              <item name="custom" type="cbb8eebc:String" user="custom" />
+              <item name="socket" type="cbb8eebc:String" user="socket" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="bookmarks" type="cbb8eebc:String" user="bookmarks" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="for-test-backend" type="cbb8eebc:String" user="for-test-backend" />
+              <item name="project" type="cbb8eebc:String" user="project" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="profile" type="cbb8eebc:String" user="profile" />
             </path>
           </expand>
           <select />
@@ -431,39 +655,49 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/router.js" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="6.11.4" />
-    <property name="SearchEverywhereHistoryKey" value="floating ui teal label&#9;null&#9;null" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="floating ui teal label&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.8.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../backup/for-test-backend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
-    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="" />
-    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\posts" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\jcrop" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\posts" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\front\lib" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\front\service" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\service\messages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\sound" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\jcrop" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\views\semantic\dist\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -478,15 +712,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="router" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="router.js" working-dir="$PROJECT_DIR$">
+  <component name="RunManager" selected="Node.js.router">
+    <configuration name="router" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
       <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-        <browser start="true" url="http://localgost:3000/sign-in" />
+        <browser start="true" url="http://185.77.204.249:3000/" />
       </EXTENSION>
     </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+    <configuration name="dev" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.router" />
+      <item itemvalue="npm.dev" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -559,11 +808,17 @@
       <workItem from="1521665523918" duration="3638000" />
       <workItem from="1521923150597" duration="4469000" />
       <workItem from="1521978697769" duration="27621000" />
+      <workItem from="1522274548550" duration="183000" />
+      <workItem from="1522274763336" duration="298000" />
+      <workItem from="1522275078660" duration="3627000" />
+      <workItem from="1522320374465" duration="24893000" />
+      <workItem from="1522359875951" duration="162000" />
+      <workItem from="1522360060793" duration="3510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="646242000" />
+    <option name="totallyTimeSpent" value="678915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,23 +833,25 @@
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16807166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.428125" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.36451614" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" x="-1278" y="76" width="1276" height="990" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286638" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021075" side_tool="true" weight="0.428125" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" x="0" y="-877" width="1600" height="877" id="Run" order="2" sideWeight="0.49789253" type="WINDOWED" visible="true" weight="0.36451614" />
+      <window_info id="npm" order="0" sideWeight="0.14224137" side_tool="true" weight="0.16807166" />
+      <window_info anchor="bottom" id="Floobits" order="11" weight="0.3297414" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286638" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.85775864" visible="true" weight="0.16807166" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
+      <window_info id="Structure" order="2" sideWeight="0.5010776" side_tool="true" weight="0.16807166" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,415 +862,319 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/center/main/post-ad-noactive.ejs">
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/other_service.js" />
+    <entry file="file://$PROJECT_DIR$/views/semantic/dist/semantic.css" />
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js" />
+    <entry file="file://$PROJECT_DIR$/views/messages.ejs" />
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/profile/profile-event.js" />
+    <entry file="file://$PROJECT_DIR$/router.js" />
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js" />
+    <entry file="file://$PROJECT_DIR$/views/profile.ejs" />
+    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/data/authentication/sign-in/sign-in-data.js" />
+    <entry file="file://$PROJECT_DIR$/.flooignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/socket.io.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/babel-register/node_modules/babel-core/lib/transformation/file/options/option-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="289" column="19" selection-start-line="289" selection-start-column="10" selection-end-line="289" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/project/views/authentication/sign-in.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13398">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/messages.js" />
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+    <entry file="file://$PROJECT_DIR$/project/views/layout/foot.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="669" column="10" lean-forward="false" selection-start-line="669" selection-start-column="10" selection-end-line="669" selection-end-column="10" />
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/lib/moment.js" />
-    <entry file="file://$PROJECT_DIR$/views/parts/advertisement-parts/right-column.ejs">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/service/data/post-ad/post-ad-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/center/main/post-content.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/profile-parts/left/left-column.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/advertisement-parts/left-tags-fields.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/add-advertisement.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/test-photo.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="69" column="71" lean-forward="false" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/options/options.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/other_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/post-ad-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <marker date="1512175791549" expanded="true" signature="1915:1930" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2132:2147" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2322:2337" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2509:2524" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2699:2714" ph="..." />
-            <marker date="1512175791549" expanded="true" signature="2888:2903" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/bookmarks-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <marker date="1511449327139" expanded="true" signature="2446:2461" ph="..." />
-            <marker date="1511449327139" expanded="true" signature="2656:2671" ph="..." />
-            <marker date="1511449327139" expanded="true" signature="2864:2879" ph="..." />
-            <marker date="1511449327139" expanded="true" signature="3073:3088" ph="..." />
-            <marker date="1511449327139" expanded="true" signature="3385:3400" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/find-pet/left-column-search.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="95" column="58" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/dist/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/sign-in.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="7" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/opt/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/menu.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="71" lean-forward="false" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/opt/modal/modal-find-pet.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="58" column="6" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/profile.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/authentication/sign-in/sign-in-validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="35" lean-forward="false" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/data/bookmarks/bookmarks-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/data/file/image-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/data/post-ad/post-ad-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/data/tags/tags-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/data/authentication/sign-in/sign-in-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/profile/profile-event.js">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/messages-socket-handle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="7" selection-end-column="21" />
-          <folding />
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/profile/profile-data.js">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/messages-socket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/add-advertisement/add-advertisement-data.js">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/service/post-ad-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/find-pet.ejs">
+    <entry file="file://$PROJECT_DIR$/project/views/columns/profile/right.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="51">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/service/other_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="86" column="19" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/columns/profile/left.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/babel-register/lib/node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/socket/socket-service.js" />
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/service/bookmarks-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/Modules/Router/routes/Advertisement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/layout/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/bookmarks/bookmarks.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/Modules/Session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/Modules/Router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/dist/package.js">
+    <entry file="file://$PROJECT_DIR$/project/Modules/Router/routes/Profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/dist/semantic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="698" column="16" lean-forward="true" selection-start-line="698" selection-start-column="16" selection-end-line="698" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/tags-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding>
-            <marker date="1512084090420" expanded="true" signature="4040:4089" ph="..." />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parts/opt/modal/img-post.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/service/data/authentication/sign-in/sign-in-data.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/router.js">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/find-pet/find-pet-event.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/service/other_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
-            <marker date="1522000222085" expanded="true" signature="2618:2633" ph="..." />
-            <marker date="1522000222085" expanded="true" signature="2777:2792" ph="..." />
-            <marker date="1522000222085" expanded="true" signature="2916:2931" ph="..." />
-            <marker date="1522000222085" expanded="true" signature="3052:3067" ph="..." />
-            <marker date="1522000222085" expanded="true" signature="3191:3206" ph="..." />
-            <marker date="1522000222085" expanded="true" signature="3329:3344" ph="..." />
+            <element signature="e#0#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/dist/semantic.css">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5611">
-          <caret line="28664" column="11" lean-forward="false" selection-start-line="28664" selection-start-column="4" selection-end-line="28664" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/messages.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
-            <marker date="1522012842398" expanded="false" signature="2219:2234" ph="..." />
+            <element signature="e#0#64#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-socket.js">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/service/data/bookmarks/bookmarks-data.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/semantic/front/messages/messages-event.js">
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/post/post.ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="141" column="46" lean-forward="true" selection-start-line="141" selection-start-column="46" selection-end-line="141" selection-end-column="46" />
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/profile/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/messages-data.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding>
-            <marker date="1522016311456" expanded="true" signature="1654:1667" ph="..." />
-            <marker date="1522016311456" expanded="true" signature="7783:7823" ph="..." />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/image/image.ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/date/date.module.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/bookmarks/bookmarks.ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/notification/notification.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in-validation.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/bookmarks/bookmarks.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="159" selection-start-line="38" selection-start-column="159" selection-end-line="38" selection-end-column="159" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/socket/socket.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile-event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/audio/audio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>

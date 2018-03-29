@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>AniShelter</title>
+  <link rel="icon" href="/assets/img/logo/favicon.png">
+  <script src="/assets/js/jquery-3.1.1.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="/assets/css/semantic.min.css">
+  <link type="text/css" rel="stylesheet" href="/assets/css/custom.css">
+</head>
+<body>
+  <div class="ui container">
+    <div class="ui menu" id="top_menu">
+      <div class="header item">
+        <img id="logo_header" src="/assets/img/logo/header.png">
+      </div>
+      <% if (locals.id) { %>
+        <a class="item" onClick="window.location.href = '/profile/<%=id%>'">
+          <i class="user icon"></i>
+          Мой профиль
+        </a>
+        <a class="item">
+            <i class="envelope icon"></i>Сообщения
+            <div class="ui red label floating" id="unread-message-label" style="top: 2.3em; matgin: 0 0 0 -2.7em!important">0</div>
+        </a>
+        <a class="item">
+            <i class="bell icon"></i>Уведомления
+            <div class="ui teal label floating" style="top: 2.3em; matgin: 0 0 0 -2.7em!important">5</div>
+        </a>
+        <div class="right menu">
+            <% if (typeof url != 'undefined' && url !== '/advertisement' && is_me) { %>
+            <div data-tooltip="That is your bookmarks!" data-position="bottom center">
+                <a id="bookmarks_link" class="ui item">
+                    <i class="bookmark icon"></i>
+                    Bookmarks
+                    <div class="floating ui teal label"></div>
+                </a>
+            </div>
+            <% } else { url = undefined; %>
+            <div data-tooltip="That is your bookmarks!" data-position="bottom center">
+                <a class="ui item" onclick="load_bookmarks(window.token, window.id)" >
+                    <i class="bookmark icon"></i>
+                    Bookmarks
+                    <div class="floating ui teal label"></div>
+                </a>
+            </div>
+            <% } %>
+            <a class="item">
+                <i class="paw icon"></i>
+                Найти петомца
+            </a>
+            <a class="item" onclick="window.location.href = '/authentication/sign-out'">
+                <i class="sign out alternate icon"></i>
+                Выход
+            </a>
+        </div>
+      <% } %>
+    </div>

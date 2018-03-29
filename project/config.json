@@ -1,0 +1,60 @@
+{
+  "DataBase": {
+    "URL": "mongodb://185.77.204.249:27017/db_session"
+  },
+  "Server": {
+    "PORT": 3000
+  },
+  "Session": {
+    "SECRET": "i need more beers",
+    "RESAVE": false,
+    "SAVEUNITILAZIED": true
+  },
+  "HttpRequest": {
+    "SIGNIN": {
+      "port": 8080,
+      "hostname": "185.77.204.249",
+      "method": "POST",
+      "path": "/authentication/sign-in",
+      "headers" : {
+          "Content-Type" : "application/json"
+      }
+    },
+    "SIGNOUT": {
+      "port": 8080,
+      "hostname": "185.77.204.249",
+      "method": "POST",
+      "path": "/authentication/sign-out",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "IMAGE": {
+      "port": 8080,
+      "hostname": "185.77.204.249",
+      "method": "POST",
+      "path": "/files",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "PROFILE": {
+      "port": 8080,
+      "hostname": "185.77.204.249",
+      "method": "POST",
+      "path": "/profile",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "POSTS": {
+      "port": 8080,
+      "hostname": "185.77.204.249",
+      "method": "POST",
+      "path": "/post-ad",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    }
+  }
+}
