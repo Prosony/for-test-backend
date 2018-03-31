@@ -4,7 +4,6 @@
       <%- include ../columns/profile/left.ejs %>
     </div>
     <div id="right_column" class="twelve wide column">
-      <%- //include ../columns/profile/right.ejs %>
     </div>
   </div>
 
@@ -13,9 +12,10 @@
     window.localStorage.setItem('token', '<%= token %>')
     window.localStorage.setItem('id_account', '<%= id %>')
 </script>
-<script type="module" src="/assets/js/custom/bookmarks/bookmarks.module.js"></script>
+<script type="module" src="/assets/js/custom/profile/profile.render.js"></script>
 <script type="module" src="/assets/js/custom/profile/profile.module.js"></script>
 <script type="module" src="/assets/js/custom/socket/socket.module.js"></script>
+<script type="module" src="/assets/js/custom/bookmarks/bookmarks.module.js"></script>
 
 <!--<script src="/assets/js/custom/socket/socket.module.js"></script>-->
 

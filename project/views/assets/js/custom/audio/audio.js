@@ -25,8 +25,8 @@ export default new Audio('/assets/sound/BubblePopWav.wav')
 //    |
 
 // export default {
-//   getUser: function () {
-//      ...
+//   getUser: async function () {
+//      await ...
 //   },
 //   getAdmin: function () {
 //      ...
@@ -40,6 +40,9 @@ export default new Audio('/assets/sound/BubblePopWav.wav')
 
 // import { getUser, getAdmin } from '....'
 //  getUser()
+//      .then(response => {
+//          ...
+//       })
 
 
 

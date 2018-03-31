@@ -13,7 +13,7 @@ function star_favorites_switch(id_post_ad, class_name){
 }
 function modal_event_switch(id_post){
     console.log(id_post);
-    $.get('../parts/opt/modal/modal-find-pet.ejs', function(modal){
+    $.get('../parts/opt/modal/modal-advertisement.ejs', function(modal){
         $('#modal').append(modal);
         get_post_ad_by_id_post(window.token, id_post).then(function (post_ad) {
             console.log('post_ad: ',post_ad);

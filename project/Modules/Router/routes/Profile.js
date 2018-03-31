@@ -15,7 +15,7 @@ export default Router().get('/:id', (request, response) => {
                 is_me: is_me,
             })
         } else {
-          response.redirect('/authentication/sign-in')
+          response.redirect('authentication/sign-in')
           Logger.error('DATABASE', 'токен не найден')
         }
       })

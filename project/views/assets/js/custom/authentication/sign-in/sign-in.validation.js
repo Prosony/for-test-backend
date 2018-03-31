@@ -1,3 +1,4 @@
+import validation from '/assets/js/custom/authentication/sign-in/sign-in.ajax.js'
 window.onload = function() {
     $('.ui.form').form(
         {
@@ -20,10 +21,11 @@ window.onload = function() {
             {
                 console.log(event);
                 console.log(fields);
-                check_account(fields.email, fields.password).then(function (data) {
+                validation.check_account(fields.email, fields.password).then(function (data) {
+                    console.log(data.err)
                     if(data.err === 204){
-                        console.log('account not found')
-                        $("#form-main").find('.ui.error.message.transition.hidden').removeClass('transition').removeClass('hidden');
+                        console.log('account not found');
+                        $(".ui.segment").find('.ui.error.message.transition.hidden').removeClass('transition').removeClass('hidden');
                     }else{
                         window.location = data.redirectUrl;
                     }

@@ -1,33 +1,47 @@
 <% include ../layout/head.ejs %>
-  <div class="ui one column centered grid">
+<div class="ui one column centered grid">
     <div class="six wide column">
-      <div class="ui segment">
-        <form class="ui form" method="POST" action="/authentication/sign-in">
-          <div class="field">
-            <label for="email">
-              <i class="envelope icon"></i>
-              Почта
-            </label>
-            <input id="email" name="email" type="email" placeholder="example@example.com" >
-          </div>
-          <div class="field">
-            <label for="password">
-              <i class="lock icon"></i>
-              Пароль
-            </label>
-            <input id="password" name="password" type="password" placeholder="********" >
-          </div>
-          <div class="ui two column grid">
-            <div class="column">
-              <button class="ui fluid button" type="submit">Войти</button>
+
+        <div class="ui segment">
+
+            <div class="ui error message transition hidden">
+                <i class="close icon"></i>  <div class="header">    password or phone invalid!    </div>
+                <ul class="list"><li>You must include both a upper and lower case letters in your password.</li></ul>
             </div>
-            <div class="column">
-              <button class="ui fluid button" type="button" onclick="window.location.href = '/authentication/sign-up'">Регистрация</button>
-            </div>
-          </div>
-        </form>
-      </div>
+            <!--action="/authentication/sign-in"-->
+            <form class="ui form" method="POST" >
+
+                <div class="field">
+                    <label for="email">
+                        <i class="envelope icon"></i>
+                        Почта
+                    </label>
+                    <input id="email" name="email" type="email"  >
+                </div>
+
+                <div class="field">
+                    <label for="password">
+                        <i class="lock icon"></i>
+                        Пароль
+                    </label>
+                    <input id="password" name="password" type="password" >
+                </div>
+
+                <div class="ui two column grid">
+
+                    <div class="column">
+                        <button class="ui fluid button" type="submit">Войти</button>
+                    </div>
+
+                    <div class="column">
+                        <button class="ui fluid button" type="button" onclick="window.location.href = '/authentication/sign-up'">Регистрация</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
     </div>
-  </div>
-<script src="/js/custom/authentication/sign-in/sign-in-validation.js"></script>
+</div>
+<script type="module" src="/assets/js/custom/authentication/sign-in/sign-in.validation.js"></script>
 <% include ../layout/foot.ejs %>

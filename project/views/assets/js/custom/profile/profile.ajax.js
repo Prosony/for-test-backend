@@ -1,5 +1,5 @@
 export default {
-    async get_posts (id, token) {
+    async get_profile (id, token) {
         return await $.post({
             charset: 'UTF-8',
             ContentType: 'application/json',

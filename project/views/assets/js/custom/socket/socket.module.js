@@ -6,7 +6,7 @@ $(() => {
     const socket = new WebSocket('ws://185.77.204.249:8080/messages-socket/{' + window.localStorage.getItem('token') + '}');
 
     socket.addEventListener('open', () => {
-        notification.update();
+        // notification.set_posts();
         console.log('#INFO Socket opened')
     });
 

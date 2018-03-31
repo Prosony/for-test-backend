@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>AniShelter</title>
   <link rel="icon" href="/assets/img/logo/favicon.png">
-  <script src="/assets/js/jquery-3.1.1.min.js"></script>
+  <script src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script src="/assets/js/semantic.min.js"></script>
   <link type="text/css" rel="stylesheet" href="/assets/css/semantic.min.css">
   <link type="text/css" rel="stylesheet" href="/assets/css/custom.css">
 </head>
@@ -16,10 +17,15 @@
         <img id="logo_header" src="/assets/img/logo/header.png">
       </div>
       <% if (locals.id) { %>
-        <a class="item" onClick="window.location.href = '/profile/<%=id%>'">
-          <i class="user icon"></i>
-          Мой профиль
+        <% if (typeof url != 'undefined' && url === 'profile' && is_me) { %>
+        <a class="item" id="post_show">
+            <i class="user icon"></i>Мой профиль
         </a>
+        <%} else{%>
+        <a class="item" onClick="window.location.href = '/profile/<%=id%>'">
+            <i class="user icon"></i>Мой профиль
+        </a>
+        <%}%>
         <a class="item">
             <i class="envelope icon"></i>Сообщения
             <div class="ui red label floating" id="unread-message-label" style="top: 2.3em; matgin: 0 0 0 -2.7em!important">0</div>
@@ -29,30 +35,26 @@
             <div class="ui teal label floating" style="top: 2.3em; matgin: 0 0 0 -2.7em!important">5</div>
         </a>
         <div class="right menu">
-            <% if (typeof url != 'undefined' && url !== '/advertisement' && is_me) { %>
+            <% if (typeof url != 'undefined' && url === 'profile' ) { %>
             <div data-tooltip="That is your bookmarks!" data-position="bottom center">
-                <a id="bookmarks_link" class="ui item">
-                    <i class="bookmark icon"></i>
-                    Bookmarks
+                <a id="bookmarks_show" class="ui item">
+                    <i class="bookmark icon"></i>Bookmarks
                     <div class="floating ui teal label"></div>
                 </a>
             </div>
             <% } else { url = undefined; %>
             <div data-tooltip="That is your bookmarks!" data-position="bottom center">
-                <a class="ui item" onclick="load_bookmarks(window.token, window.id)" >
-                    <i class="bookmark icon"></i>
-                    Bookmarks
+                <a class="ui item" id="bookmarks_load">
+                    <i class="bookmark icon"></i>Bookmarks
                     <div class="floating ui teal label"></div>
                 </a>
             </div>
             <% } %>
-            <a class="item">
-                <i class="paw icon"></i>
-                Найти петомца
+            <a class="item" onClick="window.location.href = '/advertisement'">
+                <i class="paw icon"></i>Найти петомца
             </a>
             <a class="item" onclick="window.location.href = '/authentication/sign-out'">
-                <i class="sign out alternate icon"></i>
-                Выход
+                <i class="sign out alternate icon"></i>Выход
             </a>
         </div>
       <% } %>

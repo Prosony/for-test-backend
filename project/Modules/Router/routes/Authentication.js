@@ -12,43 +12,51 @@ export default Router()
   })
   
   .post('/sign-in', (request, response) => {
+    console.log("request.body. ",request.body.email, request.body.password);
+
     if (request.body.email && request.body.password) {
-      const httpRequest = http.request(config.HttpRequest.SIGNIN,
-        httpResponse => {
-          httpResponse.setEncoding('UTF-8')
-          httpResponse.on('data', data => {
-            if (httpResponse !== 500) {
-              data = JSON.parse(data)
-              if (data.id !== undefined && data.token !== undefined) {
-                new UserSchema({
-                  id_account: data.id,
-                  id_session: request.sessionID,
-                  token: data.token
-                })
-                  .save()
-                  .then(result => {
-                    Logger.success('AUTHENTICATION ROUTER', `вход успешно выполнен: ${result.id_account}`)
-                    response.redirect(`/profile/${result.id_account}`)
-                  })
-                  .catch(error => {
-                    response.status(500)
-                    response.render('authentication/sign-in')
-                    Logger.error('SCHEMA', `ошибка базы данных ${error.message}`)
-                  })
+
+        const httpRequest = http.request(config.HttpRequest.SIGNIN, httpResponse => {
+
+            httpResponse.setEncoding('UTF-8')
+
+            httpResponse.on('data', data => {
+              if (httpResponse !== 500) {
+                data = JSON.parse(data);
+                if (data.id !== undefined && data.token !== undefined) {
+                  new UserSchema({
+                    id_account: data.id,
+                    id_session: request.sessionID,
+                    token: data.token
+                  }).save().then(result => {
+                      Logger.success('AUTHENTICATION ROUTER', `вход успешно выполнен: ${result.id_account}`)
+                      response.send({err: 0, redirectUrl: '/profile/'+result.id_account});
+                      // response.redirect(`/profile/${result.id_account}`)
+                    }).catch(error => {
+                      response.status(204);
+                      response.render('authentication/sign-in');
+                      Logger.error('SCHEMA', `ошибка базы данных ${error.message}`);
+                    })
+                }else{
+                    console.log('ПиздДЮЮЮК 2228888');
+                }
               }
+            })
+            if (httpResponse.statusCode === 204){
+                response.send({err: 204, redirectUrl: '/authentication/sign-in'});
+                // response.redirect('/profile/:'+result.id_account);
             }
           })
-        })
         httpRequest.on('error', error => {
-          response.status(500)
-          response.render('authentication/sign-in')
+          console.log('ERROR')
+          response.status(204)
+          response.render('/authentication/sign-in')
           Logger.error('HTTP REQUEST', `ошибка запроса ${error.message}`)
         })
         httpRequest.write(JSON.stringify(request.body))
         httpRequest.end()
     } else {
-      response.status(403)
-      response.render('authentication/sign-in')
+        response.send({err: 204, redirectUrl: '/authentication/sign-in'});
     }
   })
 

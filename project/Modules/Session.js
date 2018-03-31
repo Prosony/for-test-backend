@@ -13,7 +13,6 @@ export default (request, response, next) => {
           request.path === '/authentication'
           || request.path === '/authentication/sign-in'
           || request.path === '/authentication/sign-up'
-          || request.path === '/authentication'
           || request.path === '/profile'
           || request.path === '/'
             ? response.redirect(`/profile/${result.id_account}`)
@@ -23,13 +22,12 @@ export default (request, response, next) => {
           request.path === '/authentication'
           || request.path === '/authentication/sign-in'
           || request.path === '/authentication/sign-up'
-          || request.path === '/'
             ? next()
             : response.redirect('/authentication/sign-in')
         }
       })
       .catch(error => {
-        response.redirect('/authentication/sign-in')
+        response.redirect('/authentication/sign-in');
         Logger.error('SESSION DATABASE', `ошибка базы данных: ${error.message}`)
       })
   }

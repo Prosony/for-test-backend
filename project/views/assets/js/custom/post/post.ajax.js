@@ -15,7 +15,7 @@ export default {
           data: JSON.stringify({ 'token':token, 'id':id})
       })
     },
-    async update_favorite (token) {
+    async get_bookmarks (token) {
         return await $.post({
             charset: 'UTF-8',
             ContentType: 'application/json',
