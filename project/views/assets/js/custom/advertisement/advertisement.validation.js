@@ -26,7 +26,7 @@ window.onload = function() {
                 TagsModule.array_tags.breeds = fields.breedsInput;
                 TagsModule.array_tags.age = fields.ageInput;
 
-                console.log('#INFO [find-pet-validation] array_tags: ', TagsModule.array_tags);
+                console.log('#INFO [advertisement-validation] array_tags: ', TagsModule.array_tags);
                 TagsModule.get_advertisement_by_tags(token, TagsModule.array_tags).then(function (post_ad) {
                     console.log('#INFO [get_advertisement_by_tags].[THEN] post_ad: \n', post_ad, "\n");
                     AdvertisementModule.clear_advertisement();

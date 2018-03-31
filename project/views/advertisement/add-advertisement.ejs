@@ -1,0 +1,53 @@
+<%- include ../layout/head.ejs %>
+  <div class="ui container">
+
+      <div class="row" style="margin-top: 2%; margin-bottom: 2%">
+        <div class="sixteen wide column">
+          <h2 class="ui dividing header">
+            <i class="newspaper icon"></i>
+            New Advertisement
+          </h2>
+        </div>
+      </div>
+
+      <form class="ui form">
+        <div class="ui two column grid">
+          <div class="row">
+
+            <div class="ui twelve wide column">
+              <div class="ui segment">
+                <div class="ui four centered cards" id="upload-preview-image" style="display: none"></div>
+                  <%include ../columns/advertisement.add/right-column.ejs%>
+              </div>
+            </div>
+
+            <div class="ui four wide column">
+              <div class="ui segment">
+                <%include ../columns/advertisement.add/left-tags-fields.ejs%>
+              </div>
+
+              <div class="ui segment">
+                <div class="ui fluid animated fade submit button" tabindex="0">
+                  <div class="visible content">Add advertisement</div>
+                  <div class="hidden content">All right?</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+  </div>
+  <script>
+      window.localStorage.setItem('is_me', <%= is_me %>)
+      window.localStorage.setItem('token', '<%= token %>')
+      window.localStorage.setItem('id_account', '<%= id %>')
+  </script>
+<script type="module" src="/assets/js/custom/advertisement/add/add.advertisement.validation.js"></script>
+<script type="module" src="/assets/js/custom/advertisement/add/add.advertisement.image.module.js"></script>
+
+<script type="module" src="/assets/js/custom/tags/tags.module.js"></script>
+
+</body>
+<%- include ../layout/foot.ejs %>
+    <!--update_notification();-->

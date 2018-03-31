@@ -1,51 +1,21 @@
 <%- include ../layout/head.ejs %>
-  <div class="ui two column grid">
-    <div id="left_column" class="four wide column">
-      <%- include ../columns/profile/left.ejs %>
-    </div>
-    <div id="right_column" class="twelve wide column">
-    </div>
-  </div>
+      <div class="ui two column grid">
+        <div id="left_column" class="four wide column">
+          <%- include ../columns/profile/left.ejs %>
+        </div>
+        <div id="right_column" class="twelve wide column">
+        </div>
+      </div>
 
-<script>
-    window.localStorage.setItem('is_me', <%= is_me %>)
-    window.localStorage.setItem('token', '<%= token %>')
-    window.localStorage.setItem('id_account', '<%= id %>')
-</script>
-<script type="module" src="/assets/js/custom/profile/profile.render.js"></script>
-<script type="module" src="/assets/js/custom/profile/profile.module.js"></script>
-<script type="module" src="/assets/js/custom/socket/socket.module.js"></script>
-<script type="module" src="/assets/js/custom/bookmarks/bookmarks.module.js"></script>
+    <script>
+        window.localStorage.setItem('is_me', <%= is_me %>)
+        window.localStorage.setItem('token', '<%= token %>')
+        window.localStorage.setItem('id_account', '<%= id %>')
+    </script>
 
-<!--<script src="/assets/js/custom/socket/socket.module.js"></script>-->
+    <script type="module" src="/assets/js/custom/profile/profile.render.js"></script>
+    <script type="module" src="/assets/js/custom/profile/profile.module.js"></script>
+    <script type="module" src="/assets/js/custom/socket/socket.module.js"></script>
+    <script type="module" src="/assets/js/custom/bookmarks/bookmarks.module.js"></script>
 
-<!--<script src="/assets/js/custom/messages/messages-data.js"></script>-->
-<!--<script src="/assets/js/custom/messages/messages-socket-handle.js"></script>-->
-
-<!--<script src="/assets/js/custom/profile/profile-data.js"></script>-->
-<!--<script src="/assets/js/custom/profile/profile-event.js"></script>-->
-
-<!--<script src="/assets/js/custom/service/other_service.js"></script>-->
-<!--<script src="/assets/js/custom/service/post-ad-service.js"></script>-->
-<!--<script src="/assets/js/custom/service/bookmarks-service.js"></script>-->
-
-<!--<script src="/assets/js/custom/service/data/file/image-data.js"></script>-->
-<!--<script src="/assets/js/custom/service/data/post-ad/post-ad-data.js"></script>-->
-<!--<script src="/assets/js/custom/service/data/bookmarks/bookmarks-data.js"></script>-->
-<!--<script>-->
-    <!--$(document).ready(function() {-->
-        <!--menu_sticky();-->
-        <!--load_home(window.localStorage.getItem('token'), window.localStorage.getItem('id_account'));-->
-        <!--// update_notification();-->
-        <!--// $(document.body).unbind('click').on('click', '#previews-button' ,function(){-->
-        <!--//     modal_event_switch($(this).closest('.ui.items').attr('id'));-->
-        <!--// }).on('click', '.right.floated.star' ,function(){-->
-        <!--//     star_favorites_switch($(this).closest('.ui.items').attr('id'),$(this).find('.favorite.icon').attr('class'));-->
-        <!--// }).on('click','.right.floated.icon-remove', function () {-->
-        <!--//     console.log('click .right.floated.icon-remove');-->
-        <!--//     delete_post_ad($(this).closest('.ui.items').attr('id'));-->
-        <!--//-->
-        <!--// });-->
-    <!--});-->
-<!--</script>-->
 <%- include ../layout/foot.ejs %>

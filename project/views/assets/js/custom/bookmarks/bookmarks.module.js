@@ -31,13 +31,13 @@ function bookmarks_show(){
                             parent.find('#second-image').attr("src", images[1])
                         });
                         const child = parent.find('#tag-column-post-ad');
-                        child.prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.animals + '</div>');
-                        child.prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.group + '</div>');
-                        child.prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.breeds + '</div>');
-                        child.prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.age + '</div>');
+                        child.append('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.animals + '</div>');
+                        child.append('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.group + '</div>');
+                        child.append('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.breeds + '</div>');
+                        child.append('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.age + '</div>');
 
                         for (let i = 0; i < bookmarks[index].jsonTags.own_tags.length; i++) {
-                            child.prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.own_tags[i] + '</div>')
+                            child.append('<div class="ui label" id="tag-pet" style="margin-top: 5px">' + bookmarks[index].jsonTags.own_tags[i] + '</div>')
                         }
                     });
                 }
@@ -60,14 +60,18 @@ $(() => {
         });
         bookmarks_show();
     });
-    $('.right.floated.star').on('click', event => { //TODO add delete bookmarks
-        const id_post = event.closest('.ui.items').attr('id');
-        const class_name = event.find('.favorite.icon').attr('class');
+    $(document).on('click', '.right.floated.star' ,function(event){
+        const id_post = $(this).closest('.ui.items').attr('id');
+        const class_name = $(this).find('.favorite.icon').attr('class');
         if (class_name !== 'favorite icon active' && class_name !== 'favorite active icon'){
-            const element = $(`#${id_post_ad}`);
-            BookmarksAjax.add_bookmark(window.token, id_post);
+            const element = $(`#${id_post}`);
+            BookmarksAjax.add_bookmark(token, id_post);
             element.find('.favorite.icon').addClass('active');
             element.find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?');
+        }else{
+            $(this).find('.favorite.icon.active').removeClass('active');
+            $(this).find('#data-tooltip-win').attr('data-tooltip', 'Add to Bookmarks?');
+            BookmarksAjax.delete_bookmark(token, id_post);
         }
     });
 });

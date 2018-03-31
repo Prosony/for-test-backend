@@ -4,7 +4,7 @@ import PostModule       from '/assets/js/custom/post/post.module.js'
 
 const id    = window.localStorage.getItem('id_account');
 const token = window.localStorage.getItem('token');
-const me = window.localStorage.getItem('id_me');
+const me = window.localStorage.getItem('is_me');
 
 function set_main() {
     ProfileAjax.get_profile(id, token).then(profile => {
@@ -37,7 +37,7 @@ function set_left_column(profile,images) {
         const left_column = $('#left_column');
         if (me) {
             left_column.append('' +
-                '<a class="ui fluid button" href="/add-advertisement">' +
+                '<a class="ui fluid button" onClick="window.location.href = \'/advertisement/add\'">' +
                 '   <i class="add icon"></i>Add Advertisement\n            </a>'
             );
         } else {

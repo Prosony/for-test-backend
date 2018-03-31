@@ -1,10 +1,9 @@
+import AddAdvertisementAjax         from '/assets/js/custom/advertisement/add/add.advertisement.ajax.js'
+import AddAdvertisementImageModule  from '/assets/js/custom/advertisement/add/add.advertisement.image.module.js'
+import TagsModule                   from '/assets/js/custom/tags/tags.module.js'
+
 window.onload = function() {
-    menu_sticky();
-    $(document).on('mouseenter', '.blurring.dimmable.image' ,function(){
-        $(this).dimmer('show');
-    }).on('mouseleave', '.blurring.dimmable.image' ,function(){
-        $(this).dimmer('hide');
-    });
+
     $('.ui.form').form(
         {
             inline : true,
@@ -39,7 +38,7 @@ window.onload = function() {
                 return false;
             },
             onSuccess: function(event, fields) {
-                if (array_image.length < 2){
+                if (AddAdvertisementImageModule.array_image.length < 2){
                     $(this).form('add prompt', 'inputFile', 'You must upload at least two pictures!');
                 }else{
                     let array_text = JSON.parse('{' +
@@ -55,22 +54,25 @@ window.onload = function() {
                     array_text.phone = fields.phone;
                     array_text.wallTextArea = fields.wallTextArea;
 
-                    array_tags.animals = fields.animalsInput;
-                    array_tags.group = fields.groupInput;
-                    array_tags.breeds = fields.breedsInput;
-                    array_tags.age = fields.ageInput;
-                    array_tags.gender = fields.genderInput;
+                    TagsModule.array_tags.animals = fields.animalsInput;
+                    TagsModule.array_tags.group = fields.groupInput;
+                    TagsModule.array_tags.breeds = fields.breedsInput;
+                    TagsModule.array_tags.age = fields.ageInput;
+                    TagsModule.array_tags.gender = fields.genderInput;
 
                     console.log('array_text: ',array_text);
-                    console.log('array_tags: ',array_tags);
-                    console.log('array_image.length: ',array_image.length);
-                    send_post_ad(window.token, array_text, array_image, array_tags).then(function (answer) {
-                        console.log('answer: ',answer);
-                       if (answer === true){
-                           window.location.href = 'http://185.77.204.249:3000/profile/:'+id_account;
+                    console.log('array_tags: ',TagsModule.array_tags);
+                    console.log('array_image.length: ',AddAdvertisementImageModule.array_image.length);
+
+                    AddAdvertisementAjax.save_advertisement(window.localStorage.getItem('token'), array_text, AddAdvertisementImageModule.array_image, TagsModule.array_tags).then(function (answer) {
+                        console.log('#INFO [add.advertisement.validation.js] from answer backend: ',answer);
+                       if (answer){
+                           window.location = 'http://185.77.204.249:3000/profile/'+window.localStorage.getItem('id_account');
                        }else{
-                        console.log('something wrong, Check logs!');
+                        console.log('#ERROR [add.advertisement.validation.js] something wrong, Check logs!');
                        }
+                    }).catch(error =>{
+                        console.log(`#ERROR [add.advertisement.validation.js] ${error}`);
                     });
                 }
                 return false;

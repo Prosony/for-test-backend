@@ -5,7 +5,7 @@ import PostAjax     from  '/assets/js/custom/post/post.ajax.js'
 function set_posts (post){
     PostAjax.get_bookmarks(window.localStorage.getItem('token')).then(favoritePosts => {
         if (post) {
-            let path
+            let path;
             if (window.localStorage.getItem('is_me')) {
                 path = '/posts/post-ad-me.ejs'
             } else {
@@ -44,8 +44,8 @@ function set_posts (post){
                     if (typeof favoritePosts !== 'undefined') {
                         for (let index_fav = 0; index_fav < favoritePosts.length; index_fav++) {
                             if (favoritePosts[index_fav].id === post[index].id) {
-                                const favorite = $('#' + favoritePosts[index_fav])
-                                favorite.find('.favorite.icon').addClass('active')
+                                const favorite = $('#' + favoritePosts[index_fav]);
+                                favorite.find('.favorite.icon').addClass('active');
                                 favorite.find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?')
                             }
                         }
@@ -61,10 +61,14 @@ function set_posts (post){
 }
 
 function delete_post(id_post_ad){
-    PostAjax.delete_post(window.token, id_post_ad);
+    PostAjax.delete_post(window.localStorage.getItem('token'), id_post_ad);
     $(`#${id_post_ad}`).remove();
 }
-
+$(() => {
+    $(document).on('click', '.right.floated.icon-remove' ,  function(){
+        delete_post($(this).closest('.ui.items').attr('id'))
+    });
+});
 export default {
     set_posts: set_posts,
 

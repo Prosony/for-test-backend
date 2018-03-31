@@ -2,7 +2,9 @@
  *                              image                             *
  *****************************************************************/
 let array_image = [];
+
 $(document.body).on('click', '#btn-delete-img' ,function(e){
+
     let index = $(this).closest('.card').attr('id');
     console.log('click e.target: ',e.target,' id: ',index);
     console.log('before delete array: ',array_image);
@@ -15,10 +17,10 @@ $(document.body).on('click', '#btn-delete-img' ,function(e){
 
 });
 
-$('#input-file').change(function (e) {
+$('#input-file').change(function (e) { //TODO something
     let files = e.target.files;
-    $('#upload-preview-image').show()
-    console.log('#INFO [image-service.js] files.length: ',files.length);
+    $('#upload-preview-image').show();
+    console.log('#INFO [add.advertisement.image.module.js] files.length: ',files.length);
     for(let inx = 0; inx < files.length; inx++){
         blob_to_base64(files[inx]);
     }
@@ -26,8 +28,8 @@ $('#input-file').change(function (e) {
 
 function blob_to_base64(file) {
     let reader = new FileReader();
-    reader.onload = function(f) {
-        array_image.push(f.target.result);
+    reader.onload = function(buffer) {
+        array_image.push(buffer.target.result);
         preview_image();
     };
     reader.readAsDataURL(file);
@@ -38,7 +40,7 @@ function preview_image(){
         $('#upload-preview-image').append(
             ' <div class="card" id="'+index+'" style="height: 100px; width: auto">\n' +
             '        <div class="blurring dimmable image" style="height: 100px; width: auto">\n' +
-            '            <div class="ui dimmer" >\n' +
+            '            <div class="ui dimmer transition" >\n' +
             '                <div class="content">\n' +
             '                    <div class="center">\n' +
             '                        <a id="btn-delete-img" class="ui item">\n' +
@@ -53,6 +55,25 @@ function preview_image(){
     }
 }
 
+$(() => {
+    console.log(`start plz`);
+
+    $(document).on('mouseenter', '.card' ,function(){
+       console.log('mouse');
+        $(this).find('.blurring.dimmable.image').addClass('drimmed');
+        $(this).find('.ui.dimmer.transition').addClass('visible active');
+        // $(this).dimmer('show');
+    }).on('mouseleave', '.card' ,function(){
+        console.log('un_mouse');
+        $(this).find('.blurring.dimmable.image').removeClass('drimmed');
+        $(this).find('.ui.dimmer.transition').removeClass('visible active');
+        // $(this).dimmer('hide');
+    });
+});
+
+export default {
+    array_image: array_image
+}
 /******************************************************************
  *                              for test                          *
  *****************************************************************/

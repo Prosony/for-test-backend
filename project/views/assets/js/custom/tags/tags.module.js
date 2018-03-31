@@ -150,16 +150,3 @@ export default {
     },
     array_tags: array_tags
 }
-// -------------Think about it----------------
-// let array_preview_tags_by_input;
-// $(document).on('keyup', '#input-own-tags' , function () {
-//     console.log('change: ', $(this)[0].value);
-//     array_preview_tags_by_input = [];
-//     array_preview_tags_by_input.splice(count_click, 0, $(this).closest('#searching-tags-db').find('#input-own-tags')[0].value);
-//     if ($(this)[0].value.length < 3){
-//         console.log('< 3');
-//     }else{
-//         get_json_tag_for_search(window.token, array_preview_tags_by_input);
-//         console.log('> 3');
-//     }
-// });

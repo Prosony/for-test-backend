@@ -126,7 +126,9 @@ function update_tags_preview(){
     });
 }
 
-
+export default {
+    array_tags: array_tags
+}
 // -------------Think about it----------------
 // let array_preview_tags_by_input;
 // $(document).on('keyup', '#input-own-tags' , function () {
