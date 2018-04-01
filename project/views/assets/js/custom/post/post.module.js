@@ -78,6 +78,9 @@ export default {
     async get_posts(id, token){
         return await PostAjax.get_posts(id, token);
     },
+    async get_one_post(id, token){
+        return await PostAjax.get_one_post(id, token)
+    },
     delete_post_be (id_post){
         PostAjax.delete_post(id_post, window.localStorage.getItem('id_account'))
         $(`#${id_post}`).remove();

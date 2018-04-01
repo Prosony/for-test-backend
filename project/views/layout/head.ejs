@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>AniShelter</title>
   <link rel="icon" href="/assets/img/logo/favicon.png">
-  <!--<script src="/assets/js/jquery-3.2.1.min.js"></script>-->
-  <script src="/assets/js/jquery-3.3.1.min.js"></script>
-  <script src="/assets/js/semantic.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="/assets/css/semantic.min.css">
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/semantic.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/css/semantic.css">
   <link type="text/css" rel="stylesheet" href="/assets/css/custom.css">
 </head>
 <body>
@@ -27,9 +26,9 @@
             <i class="user icon"></i>Мой профиль
         </a>
         <%}%>
-        <a class="item">
+        <a class="item" onclick="window.location.href = '/messages'" >
             <i class="envelope icon"></i>Сообщения
-            <div class="ui red label floating" id="unread-message-label" style="top: 2.3em; matgin: 0 0 0 -2.7em!important">0</div>
+            <div class="ui red label floating" id="unread-message-label"  style="top: 2.3em; matgin: 0 0 0 -2.7em!important">0</div>
         </a>
         <a class="item">
             <i class="bell icon"></i>Уведомления

@@ -1,0 +1,51 @@
+<div id="modal-post-ad" class="ui longer modal">
+    <a class="ui header" id="header-post-ad-modal"></a>
+    <div class="ui three column grid">
+        <div class="column" style="width: 30%; margin-left: 5px; height: auto;">
+            <div class="ui shape">
+                <div class="sides" id="slide-image-div">
+                    <div class="active side">
+                        <img id="first-image-modal" src="" style="height: auto; width: 230px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column" style="width: 45%;  margin-top: 10px">
+            <h3 class="ui dividing header"> <i class="newspaper icon"></i> Description </h3>
+            <div class="scrolling content" style="height: 350px;">
+                <div class="description">
+                    <p id="text-wall"></p>
+                </div>
+            </div>
+        </div>
+        <div class="column" style="width: 20%; margin-top: 10px">
+            <h3 class="ui dividing header"> <i class="tags icon"></i> Tags </h3>
+            <div class="ui labels" id="tag-column">
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui very relaxed horizontal list">
+            <div class="item">
+                <i class="call icon"></i>
+                <div class="content">
+                    <p id="phone-account"></p>
+                </div>
+            </div>
+            <div class="item" id="id-account">
+                <img class="ui avatar image" id="avatar-mini" src="">
+                <div class="content">
+                    <a class="header" href="" id="head-name-user"></a>
+                </div>
+            </div>
+            <div class="ui primary approve button"> Proceed
+                <i class="right chevron icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.ui.shape').unbind("click").click(function() {
+        $('.ui.shape').shape('flip back');
+    });
+</script>

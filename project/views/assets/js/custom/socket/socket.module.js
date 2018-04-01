@@ -1,6 +1,6 @@
 import audio        from '/assets/js/custom/audio/audio.js'
 import message      from '/assets/js/custom/messages/message.js'
-import notification from '/assets/js/custom/notification/notification.module.js'
+import notification from '/assets/js/custom/notification/notification.ajax.js'
 
 $(() => {
     const socket = new WebSocket('ws://185.77.204.249:8080/messages-socket/{' + window.localStorage.getItem('token') + '}');

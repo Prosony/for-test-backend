@@ -1,17 +1,14 @@
 <%- include ../layout/head.ejs %>
-
-    <div class="ui container">
-      <div id="main" class="ui two column grid">
-        <div id="left_column" class="four wide column">
-          <%include ../columns/advertisement/left-column-search.ejs%>
-        </div>
-        <div id="right_column" class="twelve wide column">
-          <div class="ui top attached segment" id="ad-post-content"></div>
-        </div>
-        <div class="four wide column"></div>
-      </div>
-      <div id="modal"></div>
+<div class="ui two column grid">
+    <div id="left_column" class="ui rail four wide column">
+        <%include ../columns/advertisement/left-column-search.ejs%>
     </div>
+    <div id="right_column" class="twelve wide column">
+        <div class="ui top attached segment" id="ad-post-content"></div>
+    </div>
+    <div class="four wide column"></div>
+</div>
+<div id="modal"></div>
 
 <script>
     window.localStorage.setItem('is_me', <%= is_me %>)
@@ -24,33 +21,8 @@
 
 <script type="module" src="/assets/js/custom/tags/tags.module.js"></script>
 
-
 <script type="module" src="/assets/js/custom/bookmarks/bookmarks.module.js"></script>
+
+<script type="module" src="/assets/js/custom/modal/modal.modul.js"></script>
+
 <%- include ../layout/foot.ejs %>
-
-
-
-<!--<script src="semantic/front/advertisement/advertisement-data.js"></script>-->
-<!--<script src="semantic/front/advertisement/advertisement-event.js"></script>-->
-<!--<script src="semantic/front/advertisement/advertisement-validation.js"></script>-->
-
-<!--<script src="semantic/front/messages/messages-data.js"></script>-->
-<!--<script src="semantic/front/messages/messages-socket.js"></script>-->
-<!--<script src="semantic/front/messages/messages-socket-handle.js"></script>-->
-
-<!--<script src="semantic/front/service/data/bookmarks/bookmarks-data.js"></script>-->
-
-<!--<script src="semantic/front/service/data/bookmarks/bookmarks-data.js"></script>-->
-
-<!--<script src="semantic/front/profile/profile-data.js"></script>-->
-
-<!--<script src="semantic/front/service/other_service.js"></script>-->
-<!--<script src="semantic/front/service/tags-service.js"></script>-->
-<!--<script src="semantic/front/service/post-ad-service.js"></script>-->
-<!--<script src="semantic/front/service/bookmarks-service.js"></script>-->
-
-<!--<script src="semantic/front/service/data/tags/tags-data.js"></script>-->
-<!--<script src="semantic/front/service/data/file/image-data.js"></script>-->
-<!--<script src="semantic/front/service/data/post-ad/post-ad-data.js"></script>-->
-
-

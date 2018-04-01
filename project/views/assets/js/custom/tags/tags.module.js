@@ -30,14 +30,19 @@ function update_tags_preview(){
 }
 
 function update_tags_dropdown(element, title){
+    if (title){
+        console.log(`title: `,title);
         TagsAjax.get_json_tag(token, title).then(function (tags) {
-            let json_tags = JSON.parse(tags);
-            console.log('#INFO [update_tags_dropdown] json_tags: ',json_tags);
-            let menu = $(element).find(`.scrolling.menu`);
-            for (let index = 0; index < json_tags.length; index++){
-                menu.append('<div class="item">'+json_tags[index]+'</div>');
+            if (tags !== undefined){
+                let json_tags = JSON.parse(tags);
+                console.log('#INFO [update_tags_dropdown] json_tags: ',json_tags);
+                let menu = $(element).find(`.scrolling.menu`);
+                for (let index = 0; index < json_tags.length; index++){
+                    menu.append('<div class="item">'+json_tags[index]+'</div>');
+                }
             }
-        });
+        })
+    }
 }
 function preview_own_tags() {
     $(`#block-own-tags`).find(`.ui.label.transition.visible`).remove();

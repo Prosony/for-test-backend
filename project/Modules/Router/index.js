@@ -3,6 +3,7 @@ import SessionModule        from '../Session'
 import ProfileRouter        from './routes/Profile'
 import AdvertisementRouter  from './routes/Advertisement'
 import AuthenticationRouter from './routes/Authentication'
+import MessagesRouter       from './routes/Messages'
 
 
 export default Router()
@@ -10,3 +11,4 @@ export default Router()
     .use('/profile', ProfileRouter)
     .use('/advertisement', AdvertisementRouter)
     .use('/authentication', AuthenticationRouter)
+    .use('/messages', MessagesRouter)

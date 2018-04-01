@@ -5,6 +5,8 @@ export default {
             ContentType: 'application/json',
             url:'http://185.77.204.249:8080/post-content/add',
             data: JSON.stringify({ 'token':token, 'array_text':array_text, 'array_image':array_image, 'array_tags':array_tags, 'timestamp':Date.now().toString()})
+        }).catch(error => {
+            console.log(`#ERROR [add.advertisement.ajax.js][save_advertisement] error: `,error);
         });
     }
 }
