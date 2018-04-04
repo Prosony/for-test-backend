@@ -35,7 +35,7 @@ function set_left_column(profile,images) {
         $('#avatar').attr('src', images)
         $('#name-user').append(`${profile.name} ${profile.surname}`)
         const left_column = $('#left_column');
-        if (me) {
+        if (me === 'true') {
             left_column.append('' +
                 '<a class="ui fluid button" onClick="window.location.href = \'/advertisement/add\'">' +
                 '   <i class="add icon"></i>Add Advertisement\n            </a>'
@@ -43,7 +43,7 @@ function set_left_column(profile,images) {
         } else {
             left_column.append('' +
                 '<a class="ui fluid button" href="/add-advertisement" >' +
-                '   <i class="mail icon"></i>Send message' +
+                '   <i class="mail icon"></i>Send Messages' +
                 '</a>')
         }
     })

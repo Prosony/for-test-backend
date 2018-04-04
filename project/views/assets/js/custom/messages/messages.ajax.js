@@ -5,6 +5,8 @@ export default {
             ContentType: 'application/json',
             url: 'http://185.77.204.249:8080/unread-messages',
             data: JSON.stringify({ token: token})
+        }).catch(error =>{
+            console.log(`#ERROR [messages.socket.js] [get_unread] error: `,error);
         })
     },
     async get_all_dialogs(token){

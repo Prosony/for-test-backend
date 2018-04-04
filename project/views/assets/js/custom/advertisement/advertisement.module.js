@@ -51,8 +51,6 @@ function set_advertisement(advertisement){
 
                     if (typeof bookmarks !== 'undefined') {
                         for (let index_fav = 0; index_fav < bookmarks.length; index_fav++) {
-                            console.log('index_fav: ', bookmarks[index_fav].id);
-                            console.log('index: ', advertisement[index].id);
                             if (bookmarks[index_fav].id === advertisement[index].id) {
                                 const bookmark_element = $('#' + bookmarks[index_fav].id);
                                 bookmark_element.find('.favorite.icon').addClass('active');

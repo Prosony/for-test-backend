@@ -1,8 +1,8 @@
-import ImageAjax        from    '/assets/js/custom/image/image.ajax.js'
-import ProfileModule    from    '/assets/js/custom/profile/profile.module.js'
-import SocketModule     from    '/assets/js/custom/messages/socket.module.js'
-import DateModule       from    '/assets/js/custom/date/date.module.js'
-import MessagesAjax     from    '/assets/js/custom/messages/messages.ajax.js'
+import ImageAjax            from    '/assets/js/custom/image/image.ajax.js'
+import ProfileModule        from    '/assets/js/custom/profile/profile.module.js'
+import SocketModule         from    '/assets/js/custom/messages/socket.module.js'
+import DateModule           from    '/assets/js/custom/date/date.module.js'
+import MessagesAjax         from    '/assets/js/custom/messages/messages.ajax.js'
 
 const token = window.localStorage.getItem('token');
 const id_account = window.localStorage.getItem('id_account');
@@ -35,6 +35,9 @@ function set_dialog(){
         }
     });
 }
+function set_last_message(id_dialog,message){
+    $('#' + id_dialog).find('#last-message-block').text(message.substring(0, 36));
+}
 function show_dialog(id, dialog){
     // console.log(dialog)
     // console.log(`idOutcomingAccount: `, dialog.idOutcomingAccount )
@@ -49,7 +52,7 @@ function show_dialog(id, dialog){
         ImageAjax(JSON.stringify({'path': [profile.path_avatar]})).then(function (base64image) {
             MessagesAjax.get_last_message_by_id_dialog(token, dialog.idDialog).then( function (last_message) {
                 $('#dialog-block').append(
-                  '<div class="item" id="' + dialog.idDialog + '">\n' +
+                  '<div class="item dialog" id="' + dialog.idDialog + '">\n' +
                   '  <div class="ui mini image">\n' +
                   '    <img src="' + base64image + '">\n' +
                   '  </div>\n' +
@@ -60,7 +63,8 @@ function show_dialog(id, dialog){
                   '    </div>\n' +
                   '  </div>\n' +
                   '</div>\n');
-                $('#' + dialog.idDialog).find('#last-message-block').text(last_message.message.substring(0, 36));
+                console.log(`last message: `,last_message);
+                set_last_message(dialog.idDialog, last_message.message.substring(0, 36));
             });
         });
     });
@@ -74,16 +78,17 @@ function open_dialog(element, id_dialog_block) {
     id_dialog = id_dialog_block;
     j_array_data_interlocutor.full_name = $('#'+id_dialog_block).find('.ui.header')[0].innerHTML;
     j_array_data_interlocutor.img = element.find('img').attr("src");
-    j_array_data_interlocutor.id_account =
-    $('#name').html(j_array_data_interlocutor.full_name)
+    j_array_data_interlocutor.id_account = element.find('.ui.header').attr("id");
+
+    $('#name').html(j_array_data_interlocutor.full_name);
     $('#messages-block').find('.ui.minimal.comments').remove();
 
-    MessagesAjax.get_messages_by_id_dialog(token, id_dialog_block).then( function (j_array_messages) {
+    MessagesAjax.get_messages_by_id_dialog(token, id_dialog).then( function (j_array_messages) {
 
         if (typeof j_array_messages !== 'undefined'){
 
             for (let index = 0; index < j_array_messages.length; index++){
-                if(j_array_messages[index].idOutcomingAccount === id_account){ //is my message or not
+                if(j_array_messages[index].idOutcomingAccount === id_account){ //is my MessageModule or not
                     $('#messages-block').append(
                         '                    <div class="comment me" id="'+j_array_messages[index].idMessage+'" >\n' +
                         '                        <a class="avatar">\n' +
@@ -129,9 +134,9 @@ function open_dialog(element, id_dialog_block) {
                     $('#'+j_array_messages[index].idMessage).css({'background-color':'rgba(113,111,122,0.11)'});
                 }
             }
-            SocketModule.ws_message_has_read(id_dialog); // send by socket that message is read
+            SocketModule.ws_message_has_read(id_dialog); // send by socket that MessageModule is read
         }else{
-            console.log('#INFO [messages.module.js][open_dialog] message not found!');
+            console.log('#INFO [messages.module.js][open_dialog] MessageModule not found!');
         }
 
     });
@@ -179,6 +184,9 @@ function show_message(message, is_me) {
          });
      });
  }
+ function get_id_dialog(){
+    return id_dialog;
+ }
 export default {
 
     get_uuid: MessagesAjax.get_uuid,
@@ -188,13 +196,12 @@ export default {
     get_last_message_by_id_dialog: MessagesAjax.get_last_message_by_id_dialog,
 
     set_dialog: set_dialog,
-    show_dialog: show_dialog,
     open_dialog: open_dialog,
-
+    set_last_message: set_last_message,
     show_message: show_message,
     get_my_data: get_my_data,
 
-    id_dialog: id_dialog
+    get_id_dialog: get_id_dialog
 }
 
 

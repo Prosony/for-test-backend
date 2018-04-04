@@ -16,13 +16,17 @@
       <div class="header item">
         <img id="logo_header" src="/assets/img/logo/header.png">
       </div>
-      <% if (locals.id) { %>
+      <% if (locals.id) {
+          console.log(url)
+          console.log(is_me)
+      %>
+
         <% if (typeof url != 'undefined' && url === 'profile' && is_me) { %>
         <a class="item" id="post_show">
             <i class="user icon"></i>Мой профиль
         </a>
         <%} else{%>
-        <a class="item" onClick="window.location.href = '/profile/<%=id%>'">
+        <a class="item" onClick="window.location.href = '/'">
             <i class="user icon"></i>Мой профиль
         </a>
         <%}%>
@@ -43,8 +47,8 @@
                 </a>
             </div>
             <% } else { url = undefined; %>
-            <div data-tooltip="That is your bookmarks!" data-position="bottom center">
-                <a class="ui item" id="bookmarks_load">
+            <div data-tooltip="That is your bookmarks!" id="bookmarks_load" data-position="bottom center">
+                <a class="ui item" >
                     <i class="bookmark icon"></i>Bookmarks
                     <div class="floating ui teal label"></div>
                 </a>

@@ -8,8 +8,9 @@ export default Router().get('/:id', (request, response) => {
     UserSchema.findOne({ id_session: request.sessionID }).then(result => {
         if (result.token) {
             const is_me = request.params.id === result.id_account;
+            Logger.info('Profile.js',`is_me ${is_me}`);
             response.render('profile/index', {
-                id: request.params.id,
+                id: request.params.id, //TODO this is shit! that is my think
                 token: result.token,
                 url: 'profile',
                 is_me: is_me,

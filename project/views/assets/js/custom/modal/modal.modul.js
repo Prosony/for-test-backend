@@ -16,7 +16,7 @@ function modal_show(id_post){
 
                 $('#id-account').attr('id',profile.id);
                 $('#head-name-user').html(profile.name +' '+ profile.surname);
-                $('#head-name-user').attr("href","/profile/:"+profile.id);
+                $('#head-name-user').attr("href","/profile/"+profile.id);
                 $('#phone-account').html(post_ad.jsonText.phone);
 
                 ImageAjax(JSON.stringify({'path': [profile.path_avatar]})).then(function (base64) {

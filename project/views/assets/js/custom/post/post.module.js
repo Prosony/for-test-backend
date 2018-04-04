@@ -2,13 +2,18 @@ import DateModule   from '/assets/js/custom/date/date.module.js'
 import ImageModule  from '/assets/js/custom/image/image.ajax.js'
 import PostAjax     from  '/assets/js/custom/post/post.ajax.js'
 
+const me = window.localStorage.getItem('is_me');
+
 function set_posts (post){
-    PostAjax.get_bookmarks(window.localStorage.getItem('token')).then(favoritePosts => {
+    PostAjax.get_bookmarks(window.localStorage.getItem('token')).then(bookmarksPosts => {
         if (post) {
             let path;
-            if (window.localStorage.getItem('is_me')) {
+            console.log('is_me: ',me);
+            if (me === 'true') {
+                console.log('true');
                 path = '/posts/post-ad-me.ejs'
             } else {
+                console.log('false');
                 path = '/posts/post-ad-noactive.ejs'
             }
             for (let index = 0; index < post.length; index++) {
@@ -18,7 +23,7 @@ function set_posts (post){
                     $('#ad-post-content').append(data);
                     $('#id').attr("id", post[index].id);
 
-                    const parent = $('#'+post[index].id)
+                    const parent = $('#'+post[index].id);
 
                     parent.find('#header-post-ad').html(post[index].jsonText.header)
                     parent.find('#meta-data-postad').html(DateModule(new Date(post[index].timestamp)))
@@ -40,13 +45,14 @@ function set_posts (post){
                     element.prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">' + post[index].jsonTags.breeds + '</div>')
                     element.prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">' + post[index].jsonTags.group + '</div>')
                     element.prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">' + post[index].jsonTags.animals + '</div>')
-
-                    if (typeof favoritePosts !== 'undefined') {
-                        for (let index_fav = 0; index_fav < favoritePosts.length; index_fav++) {
-                            if (favoritePosts[index_fav].id === post[index].id) {
-                                const favorite = $('#' + favoritePosts[index_fav]);
-                                favorite.find('.favorite.icon').addClass('active');
-                                favorite.find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?')
+                    if (me === 'false'){
+                        if (typeof bookmarksPosts !== 'undefined') {
+                            for (let index_fav = 0; index_fav < bookmarksPosts.length; index_fav++) {
+                                if (bookmarksPosts[index_fav].id === post[index].id) {
+                                    const favorite = $('#' + bookmarksPosts[index_fav].id);
+                                    favorite.find('.favorite.icon').addClass('active');
+                                    favorite.find('#data-tooltip-win').attr('data-tooltip', 'Delete from Bookmarks?')
+                                }
                             }
                         }
                     }

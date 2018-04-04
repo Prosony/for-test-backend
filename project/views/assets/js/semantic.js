@@ -1808,7 +1808,7 @@ $.fn.form.settings = {
 
   templates: {
 
-    // template that produces error message
+    // template that produces error MessageModule
     error: function(errors) {
       var
         html = '<ul class="list">'
@@ -5055,7 +5055,7 @@ $.fn.dropdown = function(parameters) {
                     }
                   }
                   else {
-                    module.verbose('All items filtered, showing message', searchTerm);
+                    module.verbose('All items filtered, showing MessageModule', searchTerm);
                     module.add.message(message.noResults);
                   }
                 }
@@ -7071,7 +7071,7 @@ $.fn.dropdown = function(parameters) {
               count,
               query
             ;
-            module.verbose('Adding templated variables to message', message);
+            module.verbose('Adding templated variables to MessageModule', message);
             if(hasCount) {
               count  = module.get.selectionCount();
               message = message.replace('{count}', count);
@@ -8063,7 +8063,7 @@ $.fn.dropdown.settings = {
 
   allowAdditions         : false,      // whether multiple select should allow user added values
   ignoreCase             : false,       // whether to consider values not matching in case to be the same
-  hideAdditions          : true,       // whether or not to hide special message prompting a user they can enter a value
+  hideAdditions          : true,       // whether or not to hide special MessageModule prompting a user they can enter a value
 
   maxSelections          : false,      // When set to a number limits the number of selections to this count
   useLabels              : true,       // whether multiple select should filter currently active selections from choices
@@ -14442,7 +14442,7 @@ $.fn.search = function(parameters) {
 
         displayMessage: function(text, type) {
           type = type || 'standard';
-          module.debug('Displaying message', text, type);
+          module.debug('Displaying MessageModule', text, type);
           module.addResults( settings.templates.message(text, type) );
           return settings.templates.message(text, type);
         },
@@ -14788,9 +14788,9 @@ $.fn.search.settings = {
       ;
       if(message !== undefined && type !== undefined) {
         html +=  ''
-          + '<div class="message ' + type + '">'
+          + '<div class="MessageModule ' + type + '">'
         ;
-        // message type
+        // MessageModule type
         if(type == 'empty') {
           html += ''
             + '<div class="header">No Results</div class="header">'
@@ -20588,8 +20588,8 @@ $.api = $.fn.api = function(parameters) {
           },
           errorFromRequest: function(response, status, httpMessage) {
             return ($.isPlainObject(response) && response.error !== undefined)
-              ? response.error // use json error message
-              : (settings.error[status] !== undefined) // use server error message
+              ? response.error // use json error MessageModule
+              : (settings.error[status] !== undefined) // use server error MessageModule
                 ? settings.error[status]
                 : httpMessage
             ;

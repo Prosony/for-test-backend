@@ -13,8 +13,8 @@
             </div>
             <div id="input-message" class="ui disabled bottom attached segment" style="max-height: auto">
               <div class="ui disabled input action fluid">
-                <input id="message" placeholder="Write something">
-                <button class="ui disabled button" onclick="ws_send_message()">
+                <input id="message_input" placeholder="Write something">
+                <button class="ui disabled button" id="ws_send_button">
                   <i class="send icon"></i>
                 </button>
               </div>
@@ -24,29 +24,3 @@
       </div>
 <script type="module" src="/assets/js/custom/messages/socket.js"></script>
 <%- include ../layout/foot.ejs %>
-
-    <!--<script src="semantic/front/messages/messages.module.js"></script>-->
-    <!--<script src="semantic/front/messages/messages-data.js"></script>-->
-    <!--<script src="semantic/front/profile/profile-event.js"></script>-->
-    <!--<script src="semantic/front/profile/profile-data.js"></script>-->
-    <!--<script src="semantic/front/messages/messages-socket-handle.js"></script>-->
-    <!--<script src="semantic/front/service/data/file/image-data.js"></script>-->
-    <!--<script>-->
-        <!--var token = '<%= token %>';-->
-        <!--var id_account = '<%=id%>';-->
-        <!--var is_me = '<%= is_me %>';-->
-
-        <!--var audio = new Audio();-->
-        <!--audio.preload = 'auto';-->
-        <!--audio.src = 'semantic/dist/sound/BubblePopWav.wav';-->
-
-        <!--$('#input-message').on('keydown', function (event) {-->
-            <!--if (event.keyCode === 13) {-->
-                <!--ws_send_message();-->
-            <!--}-->
-        <!--});-->
-        <!--update_notification();-->
-        <!--set_dialog_block();-->
-        <!--get_my_data();-->
-    <!--</script>-->
-    <!--<script src="semantic/front/messages/socket.js"></script>-->

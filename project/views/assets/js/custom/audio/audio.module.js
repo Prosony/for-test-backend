@@ -1,6 +1,10 @@
-export default new Audio('/assets/sound/BubblePopWav.wav')
-
-
+let audio = new Audio('/assets/sound/BubblePopWav.wav')
+function play() {
+    audio.play();
+}
+export default{
+    play:play
+}
 // export ABC
 // export XYZ
 // import { ABC, XYZ } from '...'
