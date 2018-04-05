@@ -21,6 +21,7 @@ window.onload = function() {
             {
                 console.log(event);
                 console.log(fields);
+
                 validation.check_account(fields.email, fields.password).then(function (data) {
                     console.log(data.err)
                     if(data.err === 204){
