@@ -1,0 +1,32 @@
+<div class="ui small modal" id="modal-quick-message" >
+
+    <h2 class="ui header" id="name-head">
+        <img src="" id="head-avatar" class="ui image">
+
+    </h2>
+    <div class="content">
+        <div class="ui form">
+            <div class="ui segment">
+                <h4 class="ui dividing header">Последние сообщения</h4>
+
+
+                <div class="ui comments" id="preview-messages" style="overflow-y: scroll; height: 250px">
+
+                </div>
+            </div>
+            <div class="field">
+                <!--<label>Feedback</label>-->
+                <textarea id="message_input" style="height: 10px"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui button">Cancel</div>
+        <div class="ui vertical animated button" tabindex="0" id="ws_quick_send_button">
+            <div class="hidden content">Send</div>
+            <div class="visible content">
+                <i class="send icon"></i>
+            </div>
+        </div>
+    </div>
+</div>

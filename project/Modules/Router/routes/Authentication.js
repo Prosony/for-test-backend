@@ -21,7 +21,8 @@ export default Router()
             httpResponse.setEncoding('UTF-8')
 
             httpResponse.on('data', data => {
-              if (httpResponse !== 500) {
+              if (httpResponse.status !== 500) {
+                  console.log(data);
                 data = JSON.parse(data);
                 if (data.id !== undefined && data.token !== undefined) {
                   new UserSchema({
@@ -38,8 +39,10 @@ export default Router()
                       Logger.error('SCHEMA', `ошибка базы данных ${error.message}`);
                     })
                 }else{
-                    console.log('ПиздДЮЮЮК 2228888');
+                   Logger.error('TOKEN','Something wrong with token!');
                 }
+              }else{
+                  Logger.error('BACKEND','Status code 500!');
               }
             })
             if (httpResponse.statusCode === 204){
@@ -61,7 +64,7 @@ export default Router()
   })
 
   .get('/sign-up', (request, response) => {
-    response.render('authentication/sign-up')
+    response.render('authentication/sign-up');
     Logger.success('AUTHENTICATION ROUTER', 'отрисовка sign-up.ejs')
   })
   

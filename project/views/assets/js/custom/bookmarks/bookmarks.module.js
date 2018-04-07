@@ -53,11 +53,9 @@ $(() => {
         console.log('click');
         $('#left_column').empty();
         $('#right_column').empty();
-        ProfileModule.get_profile(id_account, token).then(profile => {
-            ImageAjax(JSON.stringify({ path: [profile.path_avatar]})).then(images => {
-                ProfileModule.set_left_column(profile,images);
-            })
-        });
+        let profile = JSON.parse(window.localStorage.getItem(id_account));
+        console.log("#INFO [onClick][bookmarks_load] profile: ", profile);
+        ProfileModule.set_left_column_bookmarks(profile);
         bookmarks_show();
     });
     $(document).on('click', '.right.floated.star' ,function(event){

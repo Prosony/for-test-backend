@@ -33,7 +33,7 @@ function set_advertisement(advertisement){
                     $('#ad-post-content').append(data);
                     $('#id').attr("id", advertisement[index].id);
                     $(`#${advertisement[index].id}`).find('#header-post-ad').html(advertisement[index].jsonText.header);
-                    $(`#${advertisement[index].id}`).find('#meta-data-postad').html(DateModule(new Date(advertisement[index].timestamp))); //get_date_time(new Date(j_array_messages[index].date))
+                    $(`#${advertisement[index].id}`).find('#meta-data-postad').html(DateModule.translate_timestamp(new Date(advertisement[index].timestamp))); //get_date_time(new Date(j_array_messages[index].date))
                     $(`#${advertisement[index].id}`).find('#text-wall').html(advertisement[index].jsonText.wallTextArea.substring(0, 162) +'...');
                     ImageAjax(json_image).then(function (base64string) {
                         let base_array = JSON.parse(JSON.stringify(base64string));

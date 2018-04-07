@@ -7,7 +7,7 @@ export default Router()
       UserSchema.findOne({ id_session: request.sessionID }).then(result => {
           if (result.token) {
               response.render('advertisement/advertisement.ejs', {
-                  id: result.id_account,
+                  id_account: result.id_account,
                   token: result.token,
                   url: 'advertisement',
                   is_me: false
@@ -24,7 +24,7 @@ export default Router()
       UserSchema.findOne({ id_session: request.sessionID }).then(result => {
           if (result.token) {
               response.render('advertisement/add-advertisement.ejs', {
-                  id: result.id_account,
+                  id_account: result.id_account,
                   token: result.token,
                   url: 'advertisement/add',
                   is_me: false

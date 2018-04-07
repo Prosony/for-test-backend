@@ -26,7 +26,7 @@ function set_posts (post){
                     const parent = $('#'+post[index].id);
 
                     parent.find('#header-post-ad').html(post[index].jsonText.header)
-                    parent.find('#meta-data-postad').html(DateModule(new Date(post[index].timestamp)))
+                    parent.find('#meta-data-postad').html(DateModule.translate_timestamp(new Date(post[index].timestamp)))
                     parent.find('#text-wall').html(post[index].jsonText.wallTextArea.substring(0, 162) + '...')
 
                     ImageModule(json_image).then(images => {

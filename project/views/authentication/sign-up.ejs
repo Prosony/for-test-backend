@@ -37,43 +37,31 @@
 
                 <div class="three fields" id="birthday">
                     <div class="field" >
-                        <div class="ui floating dropdown button" id="breeds-tag" style="width: 100%; border-radius: 0">
-                            <input type="hidden" name="breedsInput">
+                        <div class="ui fluid selection dropdown" id="day-button" style="width: 100%; border-radius: 0">
+                            <input type="hidden" name="dayInput">
                             <span class="text">day</span>
                             <div class="menu">
-                                <div class="ui icon search input"  style="width: auto"> <i class="search icon"></i> <input type="text" placeholder="Search tags..."> </div>
-                                <div class="divider"></div>
-                                <div class="header"> <i class="tags icon"></i>What breed is your animal?</div>
-                                <div class="scrolling menu"></div>
+
                             </div>
                         </div>
 
                     </div>
                     <div class="field" >
-                        <div class="ui floating dropdown button" id="breeds-tag" style="width: 100%; border-radius: 0">
-                            <input type="hidden" name="breedsInput">
+                        <div class="ui fluid selection dropdown" id="month-button" style="width: 100%; border-radius: 0">
+                            <input type="hidden" name="monthInput">
                             <span class="text">month</span>
                             <div class="menu">
-                                <div class="ui icon search input"  style="width: auto"> <i class="search icon"></i> <input type="text" placeholder="Search tags..."> </div>
-                                <div class="divider"></div>
-                                <div class="header"> <i class="tags icon"></i>What breed is your animal?</div>
-                                <div class="scrolling menu"></div>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="field" >
-                        <div class="ui floating dropdown button" id="years-tag" style="width: 100%; border-radius: 0">
+                        <div class="ui fluid selection dropdown" id="years-button" style="width: 100%; border-radius: 0">
                             <input type="hidden" name="yearsInput">
                             <span class="text">year</span>
                             <div class="menu">
-                                <div class="ui icon search input"  style="width: auto"> <i class="search icon"></i> <input type="text" placeholder="Search tags..."> </div>
-                                <div class="scrolling menu">
-                                    <div class="item">Arabic</div>
-                                    <div class="item">Chinese</div>
-                                    <div class="item">Danish</div>
-                                    <div class="item">Dutch</div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -95,10 +83,10 @@
 
             <div class="column">
                 <div class="field">
-                    <label for="wallTextArea">
+                    <label for="about">
                         <i class="user icon"></i>О себе
                     </label>
-                    <textarea id="wallTextArea" name="wallTextArea" type="text" placeholder="Describe the pet" cols="5"></textarea>
+                    <textarea id="about" name="about" type="text" placeholder="About yourself" cols="5"></textarea>
                 </div>
             </div>
         </div>
@@ -112,7 +100,7 @@
         </div>
     </form>
 
-<script type="module" src="/assets/js/custom/authentication/get.started/get.started.module.js"></script>
+
 <script type="module" src="/assets/js/custom/authentication/get.started/get.started.validation.js"></script>
 
 <%- include ../layout/foot.ejs %>

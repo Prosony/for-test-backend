@@ -9,12 +9,13 @@
 <div id="modal"></div>
 
     <script>
+        window.localStorage.setItem('id_account', '<%= id_account %>')
         window.localStorage.setItem('is_me', <%= is_me %>)
         window.localStorage.setItem('token', '<%= token %>')
-        window.localStorage.setItem('id_account', '<%= id %>')
+        window.localStorage.setItem('id_redirect', '<%= id %>')
+        window.localStorage.setItem("quick_message",false);
     </script>
 
-    <script type="module" src="/assets/js/custom/profile/profile.render.js"></script>
     <script type="module" src="/assets/js/custom/profile/profile.module.js"></script>
 
 

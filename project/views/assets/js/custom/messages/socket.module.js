@@ -1,7 +1,7 @@
 import MessagesModule       from    '/assets/js/custom/messages/messages.module.js'
 import Socket               from    '/assets/js/custom/messages/socket.js'
 import NotificationModule   from    "/assets/js/custom/notification/notification.module.js";
-
+let path = window.location.pathname;
 let id_account = window.localStorage.getItem('id_account');
 let token = window.localStorage.getItem('token');
 
@@ -39,7 +39,6 @@ function ws_close_connection(){
 }
 
 function ws_send_message(){
-
     let message_pack = JSON.parse(
         '{' +
         '  "type":"message",' +
@@ -47,7 +46,7 @@ function ws_send_message(){
         '    "id_message":"",' +
         '    "id_dialog":"",' +
         '    "id_outcoming_account":"",' +
-        '    "date_time":"",' +
+        '    "date":"",' +
         '    "message":"",' +
         '    "is_read":""' +
         '  }' +
@@ -64,7 +63,7 @@ function ws_send_message(){
             message_pack.data.id_message = uuid;
             message_pack.data.id_dialog = id_dialog;
             message_pack.data.id_outcoming_account = id_account;
-            message_pack.data.date_time = Date.now();
+            message_pack.data.date = Date.now();
             message_pack.data.message = value;
             message_pack.data.is_read = false;
             console.log('#INFO [SOCKET] [socket.module.js] [ws_send_message] message: ',message_pack);
@@ -76,31 +75,31 @@ function ws_send_message(){
 }
 
 $(() => {
-    if (window.location.pathname === '/messages/') {
-    $('item').unbind("click").click(function() {
-            console.log(`read from: `, $(this).find('.item').attr('id'));
-            ws_message_has_read($(this).find('.item').attr('id'));
+    if (path === '/messages/') {
+        $('item').unbind("click").click(function() {
+                console.log(`read from: `, $(this).find('.item').attr('id'));
+                ws_message_has_read($(this).find('.item').attr('id'));
 
-    });
+        });
 
-    $('#message_input').unbind("click").click(function() {
-        ws_message_has_read(MessagesModule.get_id_dialog());
-    });
-    $('#ws_send_button').unbind("click").click(function () {
-        ws_send_message()
-    });
-    $(document.body).on('click','.item',function () {
-        // console.log();
-        // console.log('click');
-        if (window.location.pathname === '/messages/') {
-            MessagesModule.open_dialog($(this), $(this).attr('id'));
-            // $('.input').removeClass('disabled');
-            // $('.button').removeClass('disabled');
-        }else{
-            console.log(`window.location.pathname: `,window.location.pathname )
-        }
-    });
+        $('#message_input').unbind("click").click(function() {
+            ws_message_has_read(MessagesModule.get_id_dialog());
+        });
 
+        $(document.body).on('click','.item',function () {
+            // console.log();
+            // console.log('click');
+            if (window.location.pathname === '/messages/') {
+                MessagesModule.open_dialog($(this), $(this).attr('id'));
+                // $('.input').removeClass('disabled');
+                // $('.button').removeClass('disabled');
+            }else{
+                console.log(`window.location.pathname: `,window.location.pathname )
+            }
+        });
+        $('#ws_send_button').unbind("click").click(function () {
+            ws_send_message()
+        });
         document.onkeydown = function (e) {
             if (e.keyCode == 13) {
                 ws_send_message()

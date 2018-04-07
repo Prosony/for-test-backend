@@ -50,6 +50,7 @@ function show_dialog(id, dialog){
         // id_interlocutor = id;
         j_array_data_interlocutor.id_account = id;
         ImageAjax(JSON.stringify({'path': [profile.path_avatar]})).then(function (base64image) {
+            console.log(dialog)
             MessagesAjax.get_last_message_by_id_dialog(token, dialog.idDialog).then( function (last_message) {
                 $('#dialog-block').append(
                   '<div class="item dialog" id="' + dialog.idDialog + '">\n' +
@@ -95,9 +96,9 @@ function open_dialog(element, id_dialog_block) {
                         '                            <img src="'+j_array_data_my.img+'">\n' +
                         '                        </a>\n' +
                         '                        <div class="content">\n' +
-                        '                            <a class="author" href="/profile/:'+id_account+'">'+j_array_data_my.full_name+'</a>\n' +
+                        '                            <a class="author" href="/profile/'+id_account+'">'+j_array_data_my.full_name+'</a>\n' +
                         '                            <div class="metadata">\n' +
-                        '                                <span class="date">'+DateModule(new Date(j_array_messages[index].date))+'</span>\n' +
+                        '                                <span class="date">'+DateModule.translate_timestamp(new Date(j_array_messages[index].date))+'</span>\n' +
                         '                            </div>\n' +
                         '                            <div class="text">\n' +
                         '                                <p>'+j_array_messages[index].message+'</p>\n' +
@@ -115,9 +116,9 @@ function open_dialog(element, id_dialog_block) {
                         '                            <img src="'+j_array_data_interlocutor.img+'">\n' +
                         '                        </a>\n' +
                         '                        <div class="content">\n' +
-                        '                            <a class="author" href="/profile/:'+j_array_data_interlocutor.id_account+'">'+j_array_data_interlocutor.full_name+'</a>\n' +
+                        '                            <a class="author" href="/profile/'+j_array_data_interlocutor.id_account+'">'+j_array_data_interlocutor.full_name+'</a>\n' +
                         '                            <div class="metadata">\n' +
-                        '                                <span class="date">'+DateModule(new Date(j_array_messages[index].date))+'</span>\n' +
+                        '                                <span class="date">'+DateModule.translate_timestamp(new Date(j_array_messages[index].date))+'</span>\n' +
                         '                            </div>\n' +
                         '                            <div class="text">\n' +
                         '                                <p>'+j_array_messages[index].message+'</p>\n' +
@@ -153,15 +154,16 @@ function show_message(message, is_me) {
             blabla ="another";
             target = j_array_data_interlocutor;
         }
+        console.log(`message.data.date: `,message.data.date);
         $('#messages-block').append(
             '                    <div class="comment '+blabla+'" id="'+message.data.id_message+'" style="background-color:rgba(113,111,122,0.11);">\n' +
             '                        <a class="avatar">\n' +
             '                            <img src="'+target.img+'">\n' +
             '                        </a>\n' +
             '                        <div class="content">\n' +
-            '                            <a class="author" href="/profile/:'+target.id_account+'">'+target.full_name+'</a>\n' +
+            '                            <a class="author" href="/profile/'+target.id_account+'">'+target.full_name+'</a>\n' +
             '                            <div class="metadata">\n' +
-            '                                <span class="date">'+DateModule(new Date(message.data.date_time))+'</span>\n' +
+            '                                <span class="date">'+DateModule.translate_timestamp(new Date(message.data.date))+'</span>\n' +
             '                            </div>\n' +
             '                            <div class="text">\n' +
             '                                <p>'+message.data.message+'</p>\n' +
@@ -192,15 +194,17 @@ export default {
     get_uuid: MessagesAjax.get_uuid,
     get_unread: MessagesAjax.get_unread,
     get_all_dialogs: MessagesAjax.get_all_dialogs,
+    create_dialog: MessagesAjax.create_dialog,
+    get_dialog: MessagesAjax.get_dialog,
     get_messages_by_id_dialog: MessagesAjax.get_messages_by_id_dialog,
     get_last_message_by_id_dialog: MessagesAjax.get_last_message_by_id_dialog,
+    get_last_some_messages: MessagesAjax.get_last_some_messages,
 
-    set_dialog: set_dialog,
     open_dialog: open_dialog,
     set_last_message: set_last_message,
     show_message: show_message,
     get_my_data: get_my_data,
-
+    set_dialog: set_dialog,
     get_id_dialog: get_id_dialog
 }
 

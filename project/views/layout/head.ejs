@@ -16,7 +16,7 @@
       <div class="header item">
         <img id="logo_header" src="/assets/img/logo/header.png">
       </div>
-      <% if (locals.id) {
+      <% if (locals.id_account) {
           console.log(url)
           console.log(is_me)
       %>
@@ -40,7 +40,7 @@
         </a>
         <div class="right menu">
             <% if (typeof url != 'undefined' && url === 'profile' ) { %>
-            <div data-tooltip="That is your bookmarks!" data-position="bottom center">
+            <div data-tooltip="That is your bookmarks!" id="bookmarks_show" data-position="bottom center">
                 <a id="bookmarks_show" class="ui item">
                     <i class="bookmark icon"></i>Bookmarks
                     <div class="floating ui teal label"></div>
@@ -54,7 +54,7 @@
                 </a>
             </div>
             <% } %>
-            <div data-tooltip="Поиск объявлений" id="bookmarks_load" data-position="bottom center">
+            <div data-tooltip="Поиск объявлений" data-position="bottom center">
                 <a class="item" onClick="window.location.href = '/advertisement'">
                     <i class="paw icon"></i>Найти петомца
                 </a>

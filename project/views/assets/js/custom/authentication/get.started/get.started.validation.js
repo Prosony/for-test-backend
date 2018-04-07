@@ -1,5 +1,6 @@
-import GetStartedAjax       from '/assets/js/custom/authentication/get.started/get.started.ajax.js'
-
+import GetStartedModule            from '/assets/js/custom/authentication/get.started/get.started.module.js'
+import GetStartedAjax       from    '/assets/js/custom/authentication/get.started/get.started.ajax.js'
+import DateModule           from    '/assets/js/custom/date/date.module.js'
 window.onload = function() {
 
     $('.ui.form').form(
@@ -19,9 +20,13 @@ window.onload = function() {
                 },
                 password:  {identifier  : 'password', rules: [{type   : 'empty', prompt : 'field password is empty'}, {type   : 'maxLength[35]', prompt : 'Max 35 symbols'}],
                 },
-                about: { identifier  : 'about',  rules: [{type   : 'empty', prompt : 'Please select category group'}, {type   : 'maxLength[50]', prompt : 'Max 50 symbols'}],
+                about: { identifier  : 'about',  rules: [{type   : 'empty', prompt : 'Please tell us about yourself'}, {type   : 'maxLength[1000]', prompt : 'Max 1000 symbols'}],
                 },
                 inputFile: { identifier  : 'inputFile',  rules: [{type   : 'empty', prompt : 'No one photo?'}],
+                },
+                dayInput: { identifier  : 'dayInput',  rules: [{type   : 'empty', prompt : 'day is empty'}],
+                },
+                monthInput: { identifier  : 'monthInput',  rules: [{type   : 'empty', prompt : 'month is empty'}],
                 },
                 yearsInput: { identifier  : 'yearsInput',  rules: [{type   : 'empty', prompt : 'years is empty'}],
                 },
@@ -37,7 +42,36 @@ window.onload = function() {
                         console.log('asddsaasddsa');
                         $(this).form('add prompt', 'email', 'This email already used!');
                     }else {
-                        console.log(`#INFO [get.started.validation.js][onSuccess] fields: `,fields);
+                        let account = JSON.parse('{' +
+                            '  "email": "",' +
+                            '  "password": "",' +
+                            '  "phone": "",' +
+                            '  "firstname": "",' +
+                            '  "lastname": "",' +
+                            '  "base64avatar": "",' +
+                            '  "birthday": "",' +
+                            '  "about": "",' +
+                            '  "date_create_account": ""' +
+                            '}');
+                        account.email = fields.email;
+                        account.password = fields.password;
+                        account.phone = fields.phone;
+                        account.firstname = fields.firstname;
+                        account.lastname = fields.lastname;
+                        account.base64avatar = GetStartedModule.get_avatar();
+                        let month = DateModule.get_month(fields.monthInput.toString());
+                        console.log(`month: `, month, `fields.monthInput.toString(): `,fields.monthInput.toString());
+                        account.birthday = fields.dayInput +'.'+ month +'.'+ fields.yearsInput;
+                        account.about = fields.about;
+                        account.date_create_account = Date.now();
+                        console.log(`#INFO [get.started.validation.js][onSuccess] account: `,account);
+
+                        GetStartedAjax.save_account(account).then(is_save =>{
+                            console.log(`#SUCCESS [get.started.validation.js][onSuccess] account was save!`);
+                            console.log(is_save);
+                            window.location.href = '/authentication/sign-in'
+                        });
+
                     }
                 });
                 return false;

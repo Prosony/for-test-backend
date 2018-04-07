@@ -1,13 +1,15 @@
 import DateModule           from    '/assets/js/custom/date/date.module.js'
 import SocketModule         from    '/assets/js/custom/messages/socket.module.js'
 import MessagesModule       from    '/assets/js/custom/messages/messages.module.js'
-import NotificationModule   from '/assets/js/custom/notification/notification.module.js'
+import NotificationModule   from    '/assets/js/custom/notification/notification.module.js'
+import QuickMessagesModule  from '/assets/js/custom/messages/quick/quick.messages.module.js'
+
+const token         = window.localStorage.getItem('token');
+const id_account    = window.localStorage.getItem('id_account');
+const url           = window.localStorage.getItem('url');
 
 
-const token = window.localStorage.getItem('token');
-const id_account = window.localStorage.getItem('id_account');
-const url = window.localStorage.getItem('url');
-    let socket    = new WebSocket('ws://185.77.204.249:8080/messages-socket/{' + window.localStorage.getItem('token') + '}');
+let socket    = new WebSocket('ws://185.77.204.249:8080/messages-socket/{' + window.localStorage.getItem('token') + '}');
 
     socket.onopen= function(message){
         NotificationModule.set_unread(token);
@@ -44,6 +46,10 @@ const url = window.localStorage.getItem('url');
         } else {
             switch (type) {
                 case 'message':
+                    if (window.localStorage.getItem('quick_message') ==='true'){
+                        console.log("modal quick_message");
+                        QuickMessagesModule.set_message(message.data);
+                    }
                     NotificationModule.set_unread(token);
                     NotificationModule.play_sound_notification();
             }
@@ -51,9 +57,6 @@ const url = window.localStorage.getItem('url');
     };
     socket.onclose = function(event){
         console.log(`#INFO [socket.js][ON CLOSE] reason: `,event.reason);
-        // if (event.reason.concat('204')) {
-        //     console.log('Delete authentication')
-        // }
     };
     socket.onerror = function(error){
         console.log('#ERROR error: ' + error.message)
@@ -63,11 +66,10 @@ const url = window.localStorage.getItem('url');
         socket.close();
     });
 $(() => {
-    console.log(token);
     if (window.location.pathname === '/messages/'){
         MessagesModule.get_my_data();
+        MessagesModule.set_dialog();
     }
-    MessagesModule.set_dialog();
 });
 export default {
     socket: socket
