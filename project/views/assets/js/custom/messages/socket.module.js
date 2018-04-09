@@ -86,7 +86,7 @@ $(() => {
             ws_message_has_read(MessagesModule.get_id_dialog());
         });
 
-        $(document.body).on('click','.item',function () {
+        $(document.body).on('click','.ui.vertical.segment',function () {
             // console.log();
             // console.log('click');
             if (window.location.pathname === '/messages/') {

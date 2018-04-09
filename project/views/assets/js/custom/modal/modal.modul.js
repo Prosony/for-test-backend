@@ -24,6 +24,7 @@ function modal_show(id_post){
 
                 });
             });
+            console.log(post_ad.jsonPathImage);
             ImageAjax(JSON.stringify({'path': post_ad.jsonPathImage})).then(function (base64) {
                 for (let index = 0; index < base64.length; index++ ){
                     if (index === 0){

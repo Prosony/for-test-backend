@@ -50,20 +50,43 @@ function show_dialog(id, dialog){
         // id_interlocutor = id;
         j_array_data_interlocutor.id_account = id;
         ImageAjax(JSON.stringify({'path': [profile.path_avatar]})).then(function (base64image) {
-            console.log(dialog)
+            // console.log(dialog)
             MessagesAjax.get_last_message_by_id_dialog(token, dialog.idDialog).then( function (last_message) {
+
                 $('#dialog-block').append(
-                  '<div class="item dialog" id="' + dialog.idDialog + '">\n' +
-                  '  <div class="ui mini image">\n' +
-                  '    <img src="' + base64image + '">\n' +
-                  '  </div>\n' +
-                  '  <div class="content">\n' +
-                  '    <h4 class="ui header" id="' + id + '">' + profile.name + ' ' + profile.surname + '</h4>\n' +
-                  '    <div class="description" id="last-message-block">\n' +
-                  '      <p>' + id + '</p>\n' +
-                  '    </div>\n' +
-                  '  </div>\n' +
-                  '</div>\n');
+                '<div class="ui vertical segment" id="' + dialog.idDialog + '">\n' +
+                    '                  <div class="comment">\n' +
+                    '                    <a class="avatar">\n' +
+                    '                      <img src="' + base64image + '">\n' +
+                    '                    </a>\n' +
+                    '                    <div class="content">\n' +
+                    '                      <a class="author" href="/profile/'+id+'">' + profile.name + ' ' + profile.surname + '</a>\n' +
+                    '                      <div class="metadata">\n' +
+                    '                        <span class="date"></span>\n' +
+                    '                      </div>\n' +
+                    '                      <div class="text"  id="last-message-block">\n' +
+                    '                      </div>\n' +
+                    '                      <div class="actions">\n' +
+                    '                        <a class="delete"><i class="trash icon"></i></a>\n' +
+                    '                      </div>\n' +
+                    '                    </div>\n' +
+                    '                  </div>\n' +
+                    '                </div>'
+                    );
+                // $('#dialog-block').append(
+                //     '<div class="ui vertical segment">'+
+                //   '<div class="item" id="' + dialog.idDialog + '">\n' +
+                //   '  <div class="ui mini image">\n' +
+                //   '    <img src="' + base64image + '">\n' +
+                //   '  </div>\n' +
+                //   '  <div class="content">\n' +
+                //   '    <h4 class="ui header" id="' + id + '">' + profile.name + ' ' + profile.surname + '</h4>\n' +
+                //   '    <div class="description" id="last-message-block">\n' +
+                //   '      <p>' + id + '</p>\n' +
+                //   '    </div>\n' +
+                //   '  </div>\n' +
+                //   '</div>\n' +
+                //   '</div>\n');
                 console.log(`last message: `,last_message);
                 set_last_message(dialog.idDialog, last_message.message.substring(0, 36));
             });
@@ -77,9 +100,9 @@ function open_dialog(element, id_dialog_block) {
     $('.button').removeClass('disabled');
 
     id_dialog = id_dialog_block;
-    j_array_data_interlocutor.full_name = $('#'+id_dialog_block).find('.ui.header')[0].innerHTML;
+    j_array_data_interlocutor.full_name = $('#'+id_dialog_block).find('.author')[0].innerHTML;
     j_array_data_interlocutor.img = element.find('img').attr("src");
-    j_array_data_interlocutor.id_account = element.find('.ui.header').attr("id");
+    j_array_data_interlocutor.id_account = element.find('.author').attr("href").substring(9);
 
     $('#name').html(j_array_data_interlocutor.full_name);
     $('#messages-block').find('.ui.minimal.comments').remove();

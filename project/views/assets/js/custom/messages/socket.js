@@ -47,8 +47,10 @@ let socket    = new WebSocket('ws://185.77.204.249:8080/messages-socket/{' + win
             switch (type) {
                 case 'message':
                     if (window.localStorage.getItem('quick_message') ==='true'){
+
                         console.log("modal quick_message");
                         QuickMessagesModule.set_message(message.data);
+
                     }
                     NotificationModule.set_unread(token);
                     NotificationModule.play_sound_notification();

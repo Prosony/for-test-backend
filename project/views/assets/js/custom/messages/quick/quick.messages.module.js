@@ -1,8 +1,8 @@
 import MessagesModule   from    '/assets/js/custom/messages/messages.module.js';
 import ProfileModule    from    '/assets/js/custom/profile/profile.module.js'
 import ImageAjax        from    '/assets/js/custom/image/image.ajax.js'
+import DateModule       from    '/assets/js/custom/date/date.module.js'
 import Socket           from    '/assets/js/custom/messages/socket.js';
-
 const   id_redirect = window.localStorage.getItem('id_redirect');
 const   id_account  = window.localStorage.getItem('id_account');
 const   token       = window.localStorage.getItem('token');
@@ -51,32 +51,37 @@ function load_messages(){ // TODO add image if message is empty or dialog not cr
     })
 }
 function set_message(message) {
-    let profile_json = {
-        id:"",
-        name:"",
-        surname:"",
-        email:"",
-        phone:"",
-        birthday: "",
-        about: "",
-        base64avatar:"",
-        dateCreateAccount:""
-    };
-    console.log(message);
-    ProfileModule.get_profile(message.id_outcoming_account, token).then(profile =>{
-        ImageAjax(JSON.stringify({ path: [profile.path_avatar]})).then(base64avatar =>{
-            profile_json.id = profile.id;
-            profile_json.name = profile.name;
-            profile_json.surname = profile.surname;
-            profile_json.email = profile.email;
-            profile_json.phone = profile.phone;
-            profile_json.birthday = profile.birthday;
-            profile_json.about = profile.about;
-            profile_json.base64avatar = base64avatar;
-            profile_json.dateCreateAccount = profile.dateCreateAccount;
-            print_messages(message, profile_json);
-        })
-    })
+    console.log(`message.id_dialog: `,message.id_dialog);
+    console.log(`dialog.idDialog: `,dialog.idDialog);
+   if (message.id_dialog === dialog.idDialog) {
+       let profile_json = {
+           id:"",
+           name:"",
+           surname:"",
+           email:"",
+           phone:"",
+           birthday: "",
+           about: "",
+           base64avatar:"",
+           dateCreateAccount:""
+       };
+       console.log(message);
+       ProfileModule.get_profile(message.id_outcoming_account, token).then(profile =>{
+           ImageAjax(JSON.stringify({ path: [profile.path_avatar]})).then(base64avatar =>{
+               profile_json.id = profile.id;
+               profile_json.name = profile.name;
+               profile_json.surname = profile.surname;
+               profile_json.email = profile.email;
+               profile_json.phone = profile.phone;
+               profile_json.birthday = profile.birthday;
+               profile_json.about = profile.about;
+               profile_json.base64avatar = base64avatar;
+               profile_json.dateCreateAccount = profile.dateCreateAccount;
+               print_messages(message, profile_json);
+           })
+       })
+   }
+
 }
 function print_messages(message, profile){
     console.log(message);
@@ -113,10 +118,12 @@ function ws_send_quick_message(dialog, token, id_account_outcoming, id_account_i
     );
     let value = document.getElementById("message_input").value;
     console.log(`value: `,value);
+    console.log(`dialog: `,dialog);
+    console.log(`dialog#2: `,dialog === "");
     if(typeof value !== 'undefined' || value !== "") {
-        if (typeof dialog === 'undefined') {
+        if (typeof dialog === 'undefined' || dialog === "") {
             console.log('CREATE DIALOG');
-            MessagesModule.set_dialog(token, id_account_outcoming, id_account_incoming).then(dialog => {
+            MessagesModule.create_dialog(token, id_account_outcoming, id_account_incoming).then(dialog => {
                 console.log('MessagesModule.dialog: ', dialog);
                 MessagesModule.get_uuid('messages').then(function (uuid) {
                     message_pack.type = "message";
@@ -128,6 +135,8 @@ function ws_send_quick_message(dialog, token, id_account_outcoming, id_account_i
                     message_pack.data.is_read = false;
                     console.log('#INFO [SOCKET] [socket.module.js] [ws_send_message] message: ', message_pack);
                     Socket.socket.send(JSON.stringify(message_pack));
+                    print_messages( message_pack.data, profile);
+                    $(`#message_input`).val('');
                 });
             })
         } else {
@@ -144,8 +153,8 @@ function ws_send_quick_message(dialog, token, id_account_outcoming, id_account_i
                 console.log('#INFO [SOCKET] [socket.module.js] [ws_send_message] message: ', message_pack);
                 Socket.socket.send(JSON.stringify(message_pack));
                 let profile = JSON.parse(window.localStorage.getItem(id_account));
-
                 print_messages( message_pack.data, profile);
+                $(`#message_input`).val('');
             });
         }
     }
@@ -157,7 +166,14 @@ $(() => {
             console.log("SEEEND");
             ws_send_quick_message(dialog, token, id_account, id_redirect);
             // $('#modal-quick-message').modal('hide')
-        })
+        });
+        document.onkeydown = function (e) {
+            if (e.keyCode == 13) {
+                ws_send_quick_message(dialog, token, id_account, id_redirect);
+            }
+            // console.log(e.keyCode)
+        }
+        // ws_quick_send_button
     }
 });
 export default {
