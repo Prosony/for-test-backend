@@ -47,11 +47,20 @@ function update_tags_dropdown(element, title){
 function preview_own_tags() {
     $(`#block-own-tags`).find(`.ui.label.transition.visible`).remove();
     for (let index = 0; index < array_tags.own_tags.length; index++) {
-        $(`#block-own-tags`).append('' +
-            '<a class="ui label transition visible" id="' + index + '" style="display: inline-block !important; margin-top: 5px">'
-            + array_tags.own_tags[index] +
-            '<i class="delete icon"></i>' +
-            '</a>');
+       let check = array_tags.own_tags[index].toString().substring(0,1);
+        if (check === `-`){
+            $(`#block-own-tags`).append('' +
+                '<a class="ui label red transition visible" id="' + index + '" style="display: inline-block !important; margin-top: 5px">'
+                + array_tags.own_tags[index] +
+                '<i class="delete icon"></i>' +
+                '</a>');
+        } else{
+            $(`#block-own-tags`).append('' +
+                '<a class="ui label transition visible" id="' + index + '" style="display: inline-block !important; margin-top: 5px">'
+                + array_tags.own_tags[index] +
+                '<i class="delete icon"></i>' +
+                '</a>');
+        }
     }
 }
 
@@ -61,12 +70,35 @@ $(() => {
     let count_click = 0;
 
     $(`#btn-own-tag`).on('click', function () {
+        let is_new_tag = true;
+        let tag = $(this).closest(`#searching-tags-db`).find(`#input-own-tags`)[0].value;
         console.log('click tags');
-        console.log('input value: ', $(this).closest(`#searching-tags-db`).find(`#input-own-tags`)[0].value);
-        array_tags.own_tags.splice(count_click, 0, $(this).closest(`#searching-tags-db`).find(`#input-own-tags`)[0].value);
-        console.log('array_tags.own_tags: ', array_tags.own_tags);
-        preview_own_tags();
-        count_click++;
+        console.log('input value: ', tag);
+        for (let index = 0; index < array_tags.own_tags.length; index++){
+            let cursor = array_tags.own_tags.toString();
+            if (cursor.substring(0,1) === `-`){
+                cursor = cursor.substring(1);
+            }
+            if (tag.substring(0,1) === `-`){
+                if (cursor === tag.substring(1)){
+                    console.log("duplicated tags with -");
+                    is_new_tag = false;
+                    break;
+                }
+            }else {
+                if (cursor === tag){
+                    console.log("duplicated tags");
+                    is_new_tag = false;
+                    break;
+                }
+            }
+        }
+        if (is_new_tag){
+            array_tags.own_tags.splice(count_click, 0, tag);
+            console.log('array_tags.own_tags: ', array_tags.own_tags);
+            preview_own_tags();
+            count_click++;
+        }
     });
 
     $(document).on('click', '.delete.icon' ,function(){
