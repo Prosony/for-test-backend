@@ -1,4 +1,5 @@
 import TagsAjax     from '/assets/js/custom/tags/tags.ajax.js'
+// import AdvertisementModule   from '/assets/js/custom/advertisement/advertisement.module.js'
 
 const token = window.localStorage.getItem(`token`);
 const id_account = window.localStorage.getItem(`id_account`);
@@ -14,19 +15,23 @@ let array_tags = JSON.parse(
     '}');
 
 let content = [];
-function update_tags_preview(){
-    TagsAjax.get_own_tag(token, 'own').then(function (json_tags) {
-        console.log('preview tags: ', json_tags);
-        for (let index = 0; index < json_tags.length; index++){
-            content.push({'title':json_tags[index]});
+function update_tags_preview(tags_cache){
+    // let json_tags = tags_cache;
+    if (tags_cache !== ''){
+        console.log('preview tags: ', tags_cache);
+        content = [];
+        for (let index = 0; index < tags_cache.length; index++){
+            content.push({'title':tags_cache[index]});
+            console.log('# INFO [update_tags_preview] content: ',content);
+            $(`#searching-tags-db`).search({
+                source: content,
+                cache: true,
+                minCharacters: 0,
+                maxResults: 10
+            });
         }
-        console.log('# INFO [update_tags_preview] content: ',content);
-        $(`#searching-tags-db`).search({
-            source: content,
-            minCharacters: 0
-        });
+    }
 
-    });
 }
 
 function update_tags_dropdown(element, title){
@@ -68,10 +73,11 @@ $(() => {
 
     update_tags_dropdown('#animals-tag','header');
     let count_click = 0;
-
+    // update_tags_preview();
     $(`#btn-own-tag`).on('click', function () {
         let is_new_tag = true;
         let tag = $(this).closest(`#searching-tags-db`).find(`#input-own-tags`)[0].value;
+        $(this).closest(`#searching-tags-db`).find(`#input-own-tags`)[0].value = '';
         console.log('click tags');
         console.log('input value: ', tag);
         for (let index = 0; index < array_tags.own_tags.length; index++){
@@ -93,7 +99,7 @@ $(() => {
                 }
             }
         }
-        if (is_new_tag){
+        if (is_new_tag && tag !== ''){
             array_tags.own_tags.splice(count_click, 0, tag);
             console.log('array_tags.own_tags: ', array_tags.own_tags);
             preview_own_tags();
@@ -180,10 +186,17 @@ $(() => {
         onChange: function(value, text, $selectedItem) {
         }
     });
+
+    $(`#searching-tags-db`).dropdown({
+        transition: 'drop',
+        onChange: function(value, text, $selectedItem) {
+        }
+    })
 });
 export default {
     async get_advertisement_by_tags(token, tags){
         return await TagsAjax.get_advertisement_by_tags(token, tags);
     },
-    array_tags: array_tags
+    array_tags: array_tags,
+    update_tags_preview: update_tags_preview
 }

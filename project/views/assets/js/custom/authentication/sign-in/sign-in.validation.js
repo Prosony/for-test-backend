@@ -26,7 +26,8 @@ window.onload = function() {
                     console.log(data.err)
                     if(data.err === 204){
                         console.log('account not found');
-                        $(".ui.segment").find('.ui.error.MessageModule.transition.hidden').removeClass('transition').removeClass('hidden');
+                        $(".ui.segment").find('.ui.error.message.transition.hidden').removeClass('transition').removeClass('hidden');
+
                     }else{
                         window.location = data.redirectUrl;
                     }
@@ -36,7 +37,11 @@ window.onload = function() {
             }
         },
     );
+    // document.on('click', '.close.icon', function (event) {
+    //     $("#form-main").find('.ui.error.MessageModule').addClass('transition').addClass('hidden');
+    // });
     $(".close.icon").on('click',function(){
-        $("#form-main").find('.ui.error.MessageModule').addClass('transition').addClass('hidden');
+        console.log('cliiick');
+        $(".ui.segment").find('.ui.error.message').addClass('transition').addClass('hidden');
     });
 };

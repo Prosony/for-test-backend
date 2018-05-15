@@ -2,10 +2,12 @@ import AdvertisementAjax    from '/assets/js/custom/advertisement/advertisement.
 import PostModule           from '/assets/js/custom/post/post.module.js'
 import DateModule           from '/assets/js/custom/date/date.module.js'
 import ImageAjax            from '/assets/js/custom/image/image.ajax.js'
+import TagsModule           from '/assets/js/custom/tags/tags.module.js'
 
 const id_account = window.localStorage.getItem('id_account');
 const token = window.localStorage.getItem('token');
 const me = window.localStorage.getItem('is_me');
+let tags_cache = [];
 function advertisement_show(token){
     AdvertisementAjax.get_all_advertisement(token).then(function (advertisement) {
         set_advertisement(advertisement);
@@ -40,7 +42,22 @@ function set_advertisement(advertisement){
                         $(`#${advertisement[index].id}`).find('#first-image').attr("src", base_array[0]); //
                         $(`#${advertisement[index].id}`).find('#second-image').attr("src", base_array[1]);
                     });
+
                     for (let i = 0; i < advertisement[index].jsonTags.own_tags.length; i++){
+
+                        if (tags_cache.length > 0){
+                            for (let index_cahce = 0; index_cahce < tags_cache.length; index_cahce++){
+                                if (advertisement[index].jsonTags.own_tags[i] !== tags_cache[index_cahce]){
+                                    tags_cache.push(advertisement[index].jsonTags.own_tags[i]);
+                                    TagsModule.update_tags_preview(tags_cache);
+                                    break;
+                                }
+                            }
+                        } else {
+                            console.log('tags_cache: ',tags_cache)
+                            tags_cache.push(advertisement[index].jsonTags.own_tags[i]);
+                        }
+
                         $(`#${advertisement[index].id}`).find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">'+advertisement[index].jsonTags.own_tags[i]+'</div>');
                     }
                     $(`#${advertisement[index].id}`).find('#tag-column-post-ad').prepend('<div class="ui teal label" id="tag-pet" style="margin-top: 5px">'+advertisement[index].jsonTags.gender+'</div>');
@@ -70,6 +87,7 @@ function clear_advertisement(){
     $('#ad-post-content').find('.ui.items').remove();
 }
 export default {
+    tags_cache: tags_cache,
     set_advertisement: set_advertisement,
     clear_advertisement: clear_advertisement
 }

@@ -78,13 +78,28 @@
             <h3 class="ui dividing header"> <i class="tags icon"></i> Add own tags </h3>
             <div class="ui vertical segment" id="block-own-tags"></div>
             <div class="main ui container" style="margin-top: 15px">
-                <div class="ui right labeled left icon input fluid" id="searching-tags-db">
-                    <i class="tags icon"></i>
-                    <input type="text" placeholder="Enter tags" id="input-own-tags"  value="" multiple>
-                    <a class="ui tag label" id="btn-own-tag">Add Tag</a>
+
+                <div class="ui search" id="searching-tags-db">
+                    <div class="ui left icon input" style="width: 70%">
+                        <i class="tags icon"></i>
+                        <input class="prompt" type="text" placeholder="Add tags..." id="input-own-tags" style="border-bottom-right-radius: 0;  border-top-right-radius: 0; " value="" multiple>
+                    </div>
+                    <a class="ui icon button" id="btn-own-tag" style="border-bottom-left-radius: 0; border-top-left-radius: 0;"> <i class="add icon"></i> </a>
+                    <div class="results">
+                    </div>
                 </div>
+
+                <!--<div class="ui right labeled left icon input fluid" id="searching-tags-db">-->
+                    <!--<i class="tags icon"></i>-->
+
+                    <!--<input type="text" placeholder="Enter tags" id="input-own-tags"  value="" multiple>-->
+
+                    <!--<a class="ui tag label" id="btn-own-tag">Add Tag</a>-->
+                <!--</div>-->
+
             </div>
         </div>
     </div>
 </div>
 
+<div class="item">Farm</div>

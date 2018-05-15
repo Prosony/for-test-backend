@@ -123,17 +123,19 @@ function ws_send_quick_message(dialog, token, id_account_outcoming, id_account_i
     if(typeof value !== 'undefined' || value !== "") {
         if (typeof dialog === 'undefined' || dialog === "") {
             console.log('CREATE DIALOG');
-            MessagesModule.create_dialog(token, id_account_outcoming, id_account_incoming).then(dialog => {
-                console.log('MessagesModule.dialog: ', dialog);
+            MessagesModule.create_dialog(token, id_account_outcoming, id_account_incoming).then(dialog_ => {
+                console.log('MessagesModule.dialog: ', dialog_);
                 MessagesModule.get_uuid('messages').then(function (uuid) {
                     message_pack.type = "message";
                     message_pack.data.id_message = uuid;
-                    message_pack.data.id_dialog = dialog.idDialog;
+                    message_pack.data.id_dialog = dialog_.idDialog;
                     message_pack.data.id_outcoming_account = id_account;
                     message_pack.data.date = Date.now();
                     message_pack.data.message = value;
                     message_pack.data.is_read = false;
                     console.log('#INFO [SOCKET] [socket.module.js] [ws_send_message] message: ', message_pack);
+                    set_new_dialog(dialog_);
+                    let profile = JSON.parse(window.localStorage.getItem(id_account));
                     Socket.socket.send(JSON.stringify(message_pack));
                     print_messages( message_pack.data, profile);
                     $(`#message_input`).val('');
@@ -158,6 +160,10 @@ function ws_send_quick_message(dialog, token, id_account_outcoming, id_account_i
             });
         }
     }
+}
+function set_new_dialog(dialog_){
+    dialog = dialog_;
+    console.log('#INFO [quick.messages.module.js] [set_new_dialog] [OK] dialog: '+dialog);
 }
 $(() => {
     if (path.substring(0,9) === '/profile/') {

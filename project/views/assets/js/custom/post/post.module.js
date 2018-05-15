@@ -3,6 +3,7 @@ import ImageModule  from '/assets/js/custom/image/image.ajax.js'
 import PostAjax     from  '/assets/js/custom/post/post.ajax.js'
 
 const me = window.localStorage.getItem('is_me');
+let tags_cache = [];
 
 function set_posts (post){
     PostAjax.get_bookmarks(window.localStorage.getItem('token')).then(bookmarksPosts => {
@@ -35,8 +36,22 @@ function set_posts (post){
                         parent.find('#first-image').attr("src", images[0])
                         parent.find('#second-image').attr("src", images[1])
                     });
-
+                    console.log('DERMOOO')
                     for (let i = 0; i < post[index].jsonTags.own_tags.length; i++) {
+
+                        // if (tags_cache.length > 0){
+                        //     for (let index_cahce = 0; index_cahce < tags_cache.length; index_cahce++){
+                        //         if (post[index].jsonTags.own_tags[i] !== tags_cache[index_cahce]){
+                        //             tags_cache.push(post[index].jsonTags.own_tags[i]);
+                        //             break;
+                        //         }
+                        //     }
+                        // } else {
+                        //     console.log('tags_cache: ',tags_cache)
+                        //     tags_cache.push(post[index].jsonTags.own_tags[i]);
+                        // }
+
+                        console.log(post[index].jsonTags.own_tags[i]);
                         parent.find('#tag-column-post-ad').prepend('<div class="ui label" id="tag-pet" style="margin-top: 5px">' + post[index].jsonTags.own_tags[i] + '</div>')
                     }
                     const element = parent.find('#tag-column-post-ad');
@@ -72,6 +87,7 @@ function delete_post(id_post_ad){
 }
 $(() => {
     $(document).on('click', '.right.floated.icon-remove' ,  function(){
+        console.log(`#INFO [post.module.js] [CLICK] delete post!`);
         delete_post($(this).closest('.ui.items').attr('id'))
     });
 });

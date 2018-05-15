@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="881c52ab-39a7-4d23-8f2b-01d12fc90038" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/Models/UserSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/Models/UserSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in.validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in.validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/tags/tags.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/tags/tags.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/authentication/sign-in.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/authentication/sign-in.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/layout/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/layout/head.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/profile/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/profile/index.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,15 +26,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="left-tags-fields.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="84" column="102" selection-start-line="84" selection-start-column="88" selection-end-line="84" selection-end-column="102" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advertisement.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/advertisement/advertisement.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advertisement.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
+              <folding>
+                <element signature="e#0#88#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="tags.module.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/tags/tags.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+            <state relative-caret-position="337">
+              <caret line="79" column="83" selection-start-line="79" selection-start-column="83" selection-end-line="79" selection-end-column="83" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/socket.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -55,6 +132,7 @@
       <find>card</find>
       <find>blurring dimmable image</find>
       <find>$('#input-file').size()</find>
+      <find>input-own-tags</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -63,8 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/project/views/layout/modal/img.ejs" />
-        <option value="$PROJECT_DIR$/project/views/layout/foot.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/add/add.advertisement.image.module.js" />
         <option value="$PROJECT_DIR$/project/Modules/Router/index.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/message.js" />
@@ -79,15 +155,11 @@
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/notification/notification.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.module..js" />
         <option value="$PROJECT_DIR$/project/views/columns/advertisement.add/right-column.ejs" />
-        <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in.validation.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/add/add.advertisement.validation.js" />
-        <option value="$PROJECT_DIR$/project/views/authentication/sign-in.ejs" />
-        <option value="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.ajax.js" />
         <option value="$PROJECT_DIR$/project/views/authentication/sign-up.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/date/date.module.js" />
-        <option value="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js" />
         <option value="$PROJECT_DIR$/project/Modules/Router/routes/Authentication.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.validation.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.render.js" />
@@ -95,7 +167,6 @@
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/modal.quick.message.js" />
         <option value="$PROJECT_DIR$/project/Modules/Router/routes/Profile.js" />
         <option value="$PROJECT_DIR$/project/Modules/Router/routes/Advertisement.js" />
-        <option value="$PROJECT_DIR$/project/views/advertisement/advertisement.ejs" />
         <option value="$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs" />
         <option value="$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/messages.ajax.js" />
@@ -109,10 +180,17 @@
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/socket.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/messages.module.js" />
         <option value="$PROJECT_DIR$/project/views/messages/messages.ejs" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/Semantic-UI-Alert.js" />
+        <option value="$PROJECT_DIR$/project/Models/UserSchema.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js" />
         <option value="$PROJECT_DIR$/project/views/layout/head.ejs" />
         <option value="$PROJECT_DIR$/project/views/profile/index.ejs" />
-        <option value="$PROJECT_DIR$/project/views/assets/js/Semantic-UI-Alert.js" />
-        <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in.validation.js" />
+        <option value="$PROJECT_DIR$/project/views/authentication/sign-in.ejs" />
+        <option value="$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs" />
+        <option value="$PROJECT_DIR$/project/views/advertisement/advertisement.ejs" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/tags/tags.module.js" />
       </list>
     </option>
@@ -139,11 +217,17 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/project/views/assets/css/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="415" />
-    <option name="y" value="-17" />
-    <option name="width" value="1296" />
-    <option name="height" value="1039" />
+    <option name="x" value="47" />
+    <option name="y" value="896" />
+    <option name="width" value="1873" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -161,6 +245,12 @@
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
@@ -228,6 +318,78 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="advertisement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="sign-in" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
+              <item name="quick" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
               <item name="tags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -250,45 +412,7 @@
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="columns" type="462c0819:PsiDirectoryNode" />
-              <item name="advertisement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="columns" type="462c0819:PsiDirectoryNode" />
-              <item name="advertisement.add" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="columns" type="462c0819:PsiDirectoryNode" />
               <item name="profile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
@@ -467,7 +591,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.8.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../for-test-backend-d187f088df6949eb972486de45e9ec7cefd3fee8" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -484,11 +608,11 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.stylelint" value="" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -637,11 +761,17 @@
       <workItem from="1523639821633" duration="980000" />
       <workItem from="1523899925448" duration="3424000" />
       <workItem from="1524130899278" duration="1239000" />
+      <workItem from="1525538289764" duration="1289000" />
+      <workItem from="1525618009599" duration="2236000" />
+      <workItem from="1525889011164" duration="31000" />
+      <workItem from="1526310039644" duration="6015000" />
+      <workItem from="1526323680022" duration="1250000" />
+      <workItem from="1526367509546" duration="8372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="850601000" />
+    <option name="totallyTimeSpent" value="869794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -653,17 +783,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
+    <frame x="47" y="896" width="1873" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.85775864" visible="true" weight="0.15384616" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.85775864" visible="true" weight="0.18312867" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286638" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021075" side_tool="true" weight="0.428125" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" x="0" y="23" width="1920" height="1057" id="Run" order="2" sideWeight="0.49789253" type="WINDOWED" weight="0.36451614" />
+      <window_info anchor="bottom" x="418" y="177" width="549" height="163" id="Run" order="2" sideWeight="0.49789253" type="WINDOWED" visible="true" weight="0.36451614" />
       <window_info id="npm" order="0" sideWeight="0.14224137" side_tool="true" weight="0.16807166" />
-      <window_info anchor="bottom" id="Floobits" order="11" weight="0.21228448" />
       <window_info id="Structure" order="2" sideWeight="0.5010776" side_tool="true" weight="0.16807166" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286638" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -672,6 +801,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Floobits" order="11" weight="0.21228448" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
@@ -689,27 +819,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/Semantic-UI-Alert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="93" selection-start-line="8" selection-start-column="93" selection-end-line="8" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/layout/foot.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/Modules/Router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -750,20 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="11" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/authentication/sign-in.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -810,13 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in.validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -824,13 +912,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ejs/ejs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="900" column="2" selection-start-line="900" selection-start-column="2" selection-end-line="900" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/ejs/ejs.js" />
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/advertisement/add/add.advertisement.image.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-544">
@@ -867,13 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/post/post.ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -888,24 +963,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="70" column="10" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="70" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="61" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -959,45 +1020,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/advertisement/advertisement.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/socket.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/messages.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="104" column="91" selection-start-line="104" selection-start-column="91" selection-end-line="104" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/messages/messages.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/layout/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/profile/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1008,17 +1034,144 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/Modules/DataBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/Models/UserSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="118" column="63" lean-forward="true" selection-start-line="118" selection-start-column="63" selection-end-line="118" selection-end-column="63" />
+        <state relative-caret-position="2771">
+          <caret line="167" column="9" lean-forward="true" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/authentication/sign-in.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in.validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/profile/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/layout/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding>
+            <marker date="1526315466545" expanded="true" signature="1635:1846" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/advertisement/advertisement.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#88#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/messages.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="84" column="102" selection-start-line="84" selection-start-column="88" selection-end-line="84" selection-end-column="102" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/socket.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/tags/tags.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        <state relative-caret-position="337">
+          <caret line="79" column="83" selection-start-line="79" selection-start-column="83" selection-end-line="79" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />

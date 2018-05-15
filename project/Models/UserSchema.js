@@ -1,4 +1,4 @@
-import Mongoose from '../modules/DataBase'
+import Mongoose from '../Modules/DataBase.js'
 
 const UserSchema = new Mongoose.Schema({
   id_account: {
