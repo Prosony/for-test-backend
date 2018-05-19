@@ -22,6 +22,7 @@ $(() => {
 function set_advertisement(advertisement){
     PostModule.get_bookmarks(window.localStorage.getItem('token'), window.localStorage.getItem('id_account')).then(function (bookmarks) {
         if (advertisement !== null && advertisement !== undefined && advertisement !== 'undefined' ) {
+            $("#right_column").find('#error_list_search').remove();
             let path;
 
             if (typeof me === true){
@@ -79,7 +80,15 @@ function set_advertisement(advertisement){
             }
         }else{
             $('#ad-post-content').append('' +
-                '<div>List is empty</div>');
+                '<div id="error_list_search">' +
+                '<h2 class="ui header">\n' +
+                '  <img class="ui image" src="/assets/img/logo/img_logo.png">\n' +
+                '  <div class="content">\n' +
+                '    Объявления не найдены\n' +
+                '<div class="sub header">Попробуйте выбрать другие теги</div>' +
+                '  </div>\n' +
+                '</h2>' +
+                '</div>');
         }
     });
 }

@@ -117,10 +117,10 @@ function ws_send_quick_message(dialog, token, id_account_outcoming, id_account_i
         '}'
     );
     let value = document.getElementById("message_input").value;
-    console.log(`value: `,value);
-    console.log(`dialog: `,dialog);
-    console.log(`dialog#2: `,dialog === "");
-    if(typeof value !== 'undefined' || value !== "") {
+
+    console.log(`value: `,);
+
+    if(value.replace(/\s+/g, '') !== '' && value !== undefined) {
         if (typeof dialog === 'undefined' || dialog === "") {
             console.log('CREATE DIALOG');
             MessagesModule.create_dialog(token, id_account_outcoming, id_account_incoming).then(dialog_ => {

@@ -87,6 +87,11 @@
 
                 </div>
 
+                <div class="ui animated fade button" tabindex="0" onclick="blabla()">
+                    <div class="visible content">Как пользоваться?</div>
+                    <div class="hidden content">Справка</div>
+                </div>
+
             </div>
             <div class="two ui buttons">
                 <div class="ui animated fade button" id="clear-tags">
@@ -103,7 +108,14 @@
         </form>
 
     </div>
+    <script>
+         function blabla() {
+            console.log("CLICK HELP");
+            $('#tags-help').modal('show');
+        }
+    </script>
 </div>
+
 
 <!--<div class="ui right labeled left icon input" style="width: 85%"> <i class="tags icon"></i>-->
 <!--<input type="text" placeholder="Enter tags" id="input-own-tags"  value="" multiple>-->
