@@ -74,7 +74,17 @@ function set_posts (post){
                 });
             }
         } else {
-            $('#ad-post-content').append('<div>List is empty</div>')//TODO something else
+            // $('#ad-post-content').append('<div>List is empty</div>')//TODO something else
+            $('#ad-post-content').append('' +
+                '<div id="error_list_search">' +
+                '<h2 class="ui header">\n' +
+                '  <img class="ui image" src="/assets/img/logo/img_logo.png">\n' +
+                '  <div class="content">\n' +
+                '    У вас нет объявлений :(\n' +
+                '<div class="sub header">Добавьте объявление</div>' +
+                '  </div>\n' +
+                '</h2>' +
+                '</div>');
         }
     }).catch(error => {
         console.error(`#ERROR : ${error.message}`)

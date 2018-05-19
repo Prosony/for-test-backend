@@ -73,7 +73,7 @@
         </div>
 
     </div>
-    <div class="column">
+
         <div class="main ui container" style="margin-top: 15px">
             <h3 class="ui dividing header"> <i class="tags icon"></i> Add own tags </h3>
             <div class="ui vertical segment" id="block-own-tags"></div>
@@ -88,18 +88,119 @@
                     <div class="results">
                     </div>
                 </div>
-
-                <!--<div class="ui right labeled left icon input fluid" id="searching-tags-db">-->
-                    <!--<i class="tags icon"></i>-->
-
-                    <!--<input type="text" placeholder="Enter tags" id="input-own-tags"  value="" multiple>-->
-
-                    <!--<a class="ui tag label" id="btn-own-tag">Add Tag</a>-->
-                <!--</div>-->
-
             </div>
         </div>
-    </div>
-</div>
+            <div class="ui divider"></div>
 
-<div class="item">Farm</div>
+        <div class="ui vertical animated button" tabindex="0" id="tags-help-btn">
+            <div class="visible content">Зачем это нужно?</div>
+            <div class="hidden content">
+                Справка
+            </div>
+        </div>
+
+    <div class="ui longer modal" id="tags-help">
+        <div class="ui dividing header"><i class="question circle icon"></i>Справка по Тегам</div>
+        <div class="scrolling content">
+
+            <div class="ui three column grid">
+
+                <div class="column" style="width: 30%">
+
+                    <div class="ui dividing header">Категории и Теги</div>
+                    <p>Квадратом цвета "чирок" выделяются категории:</p>
+                    <a class="ui teal label">Категории</a>
+                    <div class="ui divider"></div>
+
+                    <p>Обычным серым квадратом выделяются теги:</p>
+                    <a class="ui label">Теги</a>
+
+                    <div class="ui dividing header">Пример объявления</div>
+                    <div class="ui medium image">
+                        <img src="/assets/img/logo/example.png" >
+                    </div>
+                </div>
+
+                <div class="column" style="width: 30%">
+                    <div class="description">
+                        <h2 class="ui dividing header">Зачем нужны?</h2>
+                        <p>
+                            Тег — ключевое слово или несколько слов сообщения, тег (пометка),
+                            используется для описания свойств (особенностей, если есть то тип продуктивности) животного, облегчающий поиск объявлений.</p>
+                        <h2 class="ui dividing header">Примеры тегов</h2>
+                        <h3 class="ui dividing header">Окрас животного</h3>
+                        <div class="ui labels">
+                            <a class="ui label">Черный</a>
+                            <a class="ui label">Черно белый</a>
+                            <a class="ui label">Белый</a>
+                            <a class="ui label">Рыжый</a>
+                        </div>
+
+                        <h3 class="ui dividing header">Состояние здоровья</h3>
+                        <div class="ui labels">
+                            <a class="ui label">Здоров</a>
+                            <a class="ui label">Привит</a>
+                            <a class="ui label">Стерилизанна</a>
+                            <a class="ui label">Отсутсвтует лапа</a>
+                            <a class="ui label">Брак</a>
+                        </div>
+
+                        <h3 class="ui dividing header">Уточнение типа животного (при необходимости)</h3>
+                        <p>На примере Куриц:</p>
+                        <div class="ui labels">
+                            <a class="ui label">Мясо-яичные</a>
+                            <a class="ui label">Средняя яйценоскость</a>
+                            <a class="ui label">Декоративные</a>
+                            <a class="ui label">Бойцовые</a>
+                            <a class="ui label">Для Южных регионов</a>
+                            <a class="ui label">Для Северных регионов</a>
+                            <a class="ui label">Вкусное мясо</a>
+                            <a class="ui label">Хорошие наседки</a>
+                        </div>
+
+
+                        <h3 class="ui dividing header">Характер</h3>
+                        <div class="ui labels">
+                            <a class="ui label">Агрессивный</a>
+                            <a class="ui label">Добрый</a>
+                            <h3 class="ui dividing header">Остальные свойства</h3>
+                            <a class="ui label">тяжелый</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column" style="width: 300px">
+                    <h2 class="ui dividing header">Использование при поиске</h2>
+                    <p>Существуют обычные теги, которые используются как условие для поиска.
+                        Для добавления достаточно написать слово (сочетание слов) в поле ввода и нажать кнопку добавить</p>
+                    <div class="ui labels">
+                        <a class="ui label">Обычный тег</a>
+                    </div>
+                    <p>Существуют исключающие теги, которые исключают объявление из листа если в нем присутствует данный тег.</p>
+                    <p>
+                        Что бы добавить исключающий тег, перед словом (сочетанием слов) необходимо ввести знак "-" (минус).
+                        Красный цвет тега, говорит о том что он исключающий.
+                    </p>
+
+                    <div class="ui labels">
+                        <a class="ui red label">Исключающий тег</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="actions">
+            <div class="ui primary approve button">Ясно</div>
+        </div>
+    </div>
+
+    <!--</div>-->
+    <script>
+    $(document).on('click','#tags-help-btn', function (event) {
+        console.log("CLICK HELP");
+        $('#tags-help').modal('show');
+    })
+
+    </script>
+</div>
