@@ -42,21 +42,21 @@
         <!--</a>-->
         <div class="right menu">
             <% if (typeof url != 'undefined' && url === 'profile' ) { %>
-            <div data-tooltip="That is your bookmarks!" id="bookmarks_show" data-position="bottom center">
+            <div data-tooltip="Ваши закладки!" id="bookmarks_show" data-position="bottom center">
                 <a id="bookmarks_show" class="ui item">
-                    <i class="bookmark icon"></i>Bookmarks
+                    <i class="bookmark icon"></i>Закладки
                     <div class="floating ui teal label"></div>
                 </a>
             </div>
             <% } else { url = undefined; %>
-            <div data-tooltip="That is your bookmarks!" id="bookmarks_load" data-position="bottom center">
+            <div data-tooltip="Ваши закладки!" id="bookmarks_load" data-position="bottom center">
                 <a class="ui item" >
-                    <i class="bookmark icon"></i>Bookmarks
+                    <i class="bookmark icon"></i>Закладки
                     <div class="floating ui teal label"></div>
                 </a>
             </div>
             <% } %>
-            <div data-tooltip="Поиск объявлений" data-position="bottom center">
+            <div data-tooltip="Поиск объявлений!" data-position="bottom center">
                 <a class="item" onClick="window.location.href = '/advertisement'">
                     <i class="paw icon"></i>Найти питомца
                 </a>

@@ -45,12 +45,12 @@ function set_left_column(profile_json) {
         if (me === 'true') {
             left_column.append('' +
                 '<a class="ui fluid button" onClick="window.location.href = \'/advertisement/add\'">' +
-                '   <i class="add icon"></i>Add Advertisement\n            </a>'
+                '   <i class="add icon"></i>Добавить объявление\n            </a>'
             );
         } else {
             left_column.append('' +
                 '<a class="ui fluid button" id="quick-message-button" >' +
-                '   <i class="mail icon"></i>Send Messages' +
+                '   <i class="mail icon"></i>Отправить сообщение' +
                 '</a>')
         }
     })

@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="881c52ab-39a7-4d23-8f2b-01d12fc90038" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/project/views/assets/img/logo/example.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/views/assets/img/logo/img_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/views/layout/modal/modal-help-tags.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/views/advertisement/advertisement.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/advertisement/advertisement.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/authentication/sign-up.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/authentication/sign-up.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/columns/advertisement.add/right-column.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/columns/advertisement.add/right-column.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/columns/advertisement/left-column-search.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/columns/advertisement/left-column-search.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/layout/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/layout/head.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/layout/modal/modal.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/layout/modal/modal.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/views/messages/messages.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/messages/messages.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/posts/post-ad-active.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/posts/post-ad-active.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/posts/post-ad-me.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/posts/post-ad-me.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/views/posts/post-ad-noactive.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/project/views/posts/post-ad-noactive.ejs" afterDir="false" />
@@ -29,21 +28,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="add-advertisement.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="modal.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="323">
+              <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="right-column.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/right-column.ejs">
+      <file leaf-file-name="modal-help-tags.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal-help-tags.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="340">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/messages/messages.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post-ad-me.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/views/posts/post-ad-me.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/views/layout/head.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="53" column="57" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -93,7 +119,6 @@
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/add/add.advertisement.validation.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.ajax.js" />
-        <option value="$PROJECT_DIR$/project/views/authentication/sign-up.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/date/date.module.js" />
         <option value="$PROJECT_DIR$/project/Modules/Router/routes/Authentication.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.validation.js" />
@@ -101,10 +126,8 @@
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/modal.quick.message.js" />
         <option value="$PROJECT_DIR$/project/Modules/Router/routes/Profile.js" />
         <option value="$PROJECT_DIR$/project/Modules/Router/routes/Advertisement.js" />
-        <option value="$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/messages.ajax.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/bookmarks/bookmarks.module.js" />
-        <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/modal/modal.modul.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/socket.js" />
         <option value="$PROJECT_DIR$/project/views/columns/profile/left.ejs" />
@@ -112,10 +135,8 @@
         <option value="$PROJECT_DIR$/project/Modules/Router/routes/Messages.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/socket.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/messages.module.js" />
-        <option value="$PROJECT_DIR$/project/views/messages/messages.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/Semantic-UI-Alert.js" />
         <option value="$PROJECT_DIR$/project/Models/UserSchema.js" />
-        <option value="$PROJECT_DIR$/project/views/layout/head.ejs" />
         <option value="$PROJECT_DIR$/project/views/profile/index.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/authentication/sign-in/sign-in.validation.js" />
         <option value="$PROJECT_DIR$/project/views/authentication/sign-in.ejs" />
@@ -123,16 +144,21 @@
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/advertisement/advertisement.module.js" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/post/post.module.js" />
         <option value="$PROJECT_DIR$/project/views/layout/modal/modal-help-tags.ejs" />
-        <option value="$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs" />
-        <option value="$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs" />
         <option value="$PROJECT_DIR$/project/views/advertisement/advertisement.ejs" />
-        <option value="$PROJECT_DIR$/project/views/columns/advertisement/left-column-search.ejs" />
-        <option value="$PROJECT_DIR$/project/views/posts/post-ad-noactive.ejs" />
-        <option value="$PROJECT_DIR$/project/views/posts/post-ad-me.ejs" />
-        <option value="$PROJECT_DIR$/project/views/posts/post-ad-active.ejs" />
-        <option value="$PROJECT_DIR$/project/views/layout/modal/modal.ejs" />
         <option value="$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js" />
         <option value="$PROJECT_DIR$/project/views/columns/advertisement.add/right-column.ejs" />
+        <option value="$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs" />
+        <option value="$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs" />
+        <option value="$PROJECT_DIR$/project/views/authentication/sign-up.ejs" />
+        <option value="$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js" />
+        <option value="$PROJECT_DIR$/project/views/posts/post-ad-noactive.ejs" />
+        <option value="$PROJECT_DIR$/project/views/posts/post-ad-active.ejs" />
+        <option value="$PROJECT_DIR$/project/views/columns/advertisement/left-column-search.ejs" />
+        <option value="$PROJECT_DIR$/project/views/layout/modal/modal.ejs" />
+        <option value="$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs" />
+        <option value="$PROJECT_DIR$/project/views/messages/messages.ejs" />
+        <option value="$PROJECT_DIR$/project/views/posts/post-ad-me.ejs" />
+        <option value="$PROJECT_DIR$/project/views/layout/head.ejs" />
       </list>
     </option>
   </component>
@@ -165,10 +191,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="47" />
-    <option name="y" value="-4" />
-    <option name="width" value="1873" />
-    <option name="height" value="1084" />
+    <option name="x" value="121" />
+    <option name="y" value="896" />
+    <option name="width" value="1600" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -239,6 +265,13 @@
               <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -248,6 +281,27 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layout" type="462c0819:PsiDirectoryNode" />
               <item name="modal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="for-test-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="for-test-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -443,19 +497,19 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\css" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\img" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\columns\advertisement.add" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\js\custom\advertisement\add" />
-      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\js\custom\advertisement" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/project/views/assets/img/logo" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\js" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\layout\modal" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\advertisement" />
       <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\columns\find-pet" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\css" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\img" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\columns\advertisement.add" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\js\custom\advertisement\add" />
+      <recent name="C:\Users\proso\Documents\GitHub\for-test-backend\project\views\assets\js\custom\advertisement" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -596,11 +650,12 @@
       <workItem from="1526323680022" duration="1250000" />
       <workItem from="1526367509546" duration="19272000" />
       <workItem from="1526387790460" duration="6522000" />
+      <workItem from="1526913128279" duration="2731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="887216000" />
+    <option name="totallyTimeSpent" value="889947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,15 +667,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1600" height="904" extended-state="6" />
+    <frame x="47" y="896" width="1873" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.85775864" visible="true" weight="0.26625" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.85775864" visible="true" weight="0.2274426" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286638" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021075" side_tool="true" weight="0.428125" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" x="417" y="170" width="1164" height="602" id="Run" order="2" sideWeight="0.49789253" type="WINDOWED" weight="0.36451614" />
       <window_info id="npm" order="0" sideWeight="0.14224137" side_tool="true" weight="0.16807166" />
+      <window_info anchor="bottom" x="288" y="231" width="1164" height="602" id="Run" order="2" sideWeight="0.49789253" type="WINDOWED" visible="true" weight="0.36451614" />
       <window_info id="Structure" order="2" sideWeight="0.5010776" side_tool="true" weight="0.16807166" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286638" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -647,20 +703,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/authentication/sign-up.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="97" column="71" selection-start-line="97" selection-start-column="71" selection-end-line="97" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/authentication/get.started/get.started.ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -705,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/modal/modal.modul.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -740,25 +775,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/columns/profile/left.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/messages/test.ejs" />
     <entry file="file://$PROJECT_DIR$/project/Modules/Router/routes/Messages.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/messages/messages.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -780,13 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -872,45 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/profile/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="52" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="51" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal-help-tags.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="201" column="32" selection-start-line="201" selection-start-column="32" selection-end-line="201" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/advertisement/advertisement.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement/left-column-search.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -921,52 +900,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/posts/post-ad-active.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/posts/post-ad-noactive.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="103" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/posts/post-ad-me.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/layout/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="79" />
-          <folding>
-            <marker date="1526315466545" expanded="true" signature="1635:1846" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/messages/quick/quick.messages.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="117" column="6" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1526391332020" expanded="true" signature="5111:7383" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="42" column="61" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -977,17 +917,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs">
+    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/right-column.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        <state relative-caret-position="527">
+          <caret line="31" column="93" selection-start-line="31" selection-start-column="93" selection-end-line="31" selection-end-column="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/right-column.ejs">
+    <entry file="file://$PROJECT_DIR$/project/views/authentication/sign-up.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="442">
+          <caret line="26" column="64" lean-forward="true" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/assets/js/custom/profile/profile.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/posts/post-ad-noactive.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/posts/post-ad-active.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/profile/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/columns/profile/left.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement/left-column-search.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/layout/modal/img.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/columns/advertisement.add/left-tags-fields.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="84" column="81" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/advertisement/add-advertisement.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/advertisement/advertisement.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal-help-tags.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/layout/modal/modal.message.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="105" selection-start-line="24" selection-start-column="105" selection-end-line="24" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/messages/messages.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/posts/post-ad-me.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views/layout/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="53" column="57" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
         </state>
       </provider>
     </entry>

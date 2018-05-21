@@ -2,19 +2,19 @@
     <div class="ui segment">
         <form class="ui form">
         <div class="field">
-            <h3 class="ui dividing header"><i class="list layout icon"></i>Category</h3>
+            <h3 class="ui dividing header"><i class="list layout icon"></i>Категории</h3>
             <div class="ui vertical menu" style="width: 100%">
                 <div class="ui floating labeled icon dropdown button" id="animals-tag" style="width: 100%; border-radius: 0">
                     <input type="hidden" name="animalsInput">
                     <i class="paw icon"></i>
-                    <span class="text">Animals</span>
+                    <span class="text">Животные</span>
                     <div class="menu">
                         <div class="ui icon search input" style="width: auto">
                             <i class="search icon"></i>
                             <input type="text" placeholder="Search tags...">
                         </div>
                         <div class="divider"></div>
-                        <div class="header"> <i class="tags icon"></i>What kind of animal do you want to give?</div>
+                        <div class="header"> <i class="tags icon"></i>Какое животное вы хотите найти?</div>
                         <div class="scrolling menu"></div>
                     </div>
                 </div>
@@ -22,11 +22,11 @@
                 <div class="ui floating labeled icon dropdown button disabled" id="group-tag" style="width: 100%; border-radius: 0">
                     <input type="hidden" name="groupInput">
                     <i class="circle thin icon"></i>
-                    <span class="text">Group</span>
+                    <span class="text">Группа</span>
                     <div class="menu">
                         <div class="ui icon search input"  style="width: auto"> <i class="search icon"></i> <input type="text" placeholder="Search tags..."> </div>
                         <div class="divider"></div>
-                        <div class="header"> <i class="tags icon"></i>Group of animals</div>
+                        <div class="header"> <i class="tags icon"></i>Группа животного?</div>
                         <div class="scrolling menu"></div>
                     </div>
                 </div>
@@ -34,11 +34,11 @@
                 <div class="ui floating labeled icon dropdown button disabled" id="breeds-tag" style="width: 100%; border-radius: 0">
                     <input type="hidden" name="breedsInput">
                     <i class="leaf icon"></i>
-                    <span class="text">Breeds</span>
+                    <span class="text">Порода</span>
                     <div class="menu">
                         <div class="ui icon search input"  style="width: auto"> <i class="search icon"></i> <input type="text" placeholder="Search tags..."> </div>
                         <div class="divider"></div>
-                        <div class="header"> <i class="tags icon"></i>What breed is your animal?</div>
+                        <div class="header"> <i class="tags icon"></i>Какой породы?</div>
                         <div class="scrolling menu"></div>
                     </div>
                 </div>
@@ -46,11 +46,11 @@
                 <div class="ui floating labeled icon dropdown button disabled" id="age-tag" style="width: 100%; border-radius: 0">
                     <input type="hidden" name="ageInput">
                     <i class="birthday icon"></i>
-                    <span class="text">Age</span>
+                    <span class="text">Возраст</span>
                     <div class="menu">
                         <div class="ui icon search input"  style="width: auto"> <i class="search icon"></i> <input type="text" placeholder="Search tags..."> </div>
                         <div class="divider"></div>
-                        <div class="header"> <i class="tags icon"></i> How old is your pet? </div>
+                        <div class="header"> <i class="tags icon"></i> Возраст </div>
                         <div class="scrolling menu"></div>
                     </div>
                 </div>
@@ -58,28 +58,28 @@
                 <div class="ui floating labeled icon dropdown button disabled" id="gender-tag" style="width: 100%; border-radius: 0">
                     <input type="hidden" name="genderInput">
                     <i class="heterosexual icon"></i>
-                    <span class="text">Gender</span>
+                    <span class="text">Пол</span>
 
                     <div class="menu">
                         <div class="ui icon search input"  style="width: auto"> <i class="search icon"></i> <input type="text" placeholder="Search tags..."> </div>
                         <div class="divider"></div>
-                        <div class="header"> <i class="tags icon"></i> The gender of your animal </div>
+                        <div class="header"> <i class="tags icon"></i> К какому полу принадлежит? </div>
                         <div class="scrolling menu"> </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="ui horizontal divider"> Or </div>
+            <div class="ui horizontal divider"> и </div>
 
             <div class="ui segment">
-                <h3 class="ui dividing header"> <i class="tags icon"></i> Search by own tags </h3>
+                <h3 class="ui dividing header"> <i class="tags icon"></i> Теги </h3>
                 <div class="ui vertical segment" id="block-own-tags"></div>
                 <div class="field" style="margin-top: 10px;">
                     <div class="ui search" id="searching-tags-db">
                         <div class="ui left icon input action" style="width: 80%">
                             <i class="tags icon"></i>
-                            <input class="prompt" type="text" placeholder="Add tags..." id="input-own-tags" style="border-bottom-right-radius: 0;  border-top-right-radius: 0; " value="" multiple>
+                            <input class="prompt" type="text" placeholder="Добавь тег" id="input-own-tags" style="border-bottom-right-radius: 0;  border-top-right-radius: 0; " value="" multiple>
                             <a class="ui icon button" id="btn-own-tag" style="border-bottom-left-radius: 0; border-top-left-radius: 0;"> <i class="add icon"></i> </a>
                         </div>
                         <div class="results"></div>
@@ -95,12 +95,12 @@
             </div>
             <div class="two ui buttons">
                 <div class="ui animated fade button" id="clear-tags">
-                    <div class="visible content">Clear</div>
-                    <div class="hidden content">All right?</div>
+                    <div class="visible content">Сброс</div>
+                    <div class="hidden content">Все верно?</div>
                 </div>
                 <div class="ui animated fade submit button" >
-                    <div class="visible content">Search</div>
-                    <div class="hidden content">All right?</div>
+                    <div class="visible content">Поиск</div>
+                    <div class="hidden content">Все верно?</div>
                 </div>
             </div>
 
