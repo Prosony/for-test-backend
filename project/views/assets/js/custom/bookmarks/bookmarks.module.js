@@ -41,6 +41,17 @@ function bookmarks_show(){
                         }
                     });
                 }
+            }else{
+                $('#ad-post-content').append('' +
+                    '<div id="error_list_search">' +
+                    '<h2 class="ui header">\n' +
+                    '  <img class="ui image" src="/assets/img/logo/img_logo.png">\n' +
+                    '  <div class="content">\n' +
+                    '    Нет ни одного объявления\n' +
+                    '<div class="sub header">Вам ни одно не понравилось?</div>' +
+                    '  </div>\n' +
+                    '</h2>' +
+                    '</div>');
             }
         })
     })
@@ -59,7 +70,7 @@ $(() => {
         bookmarks_show();
     });
     $(document).on('click', '.right.floated.star' ,function(event){
-        const id_post = $(this).closest('.ui.items').attr('id');
+        const id_post = $(this).closest('.item').attr('id');
         const class_name = $(this).find('.favorite.icon').attr('class');
         if (class_name !== 'favorite icon active' && class_name !== 'favorite active icon'){
             const element = $(`#${id_post}`);

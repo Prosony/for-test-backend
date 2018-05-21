@@ -93,7 +93,7 @@ function set_advertisement(advertisement){
     });
 }
 function clear_advertisement(){
-    $('#ad-post-content').find('.ui.items').remove();
+    $('#ad-post-content').find('.item').remove();
 }
 export default {
     tags_cache: tags_cache,
