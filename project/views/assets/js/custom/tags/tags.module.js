@@ -164,12 +164,17 @@ $(() => {
             let menu = $(`#age-tag`).find(`.scrolling.menu`);
             for (let index = 1; index <= 25; index++){
                 if (index === 1){
-                    menu.append('<div class="item">less than 1 year old</div>');
+                    menu.append('<div class="item">меньше 1 года</div>');
                 }
                 if (index === 25){
-                    menu.append('<div class="item">for more than 25 years</div>');
+                    menu.append('<div class="item">старше 25 лет</div>');
                 }else{
-                    menu.append('<div class="item">'+index+' years old</div>');
+                	if (index <5) {
+
+                    menu.append('<div class="item">'+index+' года</div>');
+                	}else {
+                		menu.append('<div class="item">'+index+' лет</div>');
+                	}
                 }
             }
         }
