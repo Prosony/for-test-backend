@@ -98,7 +98,7 @@ function delete_post(id_post_ad){
 $(() => {
     $(document).on('click', '.right.floated.icon-remove' ,  function(){
         console.log(`#INFO [post.module.js] [CLICK] delete post!`);
-        delete_post($(this).closest('.ui.items').attr('id'))
+        delete_post($(this).closest('item').attr('id'))
     });
 });
 export default {

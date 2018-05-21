@@ -67,7 +67,7 @@ function modal_show(id_post){
 $(() => {
     $(document.body).on('click','#previews-button',function () {
         console.log(`click modal`);
-        modal_show($(this).closest('.ui.items').attr('id'));
+        modal_show($(this).closest('.item').attr('id'));
     })
 
 });
