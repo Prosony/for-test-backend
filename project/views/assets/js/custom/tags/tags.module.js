@@ -99,7 +99,14 @@ $(() => {
                 }
             }
         }
-        if (is_new_tag && tag !== ''){
+
+        if (tag.substring(tag.length-1, tag.length) === ' '){
+            console.log('Have space');
+            tag = tag.substring(0, tag.length-1);
+        }
+
+        if (is_new_tag && tag !== '' && tag.substring(0,1) !== ' '){
+
             array_tags.own_tags.splice(count_click, 0, tag);
             console.log('array_tags.own_tags: ', array_tags.own_tags);
             preview_own_tags();
@@ -119,22 +126,23 @@ $(() => {
 
     $(`#clear-tags`).on('click', () => {
         $(`.ui.floating.labeled.icon.dropdown.button`).dropdown('clear');
-        $(`#animals-tag`).children('span').html('Animals');
+        $(`#animals-tag`).children('span').html('Животные');
 
         let group = $(`#group-tag`);
-        group.children('span').html('Group');
+        group.children('span').html('Группа');
         group.addClass('disabled');
 
         let breeds = $(`#breeds-tag`);
-        breeds.children('span').html('Breeds');
+        breeds.children('span').html('Порода');
         breeds.addClass('disabled');
 
         let age = $(`#age-tag`);
-        age.children('span').html('Age').addClass('disabled');
+        age.children('span').html('Возраст');
         age.addClass('disabled');
+        
 
         let gender = $(`#gender-tag`);
-        gender.children('span').html('Gender').addClass('disabled');
+        gender.children('span').html('Пол');
         gender.addClass('disabled');
     });
 
@@ -153,7 +161,7 @@ $(() => {
         transition: 'drop',
         onChange: function(value, text, $selectedItem) {
             $(`#breeds-tag`).removeClass('disabled').find(`.scrolling.menu`).empty();
-            $(`#breeds-tag`).children('span').html('Breeds');
+            $(`#breeds-tag`).children('span').html('Порода');
             update_tags_dropdown('#breeds-tag',text);
         }
     });
